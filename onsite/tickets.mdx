@@ -1,0 +1,153 @@
+---
+title: "Tickets & Entry"
+description: "Review tickets, understand why someone can't get in, and resolve entry problems at the desk."
+---
+
+**Tickets & Entry** answers three things on one screen: is the ticket valid, why can't this person get in, and how do we fix it. Open it from the **Tickets & Entry** workspace in the [Command Center](/onsite/command-center), or by selecting **Resolve** from a search result.
+
+<Note>
+This page is for desk work on the day. To manage ticket types, sales and comp tickets, see [Ticket management](/tickets/ticket-management).
+</Note>
+
+## The ticket list
+
+### Summary cards
+
+| Card | Meaning |
+| --- | --- |
+| **Tickets issued** | Everything sold for this event. |
+| **Entered** | Tickets that have been checked in, and the percentage of tickets issued. |
+| **Awaiting details** | Tickets whose attendee details haven't been completed. These can be recovered at the desk: take the details, then admit with an override. |
+| **Blocked from entry** | Tickets that can't currently enter, grouped by reason on the right. |
+
+### Views and filters
+
+Use **Filter** to narrow by Ticket ID, holder name or email. The view buttons change which tickets are listed:
+
+| View | Shows |
+| --- | --- |
+| **Needs attention** (default) | Blocked and exception tickets first. |
+| **All** | Every ticket. |
+| **Valid** | Valid tickets. |
+| **Entered** | Tickets that have entered. |
+| **Blocked** | Tickets that can't enter. |
+| **Transfer pending** | Tickets sent to someone who hasn't accepted yet. |
+| **Cancelled** | Cancelled tickets. |
+
+The list shows 25 tickets per page; use **Previous** and **Next** to move through it.
+
+### Columns
+
+- **Ticket ID**
+- **Holder**: links to the participant. A ticket whose transfer hasn't been accepted shows "Transfer sent, not accepted".
+- **Type · session**
+- **Details**: whether attendee details are Pending, Complete, or Not required.
+- **Entry**: the entry time, or "Not entered".
+- **Wristband** (Tap events only): the bound wristband, or "Not bound".
+- **State**: a specific state label, with the next step underneath if the ticket is blocked.
+- **Resolve**: opens the guided resolution for that ticket.
+
+Ticket states you may see include Valid, Entered (with the time, and "Re-entry" with a count if the person has returned), Transfer pending, Cancelled, Refunded, Expired, Payment not confirmed and Under dispute.
+
+### Why blocked
+
+The **Why blocked** panel turns the blocked count into a work queue. Each reason shows how many tickets it affects, a next step, and whether it is:
+
+- **Recoverable at the desk**, meaning you can fix it or use an override, or
+- **Not recoverable here**, meaning no desk action will fix it. Record a [service case](/onsite/cases) instead.
+
+Recoverable reasons are listed first, because that is the order to work them in. Selecting a reason switches the list to the Blocked view.
+
+The blocked reasons you can meet are: not personalized (details missing), wrong session, already entered, wristband stopped, no longer valid, payment not confirmed, under dispute, and add-on ticket (not an entry ticket).
+
+### Recent entry activity
+
+At the bottom, **Recent entry activity** lists the latest desk actions with time, action, operator, reason and result. A **Done** result succeeded; **Blocked** means the system refused it; **Failed** means it did not complete. Re-entry and the first check-in are recorded as separate events.
+
+## Resolving one ticket
+
+Select **Resolve** on a ticket to open its guided resolution page. The page title tells you the situation, for example "Attendee details are missing", "Ticket is for another session", "Ticket already shows as entered", "Ticket is no longer valid", "Payment is not confirmed", "Ticket is under dispute", "Wristband has been stopped", or "Ready to admit".
+
+At the top you see the event and ticket, whether it is a Tap or Ticket-only event, and a verdict:
+
+| Verdict | Meaning |
+| --- | --- |
+| **Ready** | Everything is in order. Go ahead. |
+| **Needs a look** | You can deal with this, but read the notes first. |
+| **Blocked** | Something has to be resolved before this can go ahead. |
+
+The verdict is separate from the ticket's own status. A ticket can be Valid and still need a look.
+
+**See everything for this person** opens the [participant profile](/onsite/participants).
+
+### The steps
+
+A step bar shows where you are: **Identify**, **Validate**, **Confirm**, and on Tap events a **Prepare** step for wristband binding between them. You arrive on the final step, **Confirm**, because the earlier steps are worked out when the page loads.
+
+### Validation summary
+
+The **Validation summary** checks four things, each marked as passed or failed:
+
+- **Ticket status**
+- **Event & session**: whether the ticket is for the right session ("In window" or "Wrong session").
+- **Attendee details**: Complete or Pending. Not checked if payment is unconfirmed.
+- **Entry history**: whether the ticket has already entered.
+
+If something is blocking, a box underneath says what is wrong, what to do next, and a sentence marked "Say to the participant" that you can read out. If all checks pass, it says so. Any other findings are listed under **Everything else on this ticket**.
+
+On a Tap event, a panel shows which entry mode the event uses: **Bind wristband & check in** (one result; if either half fails, neither is applied) or **Bind wristband only** (entry still needs a tap at the gate). The event decides this, not you. On a Ticket-only event, a panel shows which actions are and aren't available.
+
+### What you can do
+
+The **What you can do** panel lists every action that applies to this person. The first recommended action leads in a highlighted box. Other suggestions follow, and **Show everything else** expands the rest, grouped as Entry, Wristbands and Cashless.
+
+Actions that don't exist for the event (for example wristband actions on a ticket-only event) are not shown at all. An action that is shown but refused by the system explains why, and the attempt is recorded.
+
+A **Confirmation preview** beside it lists what the recommended action will change and what it will leave alone.
+
+**Record a service case** at the bottom is for when nothing resolves the problem, so the person isn't turned away with nothing recorded.
+
+#### Entry actions
+
+| Action | What it does | What it does not do |
+| --- | --- | --- |
+| **Check in** | Marks the ticket as entered. | Creates no wristband relationship. |
+| **Check in manually** | Marks the ticket as entered without a scan, recorded as a manual entry. | |
+| **Admit with an override** | Admits past a block that can be cleared at the desk. | Doesn't fix the underlying record. The block stays on the ticket and stays visible. |
+| **Allow re-entry** | Records a return through the gate as its own event. You can note which gate. | Leaves the first check-in exactly as it is. |
+| **Undo check-in** | Returns the ticket to unused. | Doesn't reverse anything bought after that entry, and doesn't remove the original entry from the log. |
+
+Which of these you see depends on the event. **Check in** and **Check in manually** are for Ticket-only events; Tap events admit people by wristband tap instead, so recovery goes through the wristband. **Admit with an override** and **Allow re-entry** are not tied to the event type.
+
+If someone has already entered and comes back later, use **Allow re-entry**. A return is recorded separately and never overwrites the first check-in.
+
+For wristband actions, see [Wristbands](/onsite/wristbands). For wallet actions, see [Participants](/onsite/participants) and [Cashless](/onsite/cashless).
+
+### The action panel
+
+Every action opens in a side panel with the same layout:
+
+1. **You are acting on**: confirms the ticket or person, so you don't act on the wrong one.
+2. **What will happen** and **What will not happen**.
+3. Any extra fields the action needs, such as a wristband ID.
+4. **Reason**: required for most actions. Pick from the list; a note alone is not enough.
+5. **Note**: optional extra detail, or **What did you verify?** where a written account is required.
+6. A tick box to confirm you have read the impact, on overrides and destructive actions.
+
+**Confirm** stays disabled until everything required is filled in, and a line above it tells you what is still missing. If an action fails or is refused, the panel says "Nothing was changed". You can adjust and try again, or record a service case. After success, the panel summarizes what changed and what didn't.
+
+<Warning>
+Overrides need a written account of at least 12 characters in **What did you verify?** (who approved it, what you checked, how you confirmed who they are) plus the tick box. Your name is recorded with the override.
+</Warning>
+
+### If you undo an entry
+
+When **Undo check-in** is available, an **If you undo this entry** panel lists anything that followed the entry. If nothing followed it, undoing affects only the ticket.
+
+## Permissions
+
+Some actions are marked **Supervisor** with a lock. They are shown to everyone but can only be used by a supervisor; for others the button is disabled and reads "Only a supervisor can do this. Ask one, or open a case." These are the restricted wristband overrides described in [Wristbands](/onsite/wristbands).
+
+<Note>
+The console does not issue refunds or void tickets. Those need a policy decision or a payment-provider check, so the console records them as [service cases](/onsite/cases) for review.
+</Note>

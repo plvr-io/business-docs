@@ -1,0 +1,95 @@
+{
+  "$schema": "https://mintlify.com/docs.json",
+  "theme": "mint",
+  "name": "PLVR Business Portal",
+  "colors": {
+    "primary": "#7C3AED",
+    "light": "#A78BFA",
+    "dark": "#5B21B6"
+  },
+  "navigation": {
+    "groups": [
+      {
+        "group": "Getting Started",
+        "pages": [
+          "index",
+          "getting-started/quickstart",
+          "getting-started/portal-tour"
+        ]
+      },
+      {
+        "group": "Organization",
+        "pages": [
+          "organization/settings",
+          "organization/team",
+          "organization/audience"
+        ]
+      },
+      {
+        "group": "Events",
+        "pages": [
+          "events/overview",
+          "events/event-editor",
+          "events/registration-form",
+          "events/rsvp",
+          "events/followers"
+        ]
+      },
+      {
+        "group": "Tickets",
+        "pages": [
+          "tickets/ticket-report",
+          "tickets/ticket-management",
+          "tickets/comp-tickets",
+          "other/payment-links"
+        ]
+      },
+      {
+        "group": "Promotions",
+        "pages": [
+          "promotions/promo-codes",
+          "promotions/campaigns",
+          "promotions/door-sales",
+          "promotions/tracking-links",
+          "promotions/affiliates"
+        ]
+      },
+      {
+        "group": "PLVR Tap",
+        "pages": [
+          "tap/introduction",
+          "tap/top-up-setup",
+          "tap/vendors",
+          "tap/approvals",
+          "tap/cashless-activity",
+          "tap/spending-report",
+          "tap/personalization-form"
+        ]
+      },
+      {
+        "group": "Onsite Operations",
+        "pages": [
+          "onsite/command-center",
+          "onsite/search",
+          "onsite/tickets",
+          "onsite/wristbands",
+          "onsite/cashless",
+          "onsite/guests",
+          "onsite/participants",
+          "onsite/cases",
+          "onsite/onsite-staff"
+        ]
+      },
+      {
+        "group": "More",
+        "pages": [
+          "other/table-booking",
+          "other/marketing"
+        ]
+      }
+    ]
+  },
+  "footer": {
+    "socials": {}
+  }
+}

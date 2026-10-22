@@ -1,0 +1,69 @@
+---
+title: "Approvals"
+description: "Review and approve or reject item and category submissions from vendors."
+---
+
+When a vendor adds or changes an item or category, the change is sent to you as a submission. It does not go live on the vendor's menu until you approve it. The **Approvals** page, under **PLVR Tap** in the event sidebar, is where you review these. It only appears for events with PLVR Tap enabled.
+
+The sidebar item can show a badge so you can see when submissions are waiting.
+
+## What you see
+
+Each row has three parts.
+
+- **Submission:** the item or category name with a status tag, the submission type, the Item ID or Category ID, who submitted it (vendor name, with an **Inactive** tag if the vendor is inactive, plus the login code used), when it was submitted, and the Submission ID.
+- **Review Details:** what was submitted. For a new item or category you see the submitted values (image, name, price). For an edit you see only the fields that changed, with **Current** and **Requested** values side by side. Click an image to enlarge it.
+- **Actions:** **Reject** and **Approve** buttons, shown on pending submissions only.
+
+### Submission types
+
+**Create Item**, **Edit Item**, **Create Category**, **Edit Category**.
+
+### Statuses
+
+| Status | Meaning |
+| --- | --- |
+| **Pending** | Waiting for your review. |
+| **Approved** | You approved it. Review Details show when and by whom. |
+| **Rejected** | You rejected it. The reason you gave is shown. |
+| **Withdrawn** | The vendor withdrew it. Shows when and with which login code. |
+
+## Find submissions
+
+By default the page shows **Pending** submissions. Narrow the list with:
+
+- **Status:** Pending, All Submissions, Approved, Rejected, or Withdrawn.
+- **Type:** All Types, Create Item, Edit Item, Create Category, or Edit Category.
+- **Vendor:** All Vendors or a single vendor.
+- **Search** by name, item ID, category ID, or submission ID.
+
+The list is paged, 10 per page, and tells you the total and the sort order.
+
+## Review a single submission
+
+<Steps>
+  <Step title="Check the details">
+    For edits, compare Current with Requested.
+  </Step>
+  <Step title="Approve or reject">
+    - Click **Approve** and confirm. This creates the item or category using the submitted values, or applies the requested changes.
+    - Click **Reject**, enter a **Rejection Reason**, and click **Reject Submission**. The reason is required (up to 500 characters) and is shown to the vendor.
+  </Step>
+</Steps>
+
+## Review in bulk
+
+Tick the checkboxes on pending rows (or the checkbox in the header to select all pending rows on the page). A bar appears with **Reject Selected** and **Approve Selected**.
+
+- You can select up to 50 submissions at a time.
+- Bulk reject asks for one reason, which is shown on all selected submissions.
+- If some submissions can't be processed (for example because they changed in the meantime), the confirmation message tells you how many were skipped.
+
+<Tip>
+Submissions from inactive vendors stay listed and reviewable. Check the **Inactive** tag before approving.
+</Tip>
+
+## Related
+
+- [Vendors](/tap/vendors)
+- [Overview of PLVR Tap](/tap/introduction)

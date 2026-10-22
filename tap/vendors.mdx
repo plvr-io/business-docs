@@ -1,0 +1,88 @@
+---
+title: "Vendors"
+description: "Create vendors, then manage their sales locations, items, and login codes."
+---
+
+**Vendor Setup** is where you create the vendors (stalls) that sell to attendees with their wristbands, and manage what each vendor sells and who can log in. Find it under **PLVR Tap** in the event sidebar. It only appears for events with PLVR Tap enabled.
+
+## The vendor list
+
+The page lists every vendor with these columns:
+
+| Column | What it shows |
+| --- | --- |
+| **Vendor Name** | Name and image. Click it to open the vendor. |
+| **Status** | **Active** or **Inactive**. You can change it right in the table. |
+| **Sales Locations** | Number of sales locations. Click to jump to that tab. |
+| **Items** | Number of items. Click to jump to that tab. |
+| **Login Codes** | Number of login codes. Click to jump to that tab. |
+
+Use **Search by vendor name** to filter the list. The pencil icon edits a vendor, and **View Details** opens it.
+
+### Add a vendor
+
+<Steps>
+  <Step title="Click Add Vendor">
+    A **Create Vendor** panel opens.
+  </Step>
+  <Step title="Fill in the details">
+    - **Vendor Image** (optional, up to 5 MB). You can crop it after choosing a file.
+    - **Name** (required), for example "Official Merchandise".
+    - **Note** (optional, up to 200 characters). This is an internal note.
+    - **Status** (required): Active or Inactive.
+  </Step>
+  <Step title="Click Create Vendor">
+    The vendor now appears in the list.
+  </Step>
+</Steps>
+
+<Note>
+Inactive vendors are unavailable for login and new orders.
+</Note>
+
+## Vendor detail
+
+Opening a vendor shows its name and status, with three tabs. Use the **Vendor Setup** link at the top to go back to the list.
+
+### Sales locations
+
+A sales location is a place where the vendor sells, for example "Main Bar". The table shows **Sales Location**, **Description**, **Items** (how many items are sold there), and **Status**.
+
+To add one, click the add button, then enter a **Name** (required), an optional **Description** (up to 200 characters), and a **Status**. Click **Create Sales Location**. Use the pencil icon to edit.
+
+Inactive sales locations are unavailable for new orders.
+
+### Items
+
+This tab shows **Items** with a count, and lets you manage categories and items together.
+
+- **Add Item** opens a form with: **Item Image** (optional), **Sales Locations** (required, pick at least one place where the item is sold), **Category**, **Item Name** (required), **Price** in the event currency (required, must be greater than 0), and **Status**.
+- **Category** buttons let you create categories. A category needs a **Name** (required) and a **Status**.
+- Filter the table by **Sales Location**, **Category** (including **No Category**), or **Search by item name**.
+- **Export** downloads the vendor's items as a CSV file.
+
+<Note>
+Inactive items are unavailable for new orders. Inactive categories and their items are unavailable at all sales locations.
+</Note>
+
+Items and categories that a vendor submits themselves go through [Approvals](/tap/approvals) before they go live.
+
+### Login codes
+
+Login codes are what a vendor's staff use to sign in at the stall. The table shows **Login Code**, **Note**, and **Status**.
+
+- Click the add button to generate codes. Choose the **Number of Login Codes** (1 to 200), add an optional **Note** (up to 200 characters, applied to every code in the batch, for example "Alex - Vendor Manager"), and set the **Status**. Click **Generate Codes**.
+- Click the copy icon next to a code to copy it.
+- **Search by login code** filters the list.
+- **Export** downloads the vendor's login codes as a CSV file.
+- To edit a code's note or status, use the pencil icon.
+
+<Warning>
+Inactive login codes cannot sign in or perform new actions. Set a code to Inactive if someone leaves the stall or a code is shared by mistake.
+</Warning>
+
+## Related
+
+- [Approvals](/tap/approvals)
+- [Spending report](/tap/spending-report)
+- [Overview of PLVR Tap](/tap/introduction)

@@ -1,0 +1,96 @@
+---
+title: "Ticket Management"
+description: "Edit ticket prices, quantities, and sale windows, turn tickets on or off, create add-ons, and set up release chains."
+---
+
+Use **Ticket Management** to control what attendees can buy. The page has two tabs: **Tickets** and **Add-ons**.
+
+## Find a ticket
+
+Above the table you can filter by:
+
+- **Ticket Status** (or **Add-on Status** on the Add-ons tab): **Active**, **Inactive**, or **Ended**. Add-ons offer **Active** and **Inactive**.
+- **Session**: shown only when the event has more than one session.
+- **Search**: by ticket name or bundle name (by add-on name on the Add-ons tab).
+
+Tickets are grouped by session. Each session has a table with **Ticket Type**, **Price**, **Total**, **Sold**, **Available**, and **Status**.
+
+## Turn a ticket on or off
+
+Use the status dropdown in the **Status** column:
+
+- **Active**: the ticket is on sale and visible to buyers.
+- **Inactive**: the ticket is hidden from buyers.
+- **Ended**: shown automatically once the ticket's sale end time has passed. You cannot change the status of an ended ticket.
+
+If an active ticket's sale start date is still in the future, a note under the status shows how many days until sales start.
+
+## Edit a ticket or bundle
+
+Select the pencil icon at the end of a row to open the **Edit Ticket** panel. For a bundle, the panel is called **Edit Bundle** and lists the included tickets.
+
+| Field | Notes |
+| --- | --- |
+| **Session** | Shown for reference and cannot be changed. |
+| **Name** | Required. Locked once any tickets have been sold. |
+| **Status** | **Active** (visible to buyer) or **Inactive**. |
+| **Description** | Up to 200 characters. |
+| **Total Quantity** | Required. Must be a positive whole number and cannot be lower than the number already sold. For bundles this field is **Max Bundle Sales**, a cap on bundle sales that is still controlled by the underlying ticket inventory. |
+| **Price** | Required. Locked once any tickets have been sold. Whole numbers only for currencies without decimals, otherwise up to two decimal places. |
+| **Sales Start Date / Sales End Date** | Required. Choose a date, then an hour and minute for each. |
+| **Limit Qty per Order** | Optional. A whole number from 1 to 10. |
+| **Limit Qty per User** | Optional. A whole number from 1 to 20. |
+
+Select **How Fees Work** under the price to see what the buyer pays and what you receive. It breaks the price down into the ticket price, service fee, VAT, and the amount you receive.
+
+Select **Save** to apply your changes, or **Cancel** to close the panel.
+
+<Warning>
+  Name and price cannot be changed after the first ticket is sold. Set them carefully before you open sales.
+</Warning>
+
+## Release chains
+
+Each session has a **Release Chains** panel above its ticket table. A release chain lets you sell tiers of tickets one after another, for example early bird followed by general admission. When one tier sells out, the next tier is activated automatically.
+
+<Steps>
+  <Step title="Create a chain">
+    Open the **Release Chains** panel and select **New chain**. Enter a name (1 to 100 characters, for example "GA") and select **Create**. A new chain starts paused.
+  </Step>
+  <Step title="Add tickets in order">
+    In the chain card, use **+ Add existing ticket** to add tickets. Drag tiers to reorder them. A ticket can only be in one chain, and add-ons cannot be added.
+  </Step>
+  <Step title="Turn on Auto-release">
+    Switch **Auto-release** on. While it is off, the chain is paused and later tiers will not activate by themselves.
+  </Step>
+</Steps>
+
+The panel header summarizes your chains, for example "2 chains · 1 auto-releasing", and states the sell-through percentage at which the next tier opens. Each tier shows its current state, such as **On sale**, activates automatically when the previous tier sells out, or sold out. Select the history icon (**Activity log**) to see a record of sell-outs, automatic activations, and when auto-release was turned on or paused. You can also delete a chain, or copy it to another session of the same event.
+
+<Note>
+  Every ticket in a chain needs a sale end time that has not passed. If a tier has ended, update its end time or remove it from the chain.
+</Note>
+
+## Add-ons
+
+Add-ons are extras buyers can purchase alongside tickets, such as parking or merchandise. Open the **Add-ons** tab and select **Create Add-on**.
+
+| Field | Notes |
+| --- | --- |
+| **Session** | Required. |
+| **Add-on Name** | Required. |
+| **Status** | Required. Active or Inactive. |
+| **Description** | Optional. |
+| **Linked to** | Required. The tickets an add-on can be purchased with. |
+| **Inventory Source** | Required. **Own inventory** gives the add-on its own quantity. **Sync from ticket** uses another ticket type's inventory, so each add-on sale reduces that ticket's availability. |
+| **Source Ticket Type** | Shown for **Sync from ticket**. Pick the ticket whose inventory is used. |
+| **Total Quantity** or **Add-on Sales Limit** | Required. With **Own inventory** this is the quantity. With **Sync from ticket** it caps add-on sales while using the source ticket's inventory. |
+| **Face Value** | Required. A positive whole number. |
+| **Sales Start Date / Sales End Date** | Optional for add-ons. |
+| **Limit Qty per Order / Limit Qty per User** | Optional. Positive whole numbers. |
+
+The Add-ons table shows **Add-on Name**, **Price**, **Total**, **Sold**, **Available**, and **Status**. Use the edit icon on a row to change an add-on. When editing, the inventory source is locked.
+
+<Tip>
+  To give tickets away instead of selling them, see [Complimentary Tickets](/tickets/comp-tickets).
+</Tip>

@@ -1,0 +1,111 @@
+---
+title: "Wristbands"
+description: "Add wristband stock, bind and unbind bands, freeze or replace them, and resolve ownership conflicts on Tap events."
+---
+
+The **Wristbands** workspace is for Tap events only. On a Ticket-only event it isn't shown, and a direct visit says "This event doesn't use wristbands." Open it from the [Command Center](/onsite/command-center).
+
+<Warning>
+Balances belong to people, not to wristbands. Replacing a band doesn't move money, and freezing a band doesn't freeze the balance. To stop spending, freeze the wallet from the participant's profile. See [Participants](/onsite/participants).
+</Warning>
+
+## Wristband list
+
+The list shows one row per wristband.
+
+| Column | Meaning |
+| --- | --- |
+| **Band** | The tag UID (what a reader reads from the band), linking to the band's page. The printed ID is shown underneath when both exist. |
+| **State** | **Working**, **Frozen**, **Stopped** or **Not issued**. A reason is shown underneath when a band isn't usable. |
+| **On ticket** | The ticket the band is bound to, or "Nobody". |
+| **Holder** | The participant, linking to their profile. |
+| **Their balance** | The holder's wallet balance, with "Balance frozen" if their wallet is frozen. |
+| **Since** | When the band was bound. |
+
+### Find a wristband
+
+Search by wristband ID, Ticket ID or holder email and select **Search**. **All** lists every band; **Not working** lists bands that are stopped. Lists show 25 per page.
+
+### Row actions
+
+| Button | When it appears | What it does |
+| --- | --- | --- |
+| **Freeze** | Band is usable and not frozen | The band stops working for entry and payment. |
+| **Unfreeze** | Band is frozen | The band works again. |
+| **Take off** | Band is bound to a ticket | Ends the binding. |
+| **Bind to ticket** | Band is usable and not on a ticket | Asks for the Ticket ID and binds the band to it. |
+
+Each opens the standard action panel (see [Tickets & Entry](/onsite/tickets#the-action-panel)) with a reason picker and a "What will happen / What will not happen" summary. For example, freezing a band leaves the balance and the ticket unchanged; taking a band off leaves the balance, entry history and past purchases untouched.
+
+**Bind to ticket** does what the event is set up to do. If binding also checks the person in, the panel reads **Put a wristband on and check in**; otherwise it reads **Put a wristband on**, and the person enters when they tap at the gate. You don't choose between them.
+
+## Add wristbands
+
+Select **+ Add wristbands** to register spare bands before doors open.
+
+<Steps>
+  <Step title="Enter the bands">
+    In **Wristband UIDs or printed IDs**, enter one per line. A scanner that sends a new line after each tap will fill the box as you tap bands in turn. Separators don't matter: `04:A2:B3` and `04a2b3` are the same band. Duplicates are ignored, and the button shows how many bands are ready.
+  </Step>
+  <Step title="Add an optional note">
+    Use **Note** to record which box the bands came from.
+  </Step>
+  <Step title="Select Add">
+    The button reads **Add N bands**. You can add at most 200 at a time.
+  </Step>
+</Steps>
+
+The bands become available on this event so they can be bound when someone collects one. This creates no wallet and binds nothing.
+
+The result shows each band separately, because partial success is normal. A band can be newly registered, already available, or refused with a reason. Check each line: a band shown as **newly registered** when you expected an existing one usually means a mistyped ID. Select **Add more** to continue or **Done** to close.
+
+## Wristband page
+
+Select a band to open its page. The header shows the tag UID and when it was bound, or "Not bound to any ticket". A **Binding blocked** label appears if a bind is in conflict.
+
+**Add note** opens the case form so you can record something about this band. See [Service cases](/onsite/cases).
+
+### Summary cards
+
+- **Tag UID**: with a copy button. If a band was added before its UID was kept, it shows "Not recorded"; re-add it with a reader to record it.
+- **Band status**: Working, Frozen, Stopped or Not issued, with the reason.
+- **Bound to**: the ticket and holder, or "Nothing". An unbound band belongs to nobody.
+- **Wallet link**: the holder's balance, with a reminder that it lives on the person, not this band.
+
+### Band history and bindings
+
+**Band history** lists every recorded action on this band with time, action, operator, reason and result. Refused attempts are kept on purpose; a blocked action is evidence.
+
+**Bindings** lists every ticket the band has been bound to, with when it was bound and ended, the reason, and whether it is **Active**. Replaced and unbound bindings are kept, so "which band did they have then" can always be answered.
+
+### Available actions
+
+The **Available actions** panel lists the actions for this band. Each one says what it does and what it leaves alone. An action that can't be used right now says why instead of showing a button.
+
+| Action | What it does | What it leaves alone |
+| --- | --- | --- |
+| **Put a wristband on** (or **and check in**) | Binds this band to a ticket. | No balance moves. Without check-in, entry happens when they tap at the gate. |
+| **Replace the wristband** | Retires the old band and binds a new one to the same ticket. You enter the new band's ID. | The balance, which never lived on the band. |
+| **Take the wristband off** | Ends this band's binding. | Doesn't check the participant out or touch the balance. |
+| **Report the wristband lost or stolen** | Stops the band immediately and ends any binding. | Issues no replacement, and doesn't freeze the wallet. |
+| **Freeze the wristband** | Stops this band being accepted at gates and tills. | The balance stays spendable on any other band the person holds. |
+| **Unfreeze the wristband** | Lets this band be used again. | Doesn't unfreeze the wallet. |
+| **Put a wristband on anyway** | Binds a band to a ticket the checks object to. | Doesn't fix what was objected to. Restricted. |
+| **Force rebind the wristband** | Moves this band off the current holder's ticket and onto another one. | The current holder's band is detached, but their entry history and purchases stay on their ticket. No balance moves. Restricted. |
+
+Most of these ask for a reason. See [Tickets & Entry](/onsite/tickets#the-action-panel) for how the action panel works.
+
+### Restricted actions
+
+**Put a wristband on anyway** and **Force rebind the wristband** are marked **Restricted** and only a supervisor can use them. Both need:
+
+- a written account of at least 12 characters in **What did you verify?**, and
+- the confirmation tick box.
+
+The panel warns that this overrides a refusal and is recorded against your name.
+
+### Ownership conflicts
+
+If you arrive at a band's page because a ticket tried to bind a band that is already bound, the page shows an **Ownership conflict** panel. It compares **Currently bound** with **Requesting bind**, side by side: ticket, when it was bound, entry, and cashless activity. Whoever has entry history and spending on the band has been using it.
+
+Rebinding detaches both people from the band they are wearing, so resolve ownership before moving anything. The safe route is **Investigate ownership**, which opens the case form already set to an ownership conflict, so you can record what happened and escalate it. A supervisor can use **Force rebind the wristband** once ownership is settled.
