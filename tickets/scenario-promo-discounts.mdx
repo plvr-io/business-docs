@@ -1,0 +1,53 @@
+---
+title: "Scenario: Discount Campaigns with Promo Codes"
+description: "Use promo codes to reward partners, run a limited-time offer, or discount one slow-selling ticket."
+---
+
+**Goal:** Give targeted discounts without changing your public ticket prices.
+
+Promo codes work on top of any ticket price. Buyers enter the code at checkout and the discount applies to the tickets the code covers. This guide shows common setups. For every field, see [Promo Codes](/promotions/promo-codes).
+
+## Setup 1: A partner code with a usage cap
+
+A venue partner can offer their audience 10% off, limited to 50 uses.
+
+<Steps>
+  <Step title="Create the code">
+    Open [Promo Codes](/promotions/promo-codes), then select **Create**. Choose **Generation Method: Manual** and type a **Code**, such as PARTNER10.
+  </Step>
+  <Step title="Set the discount">
+    Choose **Discount Type: Percentage** and a **Discount Value** of 10.
+  </Step>
+  <Step title="Limit where it applies">
+    **Apply To: Specific ticket type**, then pick the session and the ticket (a General Admission ticket or a bundle).
+  </Step>
+  <Step title="Add a usage limit">
+    Turn on **Usage Limit** and set the maximum transactions to 50. The code stops working after that.
+  </Step>
+</Steps>
+
+## Setup 2: A flash sale with a time limit
+
+Turn on **Time Limit** and set a start and end date and time, for example a 48-hour weekend offer. Choose **Apply To: All ticket types** to cover everything.
+
+## Setup 3: Unique codes for many people
+
+Choose **Generation Method: Bulk Generate** to create up to 100 codes at once, with an optional **Code Prefix** such as "VIP". Combine with a **Usage Limit** of 1 to make each code single-use.
+
+## Setup 4: A fixed amount off
+
+Choose **Discount Type: Fixed Amount** and enter an amount in your event currency, such as $5 off.
+
+## Promo codes and tiers
+
+Promo codes and [release chains](/tickets/scenario-ga-tiers) work together. A code that applies to a specific ticket only works on that ticket, so a code for "General Admission" does not discount Early Bird or Final Release. Choose **All ticket types** if you want it to work across every tier.
+
+## Check how a code performs
+
+- In Promo Codes, see **Uses/Limit**, **Revenue**, and **Cost** per code.
+- Open **View Usage** on a row to see each buyer, tickets, and time.
+- In the [Ticket Report](/tickets/ticket-report), the **Promo Code** column shows which orders used which codes.
+
+<Tip>
+  Need to track which channel brought buyers (not discount them)? See [Tracking Links](/promotions/tracking-links) and [Affiliates](/promotions/affiliates).
+</Tip>

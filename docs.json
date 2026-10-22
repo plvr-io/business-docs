@@ -13,8 +13,30 @@
         "group": "Getting Started",
         "pages": [
           "index",
+          "getting-started/onboarding",
           "getting-started/quickstart",
           "getting-started/portal-tour"
+        ]
+      },
+      {
+        "group": "By Role",
+        "pages": [
+          "roles/index",
+          "roles/owner-and-admin",
+          "roles/event-manager",
+          "roles/marketing-and-promotions",
+          "roles/door-and-onsite-staff",
+          "roles/finance-and-reporting"
+        ]
+      },
+      {
+        "group": "Playbooks",
+        "pages": [
+          "guides/launch-checklist",
+          "guides/promote-your-event",
+          "guides/cashless-festival-setup",
+          "guides/event-day-runbook",
+          "guides/after-the-event"
         ]
       },
       {
@@ -38,10 +60,22 @@
       {
         "group": "Tickets",
         "pages": [
-          "tickets/ticket-report",
+          "tickets/concepts",
           "tickets/ticket-management",
+          "tickets/ticket-report",
           "tickets/comp-tickets",
           "other/payment-links"
+        ]
+      },
+      {
+        "group": "Ticketing Scenarios",
+        "pages": [
+          "tickets/scenario-ga-tiers",
+          "tickets/scenario-multi-day-festival",
+          "tickets/scenario-bundles",
+          "tickets/scenario-vip-addons",
+          "tickets/scenario-promo-discounts",
+          "tickets/scenario-comp-guests"
         ]
       },
       {

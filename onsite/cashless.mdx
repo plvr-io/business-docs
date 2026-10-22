@@ -60,13 +60,13 @@ The ledger shows 50 rows per page.
 
 ### Top-up stations
 
-The **Top-up stations** panel shows each station's activity today: method, number of top-ups, amount, and how many are unresolved. A health label (Healthy, Watch or Degraded) is inferred from the transactions each station booked. Stations don't report their own status.
+The **Top-up stations** panel shows each station's activity today: method, number of top-ups, amount, and how many are unresolved. A health label (Healthy, Watch or Degraded) is based on the top-ups that station has recorded.
 
 ## What this workspace cannot do
 
 The only money write in the console is **Correct the balance**, and it is done from the person's wallet. See [Participants](/onsite/participants#cashless).
 
-Crediting an unconfirmed top-up, moving one between wallets, refunding a balance and refunding a vendor charge each need a payment-provider check or a policy decision that this console does not have. Each one produces a [service case](/onsite/cases) instead.
+Crediting an unconfirmed top-up, moving one between wallets, refunding a balance and refunding a vendor charge each need a payment-provider check or a policy decision that cannot be made from the desk. Each one is recorded as a [service case](/onsite/cases) instead.
 
 ## Top-up detail
 
@@ -77,19 +77,19 @@ Select **Investigate** on an unresolved top-up to open its investigation page, t
 The page shows three layers side by side, because they must all agree:
 
 1. **Payment provider:** whether the provider shows the payment as paid, pending, expired, failed or cancelled.
-2. **Top-up entry:** the status of the top-up record in PLVR.
+2. **Top-up entry:** the status of the top-up in PLVR.
 3. **Wallet balance:** the balance, or whether it is credited or unchanged.
 
 The **Reconciliation** panel lists each layer's state and what it is based on. **Where it broke** states the diagnosis in words.
 
 <Warning>
-Expired does not mean not charged. The credit step failing and the card never being charged look identical on this screen. Don't tell a guest that no money was taken unless you have checked.
+Expired does not mean not charged. A failed credit and a card that was never charged look identical on this screen. Don't tell a guest that no money was taken unless you have checked.
 </Warning>
 
 Two banners help you read the layers:
 
-- If PLVR's own payment record says the provider took the money but the balance never went up, the page says so: the credit step never ran, so it is owed. Credit it against this evidence rather than asking the guest to pay again.
-- If the top-up expired and there is no completed payment on record, the page reminds you that this is PLVR's record, not the provider's. If the guest can show a charge on a statement, believe them and open a payment review.
+- If PLVR shows the provider took the money but the balance never went up, the page says so: the guest is owed the credit. Resolve it against this evidence rather than asking the guest to pay again.
+- If the top-up expired and PLVR has no completed payment for it, the page reminds you that this reflects PLVR's information, not the provider's. If the guest can show a charge on a statement, believe them and open a payment review.
 
 ### Evidence, next steps and limits
 

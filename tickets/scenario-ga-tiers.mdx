@@ -1,0 +1,97 @@
+---
+title: "Scenario: General Admission in Tiers"
+description: "Sell only General Admission in stages (Early Bird, General Admission, Final Release) and let a release chain open each tier automatically."
+---
+
+**Goal:** You sell one kind of entry, General Admission, but want the price to rise as demand grows. Early buyers get a deal, and the last tickets cost the most.
+
+## The example
+
+| Tier | Quantity | Price |
+| --- | --- | --- |
+| Early Bird | 100 | $20 |
+| General Admission | 300 | $30 |
+| Final Release | 100 | $40 |
+
+Total capacity: 500 tickets. Potential revenue if everything sells at face value: 100 x $20 + 300 x $30 + 100 x $40 = $15,000.
+
+## Should you use a release chain?
+
+<Tabs>
+  <Tab title="Use a release chain when">
+    You want the next price to open the moment the previous tier is gone, without watching sales and flipping tickets on by hand, including overnight or on weekends.
+  </Tab>
+  <Tab title="Skip it when">
+    You prefer to switch tiers on specific dates only (use each ticket's **Sales Start Date** and **Sales End Date**), or you want full manual control over when the next tier opens.
+  </Tab>
+</Tabs>
+
+You can also combine them: give each tier a sale window as a safety net, and let the chain advance early if a tier sells out first.
+
+## Set it up
+
+<Steps>
+  <Step title="Check the three tickets">
+    Open [Ticket Management](/tickets/ticket-management) and find the session. Confirm that Early Bird, General Admission, and Final Release each have the right **Price**, **Total**, and sale dates. Name and price lock after the first sale, so check them now.
+  </Step>
+  <Step title="Set the starting statuses">
+    Make **Early Bird** **Active**. Keep **General Admission** and **Final Release** **Inactive** so buyers only see the tier that is currently open.
+  </Step>
+  <Step title="Give every tier a future end time">
+    Every ticket in a chain needs a sales end time that has not passed. Set the end times so they make sense in order, with each later tier ending no earlier than the one before it. The portal tells you if they do not line up.
+  </Step>
+  <Step title="Create the chain">
+    Open the **Release Chains** panel above the ticket table and select **New chain**. Name it, for example "GA", and select **Create**. New chains start paused.
+  </Step>
+  <Step title="Add the tiers in order">
+    Use **+ Add existing ticket** to add **Early Bird**, then **General Admission**, then **Final Release**. Drag to reorder if needed. The order is the order they open.
+  </Step>
+  <Step title="Turn on Auto-release">
+    Switch **Auto-release** on. Each tier now shows a line such as **On sale** or "Activates automatically when 'Early Bird' sells out".
+  </Step>
+</Steps>
+
+## What happens as tickets sell
+
+<Steps>
+  <Step title="Early Bird is on sale">
+    Buyers see only Early Bird at $20. The chain card shows how much of it has sold.
+  </Step>
+  <Step title="Early Bird nearly sells out">
+    The next tier opens when the percentage shown at the top of the Release Chains panel is reached (for example "The next tier opens when 98% of the current tier is sold"). General Admission becomes **Active** at $30 automatically, and you will see "Auto-activated when 'Early Bird' sold out" next to it in the ticket table.
+  </Step>
+  <Step title="Repeat for Final Release">
+    The same happens when General Admission nears sell-out: Final Release opens at $40.
+  </Step>
+  <Step title="The chain finishes">
+    After the last tier, the chain is marked **Exhausted**.
+  </Step>
+</Steps>
+
+<Note>
+  The next tier opens at a high percentage sold, not necessarily at the very last ticket. Unpaid orders still in checkout can hold a few tickets for a short while. If they are released, the earlier tier can show a few tickets back on sale, for example "Sold out - next tier opened - 3 back on sale".
+</Note>
+
+## What attendees see
+
+Attendees only see tickets that are **Active** and within their sale window. At any moment they typically see one General Admission option with the current price. They never see the later tiers until their turn. There is no countdown or tier list on the buyer page unless you describe it yourself in the ticket **Description** or event page.
+
+<Tip>
+  Mention the staging in the **Description** of each ticket (up to 200 characters), for example "Early Bird: first 100 tickets only". Buyers then understand why the price may rise.
+</Tip>
+
+## Keep an eye on it
+
+- Select the history icon (**Activity log**) in the Release Chains panel to see each sell-out and automatic activation, and when auto-release was turned on or paused.
+- Switch **Auto-release** off at any time to pause the chain. Tickets keep their current status, and later tiers will not activate until you turn it back on.
+- If a later tier is activated manually while an earlier one is still selling, the portal tells you the inactive tier will not auto-activate. Activate it manually or remove it from the chain.
+
+## Reuse it for other sessions
+
+If you run several sessions with the same tiers, use **Copy to...** on the chain card. The portal matches tiers to tickets in the other session by name and lets you review matches before copying. Copied chains start paused, so review them and then turn on **Auto-release**. See [Multi-day festival](/tickets/scenario-multi-day-festival).
+
+## Related
+
+- [Ticketing Concepts](/tickets/concepts)
+- [Ticket Management reference](/tickets/ticket-management)
+- [Promo Codes](/promotions/promo-codes) for discounts on top of any tier
