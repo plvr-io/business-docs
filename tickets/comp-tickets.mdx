@@ -1,0 +1,101 @@
+---
+title: "Complimentary Tickets"
+description: "Issue free tickets to guests one at a time or in bulk, email them to recipients, and download them later."
+---
+
+Use **Complimentary Tickets** (also called comp tickets) to give free tickets to guests, sponsors, press, or staff. Comp tickets count against your ticket inventory like any other ticket.
+
+## Summary and list
+
+Two cards at the top show **Total Recipients** and **Total Tickets** issued so far.
+
+{/* SCREENSHOT: images/tickets/comp-tickets-list.png | Open the event's Complimentary Tickets page. Pre-issue about 5 comp tickets (mix of Ticket Types, one recent one still showing 'Generating...'). Capture the two summary cards (Total Recipients, Total Tickets), the 'Search by name or email' box, the 'Create Complimentary Tickets' button and the table with columns Name, Session, Ticket Type, Quantity, Sent Date, Remarks. Highlight the download icon at the end of a row. */}
+
+Below them, the table lists every comp ticket you have issued. Search by name or email with **Search by name or email**. Select a column heading to sort by it.
+
+| Column | Description |
+| --- | --- |
+| **Name** | The recipient's name. |
+| **Session** | The session the ticket is for. |
+| **Ticket Type** | The ticket type issued. |
+| **Quantity** | How many tickets were issued. |
+| **Sent Date** | When the tickets were issued. |
+| **Remarks** | Your internal notes. |
+
+Use the download icon (**Download tickets**) at the end of a row to download that recipient's tickets as PDFs. While tickets are still being prepared, the row shows **Generating...** instead. Check back in a moment.
+
+## Create comp tickets
+
+Select **Create Complimentary Tickets** to open the panel. It has two tabs: **Single Creation** and **Bulk Creation**.
+
+### Single Creation
+
+<Steps>
+  <Step title="Choose whether to email the ticket">
+    Turn on **Email ticket to recipient** if you want the tickets sent by email. This switch is turned off automatically, and cannot be used, when the quantity is above 10.
+  </Step>
+  <Step title="Enter the recipient">
+    Fill in **Name** and **Email**. Both are required, and the email must be valid.
+  </Step>
+  <Step title="Pick the ticket">
+    Choose a **Session** (only asked when the event has several sessions), then a **Ticket Type**. Ticket types that are sold out appear greyed out and cannot be selected.
+  </Step>
+  <Step title="Set the quantity and remarks">
+    Enter **Quantity**, a positive whole number up to 50, and never more than what remains for that ticket type. **Remarks** is optional, up to 200 characters, and is for your own reference.
+  </Step>
+  <Step title="Save">
+    Select **Save**. A confirmation shows how many tickets were generated.
+  </Step>
+</Steps>
+
+{/* SCREENSHOT: images/tickets/comp-tickets-single-form.png | Click 'Create Complimentary Tickets' and stay on the 'Single Creation' tab. Fill in: Email ticket to recipient ON, Name 'Alex Rivera', Email 'alex@example.com', a Session and Ticket Type, Quantity 2, Remarks 'Press'. Capture the whole panel including the Save button. Use an event with at least one sold-out ticket type so the greyed-out option is visible in the Ticket Type dropdown if possible. */}
+
+### Bulk Creation
+
+Bulk creation issues the same ticket type to many recipients at once, up to **50 recipients** per submission.
+
+<Steps>
+  <Step title="Choose delivery and ticket type">
+    Optionally turn on **Email tickets to recipients**. Select the **Session** (if asked) and **Ticket Type**. All recipients receive the same ticket type.
+  </Step>
+  <Step title="Add recipients">
+    Add rows in the **Recipients** list manually, or import them from CSV (see below). Each row needs a **Name**, **Email**, and **Quantity**. A counter shows how many recipients you have out of 50.
+  </Step>
+  <Step title="Check the quantities">
+    The quantity limit per recipient is shown in the column heading as **Qty (Max ...)**. It is 50, or 10 when emailing tickets, and it can be lower if fewer tickets remain. The page shows **Total Tickets** and **Remaining**. If the total exceeds what remains, a warning asks you to adjust the quantities.
+  </Step>
+  <Step title="Add remarks and save">
+    **Remarks** applies to all tickets in the batch (up to 200 characters). Select **Save** to create them.
+  </Step>
+</Steps>
+
+{/* SCREENSHOT: images/tickets/comp-tickets-bulk-form.png | In the Create Complimentary Tickets panel select the 'Bulk Creation' tab. Pick a Ticket Type, add 3 recipient rows (Name, Email, Quantity). Capture the Recipients list with the counter (x/50), the 'Qty (Max ...)' column heading, the Total Tickets and Remaining figures, Remarks, and the Save button. Highlight the 'Qty (Max ...)' heading. */}
+
+### Import recipients from CSV
+
+You can upload a CSV file with **Upload CSV**, or paste rows into the box and select **Parse & Preview**. Select **Download Template** to get a starting file.
+
+The file needs three columns in this order: Name, Email, Quantity.
+
+```csv
+Name,Email,Quantity
+John Doe,john@example.com,1
+Jane Smith,jane@example.com,2
+```
+
+- A header row is optional. If the first row contains "name", "email", and "quantity", it is skipped.
+- When pasting, use one recipient per line in the form `Name,Email,Quantity`, with no header.
+- Each row must have exactly three values separated by commas, so names cannot contain commas.
+- Name cannot be empty, email must be valid, and quantity must be a positive whole number.
+- Imported rows count toward the 50 recipient limit, along with rows you have already added.
+- If a row is invalid, the import stops and tells you which line to fix.
+
+{/* SCREENSHOT: images/tickets/comp-tickets-csv-import.png | In the Bulk Creation tab, paste three lines (Name,Email,Quantity) into the paste box and click 'Parse & Preview'. Capture the 'Upload CSV' button, 'Download Template' link, the paste box and the resulting populated Recipients list. */}
+
+<Note>
+  Imported recipients are added to the Recipients list first, so you can review and edit them before saving.
+</Note>
+
+<Tip>
+  Not sure whether to email or download? Emailing sends tickets directly to guests. If you leave it off, you can still download each recipient's tickets from the table afterward.
+</Tip>

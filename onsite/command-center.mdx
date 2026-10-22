@@ -1,0 +1,95 @@
+---
+title: "Command Center"
+description: "The Onsite Operations home screen: search for a guest, see what needs attention, and open any desk workspace."
+---
+
+Onsite Operations is the desk console for the day of your event. You open it from **Onsite Operations** in the event sidebar. The first screen, the Command Center, answers two questions: is the floor healthy right now, and what needs doing next.
+
+The page header shows the event name, start time, timezone, and whether this is a **Tap event** or a **Ticket-only event**. The event type decides what you can do in the console:
+
+{/* SCREENSHOT: images/onsite/onsite-command-center-overview.png | Open Onsite Operations in the event sidebar of a Tap event during activity, with a few open cases. Capture the full Command Center: header with Tap event label, search box, health banner (if available), attention queue, Workspaces, Desk activity. Highlight the search box and the Workspaces panel. */}
+
+- **Ticket-only event:** guests enter by QR scan, or by manual check-in when a code won't scan. There are no wristbands and no cashless wallet, so those screens and actions don't appear.
+- **Tap event:** guests enter by tapping a wristband. QR and manual check-in are not available. Wristbands and Cashless workspaces are shown. See [PLVR Tap](/tap/introduction).
+
+<Note>
+The Command Center refreshes itself about every 30 seconds, so you don't need to reload the page to see new cases.
+</Note>
+
+## Find a guest
+
+The large search box at the top is the main control, because most desk interactions start with someone arriving with a problem.
+
+{/* SCREENSHOT: images/onsite/onsite-command-center-search.png | On the Command Center, type a three-character-plus email into the search box so the auto-detected type label and Search button are enabled. Crop to the search box. */}
+
+Type any identifier and select **Search**: a Ticket ID, email, wristband, order number, or a payment or top-up reference. The type is detected for you. You need at least three characters before **Search** becomes available.
+
+Results open on the [Search](/onsite/search) page.
+
+## Open a service case
+
+Select **+ New service case** at the top right to record a problem raised at the desk. See [Service cases](/onsite/cases) for the form and what happens next.
+
+## Summary cards
+
+| Card | What it shows |
+| --- | --- |
+| **Open service cases** | How many cases are open, and how many are waiting on review. Select it to open the case list. |
+| **Blocked from entry** | How many tickets can't currently enter, plus how many cases have been closed and what share were settled at the desk. Select it to open the blocked tickets. |
+| **Unresolved top-ups** | Tap events only. Top-ups where money may have been taken without the balance going up, and the amount unaccounted for. If any have expired, the card tells you to re-check them with the payment provider. Select it to open [Cashless](/onsite/cashless). |
+| **Average time to close** | The average (mean, not median) time cases took to close. It shows "no closures yet" until a case has been closed. |
+
+## Operational health
+
+When the floor is not running normally, a banner appears under the cards: **Operational health: Degraded** or **Operational health: Incident**, with a sentence explaining why. When everything is stable, no banner is shown.
+
+## Attention queue
+
+The attention queue lists open cases, ordered by risk and then by how long the person has been waiting. The first eight are shown; select **View all** to see every case.
+
+{/* SCREENSHOT: images/onsite/onsite-command-center-attention-queue.png | On the Command Center, have at least three open cases of varied risk, including one Unmatched and one sent for review. Capture the Attention queue panel with risk labels, review type labels and the View all link. */}
+
+Each row shows:
+
+- The type of problem and why it needs attention.
+- A **review type** label, if the case has been sent for review.
+- **Unmatched**, if the case was raised against something the desk typed in but nobody was identified yet.
+- A **risk** label (High, Medium or Normal) and how long the person has been waiting.
+
+Select a row to open the case. Risk is separate from case status: a case can be Open and High risk at the same time.
+
+## Workspaces
+
+The **Workspaces** panel links to each part of the console:
+
+| Workspace | Use it for | Shown when |
+| --- | --- | --- |
+| **Tickets & Entry** | Blocked tickets, grouped by reason. See [Tickets & entry](/onsite/tickets). | Always |
+| **Wristbands** | Bindings, freezes and ownership. See [Wristbands](/onsite/wristbands). | Tap events |
+| **Cashless** | Money collected, credited and spent. See [Cashless](/onsite/cashless). | Events with cashless enabled |
+| **Guests** | Invite lists and approved additions. See [Guests](/onsite/guests). | Always |
+| **Service cases** | Everything raised at the desk. See [Service cases](/onsite/cases). | Always |
+
+## Desk activity
+
+The **Desk activity** panel shows how much work the desk has done over the last 30 minutes, broken down by category with a bar for each. It counts recorded actions, not lookups. Searches aren't recorded, so this shows work done, not people seen.
+
+## Floor alerts
+
+If several failures cluster together, a **Floor alerts** panel appears with a summary, detail, and a suggested action for each. Alerts are marked high or medium severity. This panel is hidden when there are no alerts.
+
+{/* SCREENSHOT: images/onsite/onsite-command-center-floor-alerts.png | On the Command Center with a degraded floor, capture the Operational health: Degraded banner and the Floor alerts panel with high and medium severity items. If this cannot be produced, use a staging event with seeded failures. */}
+
+## Related pages
+
+<Cards>
+  <Card title="Search" href="/onsite/search" icon="magnifying-glass">
+    Find a participant by any identifier.
+  </Card>
+  <Card title="Service cases" href="/onsite/cases" icon="file-lines">
+    Record, work and conclude desk problems.
+  </Card>
+  <Card title="Onsite staff" href="/onsite/onsite-staff" icon="user-gear">
+    Create login codes for your gate and top-up team.
+  </Card>
+</Cards>

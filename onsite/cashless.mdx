@@ -1,0 +1,133 @@
+---
+title: "Cashless"
+description: "Reconcile top-ups and spending at the desk: the money ledger, unresolved top-ups, transaction detail and what the console can and cannot do."
+---
+
+The **Cashless** workspace shows where money was collected, whether the balance was credited, and where it was spent. It is available on Tap events with cashless enabled. Open it from the [Command Center](/onsite/command-center).
+
+The workspace keeps three questions apart on purpose: was the money taken, was the balance credited, and where was it spent. Collapsing them is how a desk credits a balance twice.
+
+<Note>
+This page is for resolving problems with individual guests during the event. For event-wide cashless reporting, see [Cashless activity](/tap/cashless-activity). To configure top-ups, see [Top-up setup](/tap/top-up-setup).
+</Note>
+
+## Online and onsite
+
+Top-ups and spending are split into two channels everywhere in this workspace:
+
+- **Online:** went through a payment provider, so it has a payment reference you can ask the provider about.
+- **Onsite:** booked at a station against cash or a terminal. There is no payment reference. Reconcile by station, collection method and cash record.
+
+## Unresolved top-ups
+
+A bar at the top of the page counts **top-ups unresolved**: top-ups where money may have moved without the balance following (pending, expired or failed). **Show N** filters the ledger to just those.
+
+{/* SCREENSHOT: images/onsite/onsite-cashless-overview.png | Open Onsite Operations > Command Center > Cashless on a Tap event with at least one unresolved top-up. Capture the top-ups unresolved bar with Show N, the Needs attention panel, and the Totals cards (Top-ups collected, Still on wallets, Vendor spend). Highlight the unresolved bar. */}
+
+The **Needs attention** panel groups them by meaning rather than by status, with a count and explanation for each, marked high, medium or informational. An expired top-up is not treated as free: it stays flagged until someone checks.
+
+## Totals
+
+| Total | Meaning |
+| --- | --- |
+| **Top-ups collected** | The total collected, split into Online and Onsite. |
+| **Still on wallets** | The balance still held, and across how many wallets. |
+| **Vendor spend** | Total spent at vendors, with the onsite portion. |
+
+If any wallets are frozen, a notice tells you how many. A frozen wallet stops spending, not entry. Freezing the wristband is a separate action.
+
+## Money ledger
+
+Every movement of money is a row with its own amount and the balance it left behind.
+
+{/* SCREENSHOT: images/onsite/onsite-cashless-ledger.png | On the Cashless workspace, scroll to the Money ledger with the Search, Channel, Type and Unresolved only controls. Show rows of varied types and statuses, including one Expired top-up with an Investigate link. */}
+
+| Column | Meaning |
+| --- | --- |
+| **Who** | The participant, linking to their profile. |
+| **What** | The type (Top-up, Purchase, Refund or Staff adjustment), where it happened, and the payment reference if there is one. |
+| **Status** | **Completed**, **Pending**, **Expired**, **Failed** or **Cancelled**. Unresolved top-ups also show **Investigate**. |
+| **Amount** | Signed amount, with a minus for money out. |
+| **Balance** | The balance after this row. |
+| **When** | Event time and how long ago. |
+
+Select the arrow at the end of a row to open the [transaction detail](#transaction-detail).
+
+### Search and filters
+
+- **Search:** by email, name, reference, station or stall. You don't need the right kind of reference.
+- **Channel:** All, Online or Onsite.
+- **Type:** All, Top-up, Spend, Refund or Adjustment.
+- **Unresolved only:** shows only unresolved top-ups.
+
+The ledger shows 50 rows per page.
+
+### Top-up stations
+
+The **Top-up stations** panel shows each station's activity today: method, number of top-ups, amount, and how many are unresolved. A health label (Healthy, Watch or Degraded) is based on the top-ups that station has recorded.
+
+{/* SCREENSHOT: images/onsite/onsite-cashless-topup-stations-panel.png | On the Cashless workspace, capture the Top-up stations panel showing each station with method, count, amount, unresolved and health label (Healthy, Watch or Degraded). */}
+
+## What this workspace cannot do
+
+The only money write in the console is **Correct the balance**, and it is done from the person's wallet. See [Participants](/onsite/participants#cashless).
+
+Crediting an unconfirmed top-up, moving one between wallets, refunding a balance and refunding a vendor charge each need a payment-provider check or a policy decision that cannot be made from the desk. Each one is recorded as a [service case](/onsite/cases) instead.
+
+## Top-up detail
+
+Select **Investigate** on an unresolved top-up to open its investigation page, titled **Top-up not reflected**. The header shows whether it was an Online or Onsite top-up, the station, method and time. **Add note** opens the case form.
+
+### Three layers
+
+The page shows three layers side by side, because they must all agree:
+
+{/* SCREENSHOT: images/onsite/onsite-cashless-topup-investigation.png | From the Cashless ledger, click Investigate on an unresolved online top-up to open the Top-up not reflected page. Capture the header, the three layers (Payment provider, Top-up entry, Wallet balance), the Reconciliation panel and Where it broke. Highlight the three layers. */}
+
+1. **Payment provider:** whether the provider shows the payment as paid, pending, expired, failed or cancelled.
+2. **Top-up entry:** the status of the top-up in PLVR.
+3. **Wallet balance:** the balance, or whether it is credited or unchanged.
+
+The **Reconciliation** panel lists each layer's state and what it is based on. **Where it broke** states the diagnosis in words.
+
+<Warning>
+Expired does not mean not charged. A failed credit and a card that was never charged look identical on this screen. Don't tell a guest that no money was taken unless you have checked.
+</Warning>
+
+Two banners help you read the layers:
+
+- If PLVR shows the provider took the money but the balance never went up, the page says so: the guest is owed the credit. Resolve it against this evidence rather than asking the guest to pay again.
+- If the top-up expired and PLVR has no completed payment for it, the page reminds you that this reflects PLVR's information, not the provider's. If the guest can show a charge on a statement, believe them and open a payment review.
+
+### Evidence, next steps and limits
+
+- **Evidence to collect:** a checklist. For an online top-up the provider reference is the anchor; an onsite top-up has no payment reference.
+- **What happened after this top-up:** later activity on the same wallet.
+- **What to do next:** steps in order, safest first.
+- **What this console will not do:** the actions the console won't take, each tagged with the review type it becomes. **Open a payment review case** records the case.
+- **Duplicate-credit protection:** a second credit can't be issued while the original payment is unresolved. This stops one uncertain top-up becoming two credited ones.
+
+If the reference doesn't match any top-up, the page says so. Check the characters (0/O and 1/I are easy to confuse). If the guest has a receipt, record an unmatched case with the reference exactly as they gave it.
+
+## Transaction detail
+
+Select a ledger row's arrow to open the full record of one movement of money.
+
+The top band answers what it is, how much, whose, and whether anything is wrong:
+
+{/* SCREENSHOT: images/onsite/onsite-cashless-transaction-detail.png | From the Cashless ledger, click the arrow on a Purchase row that has a partial refund. Capture the transaction detail page: top band, What was bought table with the refunded column, What else has happened to this, Record and What you can do. */}
+
+- The status, type and where it happened.
+- The signed amount, and when it happened.
+- **Balance after** and **Balance now** (with "Wallet frozen" if applicable).
+- The participant, with their email.
+- A sentence written to be read aloud to the participant.
+
+Underneath:
+
+- **What was bought:** for a purchase, the items with quantity, unit price, line total and how much has been refunded, plus the order total and the order and transaction references. If part or all of the order has already been refunded, a notice says so. Check the refunded column before agreeing to anything further.
+- **What else has happened to this:** refunds and corrections already applied against the line, each linking to its own record.
+- **Record:** provider, what the provider says, references, collection station and method, who recorded it, label and reason given, where they exist.
+- **What you can do:** suggested next steps for this transaction.
+
+If a reference isn't on this event, the page says "Not on this event". It may belong to another event or be mistyped.

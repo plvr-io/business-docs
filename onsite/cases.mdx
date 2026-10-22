@@ -1,0 +1,122 @@
+---
+title: "Service cases"
+description: "Record problems raised at the desk, attach evidence, send them for review and conclude them with a clear answer."
+---
+
+A service case records a problem raised at the desk and how it was concluded. Its purpose is to make sure every problem ends with an answer, so nobody is turned away with nothing recorded. Nothing is assigned or timed; the case simply keeps the record.
+
+Open the list from **Service cases** in the [Command Center](/onsite/command-center), or from the **Attention queue**.
+
+{/* SCREENSHOT: images/onsite/onsite-cases-list.png | Open Onsite Operations > Command Center, then Service cases. Have a mix of Open, Sent for review and Resolved cases, including one Nobody identified. Capture the filter buttons (Still open, Resolved, Product gaps, Everything, Nobody identified yet) and the table columns Problem, Who, Status, Review, Raised. */}
+
+## Case statuses
+
+| Status | Meaning |
+| --- | --- |
+| **Open** | Recorded and still being worked on. |
+| **Sent for review** | The desk couldn't safely act, so it has gone to a reviewer with a stated review type. |
+| **Resolved** | The participant got a definite answer. |
+| **Could not be resolved** | Concluded as not possible, with a reason. This is recorded as a product gap: something the console still can't do. |
+| **Cancelled** | Withdrawn, or a duplicate. |
+
+Risk (High, Medium or Normal) is separate from status. The attention queue on the Command Center is ordered by risk, then by how long someone has been waiting.
+
+## Review types
+
+When a case is sent for review, you choose what kind of judgement is being asked for:
+
+- **Identity dispute**
+- **Payment review**
+- **Ticket entitlement review**
+- **Operational incident**
+
+## The case list
+
+The list opens on cases that are still open. The filter buttons are:
+
+| Button | Shows |
+| --- | --- |
+| **Still open** | Cases not yet concluded. |
+| **Resolved** | Resolved cases. |
+| **Product gaps** | Cases concluded as "could not be resolved". |
+| **Everything** | All cases. |
+| **Nobody identified yet** | Cases raised without a matched participant. |
+
+Columns:
+
+- **Problem**: the type of problem, with a short summary.
+- **Who**: the participant, linking to their profile. If nobody is identified, it says "Nobody identified" and shows what the desk typed, exactly as typed.
+- **Status**: the case status, with "Needs the payment provider" where that applies.
+- **Review**: the review type, if one is set.
+- **Raised**: when the case was created.
+
+Select the problem name to open the case. The list shows 25 per page.
+
+## Record a case
+
+Select **Record a case** (or **+ New service case**, **Record a service case**, **Add note** or **Create unmatched case** elsewhere in the console). The same form opens each time.
+
+{/* SCREENSHOT: images/onsite/onsite-cases-record-form.png | On Service cases, click Record a case. Select a kind of problem and fill in What happened at the desk. Capture the whole form with the required fields and the Record case button. */}
+
+| Field | Required | Notes |
+| --- | --- | --- |
+| **What kind of problem?** | Yes | Choose the closest match. If it would need escalating, the form tells you which review it would go to. |
+| **What did they show you?** | Only when nobody is identified | Type it exactly as they gave it to you. Don't correct spelling or capitalization, because what they presented is the record. |
+| **What did they say?** | No | Only for cases with nobody identified. In their words, as far as you can. |
+| **What happened at the desk?** | Yes | What you checked, what you found, and what you couldn't do. |
+
+When you open the form from a ticket or a transaction, it is pre-filled where possible and shows an **Attached** box. The current state of the attached ticket or transaction is saved with the case, so a reviewer sees what you saw. A case opened from a zero-result search carries the exact text you searched.
+
+**Record case** stays disabled until the required fields are filled in.
+
+## Case page
+
+The page header shows the problem, the participant and time, the status and a plain-language meaning of that status. **Add evidence** is available at the top. A flow diagram shows where the case is: Open, Review required, then one of the three endings.
+
+{/* SCREENSHOT: images/onsite/onsite-case-detail-page.png | Open a Sent for review case that has evidence and at least one refused attempt. Capture the full case page: header with status, flow diagram, Evidence, What was tried, Conclusion and the Conclude this case buttons. Highlight the flow diagram. */}
+
+The page contains:
+
+- **Raised** and, once closed, **Concluded** times; the **Kind of review**, and the **Ticket**.
+- **Participant:** a link to their profile. If nobody is identified, you see what they gave you and what they said, and a **Link to a participant** button.
+- **What happened at the desk:** the description you recorded.
+- **What the portal showed at the time:** captured when the case was raised, so a reviewer sees what you saw rather than today's state.
+- **Evidence:** reference numbers, named confirmations and notes, each with time and, for confirmations, who confirmed.
+- **What was tried:** every action recorded against the case. Refused attempts are kept and highlighted, because "we tried and it was refused" is itself evidence.
+- **Conclusion:** the outcome or the reason it couldn't be resolved.
+
+### Add evidence
+
+Select **Add evidence** and choose a kind:
+
+{/* SCREENSHOT: images/onsite/onsite-case-add-evidence-dialog.png | On a case page, click Add evidence and choose Named confirmation. Capture the dialog with the kind selector and fields filled with sample values. */}
+
+| Kind | What to enter |
+| --- | --- |
+| **Reference number** | A payment reference, order number or cash count. |
+| **Named confirmation** | What was confirmed, and by whom. Your name is recorded with this. |
+| **Note** | Anything a reviewer would need. |
+
+<Tip>
+Verbal agreement on its own isn't evidence. Add a reference number, a named confirmation, or a note saying who confirmed what.
+</Tip>
+
+### Link to a participant
+
+If the case has nobody identified, find the person in [Search](/onsite/search) first, then select **Link to a participant** and enter their participant user ID. What they originally gave you stays on the record. Linking doesn't change the status, because identifying someone isn't the same as solving their problem.
+
+### Conclude a case
+
+The **Conclude this case** buttons only offer moves available to you for the case's current state. For example, desk operators won't see "Conclude: cannot be resolved". The possible buttons are:
+
+{/* SCREENSHOT: images/onsite/onsite-case-conclude-buttons.png | On an Open case page, scroll to Conclude this case. Capture the button group (Send for review, Close as resolved, Conclude: cannot be resolved, Cancel this case) and, ideally, Send for review expanded with the review type dropdown. */}
+
+| Button | What you provide |
+| --- | --- |
+| **Send for review** | **What kind of review?** (required). A reviewer needs to know what sort of judgement is being asked for. |
+| **Close as resolved** | **What was the outcome?** (required): what the participant was told and what you did. |
+| **Conclude: cannot be resolved** | **Why can it not be resolved?** (required): what the console couldn't do. Recorded as a product gap. |
+| **Cancel this case** | No extra detail. |
+| **Reopen** | No extra detail. |
+
+Select **Confirm** to apply the change.

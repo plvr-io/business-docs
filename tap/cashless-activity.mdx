@@ -1,0 +1,59 @@
+---
+title: "Cashless activity"
+description: "See every top-up and spending transaction for your event, filter it, and export it."
+---
+
+**Cashless Activity** lists the cashless transactions for the event: top-ups into attendees' wallets and spending at vendors. Find it under **PLVR Tap** in the event sidebar. It only appears for events with PLVR Tap enabled.
+
+## Summary cards
+
+Four cards at the top summarize successful transactions. Hover the info icon on each for its definition.
+
+- **Top-up Transactions:** number of successful top-ups.
+- **Top-up Amount:** total from successful top-ups. It excludes service fee and tax.
+- **Spending Transactions:** number of successful spending transactions.
+- **Spending Amount:** total from successful spending transactions.
+
+Amounts are shown in the event currency.
+
+{/* SCREENSHOT: images/tap/tap-cashless-activity-overview.png | Open PLVR Tap > Cashless Activity on a Tap event with successful top-ups and spending. Capture the page header, the four summary cards (Top-up Transactions, Top-up Amount, Spending Transactions, Spending Amount), and the All / Top-ups / Spending tabs. Highlight the four cards. */}
+
+## Tabs and filters
+
+Use the tabs **All**, **Top-ups**, and **Spending**. Each tab remembers its own filters.
+
+{/* SCREENSHOT: images/tap/tap-cashless-activity-filters.png | On PLVR Tap > Cashless Activity, select the Spending tab and show the filter row (Status, Vendor, Sales Location, Search). Crop to tabs and filters, with the Vendor dropdown open. */}
+
+| Filter | Available on | Options |
+| --- | --- | --- |
+| **Status** | All tabs | All, Successful, Cancelled |
+| **Top-up Channel** | Top-ups | All channels, In-App, Station |
+| **Top-up Station** | Top-ups | All Stations, or a specific station (inactive ones are marked) |
+| **Vendor** | Spending | All Vendors, or a specific vendor |
+| **Sales Location** | Spending | All Locations, or a location (narrowed to the chosen vendor) |
+| **Search** | All tabs | Name, email, or transaction ID |
+
+## The table
+
+| Column | What it shows |
+| --- | --- |
+| **Transaction** | Date and time (in the event's time zone) and transaction ID. |
+| **Attendee** | Name and email. |
+| **Activity** (All tab) | Top-up or Spending, with the channel or vendor underneath. |
+| **Top-up Channel** (Top-ups tab) | In-App or Station, with the station name when relevant. |
+| **Vendor** (Spending tab) | Vendor and sales location. |
+| **Status** | **Successful** or **Cancelled**. |
+| **Amount** | Shown with **+** for top-ups and **−** for spending. Cancelled rows appear greyed out. |
+
+Use **Previous** and **Next** to page, and choose 10, 25, or 50 rows per page.
+
+{/* SCREENSHOT: images/tap/tap-cashless-activity-table.png | On PLVR Tap > Cashless Activity, All tab, with both top-up and spending rows and at least one Cancelled (greyed) row. Capture the table with columns Transaction, Attendee, Activity, Status, Amount and the Export button visible. */}
+
+## Export
+
+Click **Export** to download a CSV of the current tab with your active filters applied. A message confirms how many records were exported.
+
+## Related
+
+- [Spending report](/tap/spending-report), for totals by vendor and by item
+- [Cashless transactions onsite](/onsite/cashless), for looking up and handling individual transactions

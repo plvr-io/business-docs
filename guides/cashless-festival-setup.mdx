@@ -1,0 +1,137 @@
+---
+title: "Cashless festival setup"
+description: "Set up PLVR Tap end to end: top-up stations, payment methods, personalization questions, vendors and menus, approvals, wristbands and onsite staff."
+---
+
+This guide walks through everything a cashless event needs, in the order that avoids rework. Plan to finish it at least a few days before doors open, because vendors need time to build menus and you need time to approve them.
+
+<Note>
+The **PLVR Tap** group and **Personalization Form** only appear in the event menu for events that have PLVR Tap enabled. If you do not see them, your event is not a Tap event. For the big picture first, read [PLVR Tap overview](/tap/introduction).
+</Note>
+
+## Your setup at a glance
+
+| Step | Page | Done when |
+| --- | --- | --- |
+| 1 | **Top-up Setup** | Every station and payment method exists |
+| 2 | **Personalization Form** | You have chosen what attendees are asked |
+| 3 | **Vendor Setup** | Vendors, sales locations, items and login codes exist |
+| 4 | **Approvals** | No submissions are left pending |
+| 5 | **Onsite Staff** | Every team member has a login code |
+| 6 | **Onsite Operations > Wristbands** | Spare wristbands are added |
+
+## 1. Create top-up stations and payment methods
+
+Open **PLVR Tap > Top-up Setup**.
+
+<Steps>
+  <Step title="Add your stations">
+    On **Top-up Stations**, select **Add Top-up Station** for every place where staff will add money to wallets. A mid-size festival might have **Main Entrance**, **VIP Area** and **Campsite**. Use the **Description** for instructions such as "next to the first aid tent".
+  </Step>
+  <Step title="Add payment methods">
+    On **Onsite Payment Methods**, use **Quick add** for **Cash**, **Card**, **QR Payment**, **Bank Transfer** or **Other**, or add a **Custom Payment Method** such as Apple Pay. Only add the ones your team will actually accept.
+  </Step>
+</Steps>
+
+<Warning>
+Payment methods here are for reporting only. They do not take payment. Your staff must take the money with your own cash box or card terminal.
+</Warning>
+
+{/* SCREENSHOT: images/guides/cashless-topup-setup.png | Open PLVR Tap > Top-up Setup with stations Main Entrance, VIP Area, Campsite and payment methods Cash and Card added. Capture the 'Add Top-up Station' button, the Top-up Stations list, the Quick add options and the Onsite Payment Methods list. */}
+
+See [Top-up setup](/tap/top-up-setup).
+
+## 2. Choose what attendees are asked
+
+Open **Personalization Form**. Attendees answer these questions when they personalize or claim a ticket, before a wristband is bound to it.
+
+- Use **Quick add** for standard questions such as **Phone Number** or **Date of Birth**, or write a **Custom question**.
+- Mark a question **Required** only if you really need it.
+- Drag rows to set the order, and set unwanted questions to **Inactive**.
+
+{/* SCREENSHOT: images/guides/cashless-personalization-form.png | Open the Personalization Form page with Phone Number (Required) and Date of Birth added, one custom question and one Inactive question. Capture Quick add, Custom question and drag handles. */}
+
+This is separate from the checkout [Registration form](/events/registration-form). See [Personalization form](/tap/personalization-form).
+
+## 3. Create vendors
+
+Open **PLVR Tap > Vendor Setup**. Each stall, bar or merchandise stand is a vendor.
+
+<Steps>
+  <Step title="Add the vendor">
+    Select **Add Vendor**, enter the **Name** (for example "Noodle Bar"), and keep **Status** as **Active**. An optional **Note** is internal only.
+  </Step>
+  <Step title="Add sales locations">
+    Open the vendor and go to **Sales Locations**. Add each place the vendor sells from, such as "Main Stage Stall" and "Campsite Cart".
+  </Step>
+  <Step title="Add items">
+    On **Items**, create categories if you want them, then use **Add Item**. Each item needs at least one sales location, a name and a price above zero. You can also leave this to the vendor, who submits items for your approval.
+  </Step>
+  <Step title="Generate login codes">
+    On **Login Codes**, choose how many codes the vendor needs, add a **Note** such as "Alex - Vendor Manager", and select **Generate Codes**. Give the codes to the vendor.
+  </Step>
+</Steps>
+
+<Tip>
+Create one login code per person on shift, and use the **Note** to record who has which. When someone leaves the stall, set their code to **Inactive**.
+</Tip>
+
+{/* SCREENSHOT: images/guides/cashless-vendor-setup.png | Open PLVR Tap > Vendor Setup, open the vendor 'Noodle Bar'. Capture the tabs (Sales Locations, Items, Login Codes) and the Login Codes tab after generating codes with Notes like 'Alex - Vendor Manager'. Two crops are fine (add -items suffix for the second). */}
+
+See [Vendors](/tap/vendors).
+
+## 4. Approve what vendors submit
+
+When a vendor adds or changes an item or category, it waits for you. Nothing goes live on the menu until you approve it.
+
+1. Open **Approvals**. A badge in the event menu shows when submissions are waiting.
+2. Check each **Review Details**. For edits, compare **Current** with **Requested**.
+3. Select **Approve**, or **Reject** with a clear **Rejection Reason**, which the vendor sees.
+4. For many at once, tick the rows and use **Approve Selected** or **Reject Selected**.
+
+<Warning>
+Do not wait until doors open. A vendor whose menu is still pending cannot sell it. Aim for an empty Pending list the day before.
+</Warning>
+
+{/* SCREENSHOT: images/guides/cashless-approvals.png | Open Approvals with a few pending submissions, one edit showing Current vs Requested in Review Details. Capture the list with checkboxes, Approve Selected and Reject Selected, and the menu badge. */}
+
+See [Approvals](/tap/approvals).
+
+## 5. Create login codes for your team
+
+Open **Onsite Staff** and select **Add Staff**.
+
+- For the top-up team, choose the **Top-up staff** role, then pick their **Top-up Station**. Create a separate batch for each station.
+- For other roles, pick from the **Role** list. Each role shows a short description of what it is for.
+- To create codes for named people in one go, use **CSV Import** with the template, or **Manual Creation** with a **Note** like "Alex - Main Gate".
+- Set a code to **Inactive** when a shift ends.
+
+{/* SCREENSHOT: images/guides/cashless-onsite-staff.png | Onsite Staff > Add Staff. Select the 'Top-up staff' role and a Top-up Station. Capture the creation panel with CSV Import and Manual Creation options and the role description. */}
+
+See [Onsite staff](/onsite/onsite-staff).
+
+## 6. Add wristbands
+
+Open **Onsite Operations > Wristbands** and select **+ Add wristbands**. Enter or scan one wristband per line, add a **Note** about which box they came from, and select **Add**. You can add up to 200 at a time.
+
+<Check>
+Read each result line. A band shown as newly registered when you expected an existing one usually means a mistyped ID.
+</Check>
+
+{/* SCREENSHOT: images/guides/cashless-add-wristbands.png | Onsite Operations > Wristbands > '+ Add wristbands'. Enter 3 wristband IDs (one per line) and a Note, then Add. Capture the dialog and the result lines. */}
+
+See [Wristbands](/onsite/wristbands).
+
+## 7. Run a dress rehearsal
+
+<Check>Every vendor shows **Active** with the right number of **Sales Locations**, **Items** and **Login Codes**.</Check>
+<Check>In **Onsite Staff**, each Top-up staff code shows the right station under its role.</Check>
+<Check>A test attendee can be found in **Search**, has a wristband bound (check the **Wristbands** list), and shows the expected balance after a top-up.</Check>
+<Check>The test top-up and test purchase appear in **Cashless Activity**.</Check>
+
+## Next steps
+
+<CardGroup cols={2}>
+  <Card title="Event day runbook" icon="clipboard-list" href="/guides/event-day-runbook">Run the day with Onsite Operations.</Card>
+  <Card title="After the event" icon="chart-line" href="/guides/after-the-event">Reconcile spending and settle with vendors.</Card>
+</CardGroup>
