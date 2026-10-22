@@ -22,6 +22,8 @@ Top-ups and spending are split into two channels everywhere in this workspace:
 
 A bar at the top of the page counts **top-ups unresolved**: top-ups where money may have moved without the balance following (pending, expired or failed). **Show N** filters the ledger to just those.
 
+{/* SCREENSHOT: images/onsite/onsite-cashless-overview.png | Open Onsite Operations > Command Center > Cashless on a Tap event with at least one unresolved top-up. Capture the top-ups unresolved bar with Show N, the Needs attention panel, and the Totals cards (Top-ups collected, Still on wallets, Vendor spend). Highlight the unresolved bar. */}
+
 The **Needs attention** panel groups them by meaning rather than by status, with a count and explanation for each, marked high, medium or informational. An expired top-up is not treated as free: it stays flagged until someone checks.
 
 ## Totals
@@ -37,6 +39,8 @@ If any wallets are frozen, a notice tells you how many. A frozen wallet stops sp
 ## Money ledger
 
 Every movement of money is a row with its own amount and the balance it left behind.
+
+{/* SCREENSHOT: images/onsite/onsite-cashless-ledger.png | On the Cashless workspace, scroll to the Money ledger with the Search, Channel, Type and Unresolved only controls. Show rows of varied types and statuses, including one Expired top-up with an Investigate link. */}
 
 | Column | Meaning |
 | --- | --- |
@@ -62,6 +66,8 @@ The ledger shows 50 rows per page.
 
 The **Top-up stations** panel shows each station's activity today: method, number of top-ups, amount, and how many are unresolved. A health label (Healthy, Watch or Degraded) is based on the top-ups that station has recorded.
 
+{/* SCREENSHOT: images/onsite/onsite-cashless-topup-stations-panel.png | On the Cashless workspace, capture the Top-up stations panel showing each station with method, count, amount, unresolved and health label (Healthy, Watch or Degraded). */}
+
 ## What this workspace cannot do
 
 The only money write in the console is **Correct the balance**, and it is done from the person's wallet. See [Participants](/onsite/participants#cashless).
@@ -75,6 +81,8 @@ Select **Investigate** on an unresolved top-up to open its investigation page, t
 ### Three layers
 
 The page shows three layers side by side, because they must all agree:
+
+{/* SCREENSHOT: images/onsite/onsite-cashless-topup-investigation.png | From the Cashless ledger, click Investigate on an unresolved online top-up to open the Top-up not reflected page. Capture the header, the three layers (Payment provider, Top-up entry, Wallet balance), the Reconciliation panel and Where it broke. Highlight the three layers. */}
 
 1. **Payment provider:** whether the provider shows the payment as paid, pending, expired, failed or cancelled.
 2. **Top-up entry:** the status of the top-up in PLVR.
@@ -106,6 +114,8 @@ If the reference doesn't match any top-up, the page says so. Check the character
 Select a ledger row's arrow to open the full record of one movement of money.
 
 The top band answers what it is, how much, whose, and whether anything is wrong:
+
+{/* SCREENSHOT: images/onsite/onsite-cashless-transaction-detail.png | From the Cashless ledger, click the arrow on a Purchase row that has a partial refund. Capture the transaction detail page: top band, What was bought table with the refunded column, What else has happened to this, Record and What you can do. */}
 
 - The status, type and where it happened.
 - The signed amount, and when it happened.

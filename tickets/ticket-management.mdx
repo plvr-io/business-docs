@@ -15,6 +15,8 @@ Above the table you can filter by:
 
 Tickets are grouped by session. Each session has a table with **Ticket Type**, **Price**, **Total**, **Sold**, **Available**, and **Status**.
 
+{/* SCREENSHOT: images/tickets/ticket-management-overview.png | Open Tickets > Ticket Management, Tickets tab, for an event with two sessions. Capture the tabs (Tickets, Add-ons), the filters (Ticket Status, Session, Search) and the table with Ticket Type, Price, Total, Sold, Available, Status. Include an Active ticket whose start date is in the future so the days-until-sales note shows. */}
+
 ## Turn a ticket on or off
 
 Use the status dropdown in the **Status** column:
@@ -41,6 +43,8 @@ Select the pencil icon at the end of a row to open the **Edit Ticket** panel. Fo
 | **Limit Qty per Order** | Optional. A whole number from 1 to 10. |
 | **Limit Qty per User** | Optional. A whole number from 1 to 20. |
 
+{/* SCREENSHOT: images/tickets/ticket-management-edit-panel.png | Click the pencil icon on a ticket row. Capture the full 'Edit Ticket' panel (Session, Name, Status, Description, Total Quantity, Price, sales dates, limits) with the 'How Fees Work' link expanded to show the breakdown. Use a ticket that has already sold some so locked Name and Price are visible. */}
+
 Select **How Fees Work** under the price to see what the buyer pays and what you receive. It breaks the price down into the ticket price, service fee, VAT, and the amount you receive.
 
 Select **Save** to apply your changes, or **Cancel** to close the panel.
@@ -54,6 +58,8 @@ Select **Save** to apply your changes, or **Cancel** to close the panel.
 Each session has a **Release Chains** panel above its ticket table. It is folded closed by default. The header shows a summary such as "2 chains · 1 auto-releasing". A release chain lets you sell tiers one after another, for example Early Bird, then General Admission, then Final Release. When the current tier is nearly sold out, the next tier is activated automatically.
 
 For a full worked example, see [Selling General Admission in tiers](/tickets/scenario-ga-tiers).
+
+{/* SCREENSHOT: images/tickets/ticket-management-release-chains-panel.png | Expand the Release Chains panel (header like '2 chains · 1 auto-releasing') on a session with a chain of three tiers. Show the 'next tier opens when 98%' line, tier progress bars with the tick mark, the New chain button, the Auto-release switch, the Activity log and Copy to... buttons and the Delete trash icon. */}
 
 ### When the next tier opens
 
@@ -85,6 +91,8 @@ Inside the open panel, a line states the percentage at which the next tier opens
 
 In the ticket table, chained tickets show a badge such as "GA - 2/3", and tickets opened automatically note which tier's sell-out opened them. When every tier has been used, the chain shows **Exhausted**.
 
+{/* SCREENSHOT: images/tickets/ticket-management-chain-tier-messages.png | Capture a chain with tiers in different states so several messages from the table are visible (On sale, Activates automatically when 'X' sells out, Sold out - next tier opened). Include the matching ticket table rows with the 'GA - 2/3' style badge. */}
+
 ### Other chain controls
 
 - **Activity log** (history icon in the panel header): a record of sell-outs, automatic activations, chains finishing, and auto-release being turned on or paused. A number on the icon shows recent entries.
@@ -113,7 +121,11 @@ Add-ons are extras buyers can purchase alongside tickets, such as parking or mer
 | **Sales Start Date / Sales End Date** | Optional for add-ons. |
 | **Limit Qty per Order / Limit Qty per User** | Optional. Positive whole numbers. |
 
+{/* SCREENSHOT: images/tickets/ticket-management-create-addon.png | Ticket Management > Add-ons tab > Create Add-on, with Inventory Source set to 'Sync from ticket'. Capture the panel showing Source Ticket Type and 'Add-on Sales Limit', Linked to, Face Value and the sales date fields. */}
+
 The Add-ons table shows **Add-on Name**, **Price**, **Total**, **Sold**, **Available**, and **Status**. Use the edit icon on a row to change an add-on. When editing, the inventory source is locked.
+
+{/* SCREENSHOT: images/tickets/ticket-management-addons-table.png | Ticket Management > Add-ons tab with 2 or 3 add-ons. Capture Add-on Status filter and the table with Add-on Name, Price, Total, Sold, Available, Status and the edit icon. */}
 
 ## Guides and related pages
 

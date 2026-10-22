@@ -28,6 +28,8 @@ Total capacity: 500 tickets. Potential revenue if everything sells at face value
 
 You can also combine them: give each tier a sale window as a safety net, and let the chain advance early if a tier sells out first.
 
+{/* SCREENSHOT: images/tickets/ga-tiers-initial-tickets.png | Open Ticket Management for the event with Early Bird (100 @ $20), General Admission (300 @ $30) and Final Release (100 @ $40), before any chain exists. Early Bird Active, the other two Inactive, each with a future sales end date. Capture the session table with Price, Total, Sold, Available, Status. */}
+
 ## Set it up
 
 <Steps>
@@ -51,6 +53,8 @@ You can also combine them: give each tier a sale window as a safety net, and let
   </Step>
 </Steps>
 
+{/* SCREENSHOT: images/tickets/ga-tiers-chain-configured.png | Release Chains panel expanded after finishing setup: chain named 'GA' containing Early Bird, General Admission, Final Release in order, Auto-release switch ON. Early Bird shows 'On sale' with a partially filled progress bar; the other two show 'Activates automatically when ... sells out'. Include the line 'The next tier opens when 98% of the current tier is sold' and the Activity log (history) icon. */}
+
 ## What happens as tickets sell
 
 <Steps>
@@ -68,6 +72,8 @@ You can also combine them: give each tier a sale window as a safety net, and let
   </Step>
 </Steps>
 
+{/* SCREENSHOT: images/tickets/ga-tiers-second-tier-open.png | Same event after Early Bird has sold out (sell or adjust test data): show the Release Chains panel and the ticket table together. Early Bird 'Sold out - next tier opened', General Admission Active at $30, with the 'Auto-activated when Early Bird sold out' note and the 'GA - 2/3' badge in the table. */}
+
 <Note>
   The next tier opens at a high percentage sold, not necessarily at the very last ticket. Unpaid orders still in checkout can hold a few tickets for a short while. If they are released, the earlier tier can show a few tickets back on sale, for example "Sold out - next tier opened - 3 back on sale".
 </Note>
@@ -75,6 +81,8 @@ You can also combine them: give each tier a sale window as a safety net, and let
 ## What attendees see
 
 Attendees only see tickets that are **Active** and within their sale window. At any moment they typically see one General Admission option with the current price. They never see the later tiers until their turn. There is no countdown or tier list on the buyer page unless you describe it yourself in the ticket **Description** or event page.
+
+{/* SCREENSHOT: images/tickets/ga-tiers-attendee-view.png | Open the public event page (via 'view Event') while only Early Bird is Active. Capture the ticket selection area showing just one General Admission option at the current price and the ticket Description (e.g. 'Early Bird: first 100 tickets only'). */}
 
 <Tip>
   Mention the staging in the **Description** of each ticket (up to 200 characters), for example "Early Bird: first 100 tickets only". Buyers then understand why the price may rise.
@@ -86,9 +94,13 @@ Attendees only see tickets that are **Active** and within their sale window. At 
 - Switch **Auto-release** off at any time to pause the chain. Tickets keep their current status, and later tiers will not activate until you turn it back on.
 - If a later tier is activated manually while an earlier one is still selling, the portal tells you the inactive tier will not auto-activate. Activate it manually or remove it from the chain.
 
+{/* SCREENSHOT: images/tickets/ga-tiers-activity-log.png | Click the history icon (Activity log) in the Release Chains panel header. Capture the open log showing a few entries (auto-release turned on, sell-out, automatic activation). */}
+
 ## Reuse it for other sessions
 
 If you run several sessions with the same tiers, use **Copy to...** on the chain card. The portal matches tiers to tickets in the other session by name and lets you review matches before copying. Copied chains start paused, so review them and then turn on **Auto-release**. See [Multi-day festival](/tickets/scenario-multi-day-festival).
+
+{/* SCREENSHOT: images/tickets/ga-tiers-copy-to-dialog.png | On an event with several sessions, click 'Copy to...' on the chain card. Capture the dialog listing the other sessions with the tier-to-ticket matching step visible, including a 'Don't copy this tier' option. */}
 
 ## Related
 
