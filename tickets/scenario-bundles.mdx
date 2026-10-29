@@ -1,69 +1,43 @@
 ---
 title: "Scenario: Group Packages with Bundles"
-description: "Sell packs such as a Group of 4 at a better per-ticket price, and understand how bundles use your ticket inventory."
+description: "Sell packs such as a Group of 4 at a better per-ticket price."
 ---
 
-**Goal:** Encourage groups to buy together by offering a pack of tickets at a better price than buying them one by one.
-
-## What a bundle is
-
-A **bundle** is one product that contains several copies of a ticket. Example:
+**Goal:** Encourage groups to buy together with a discounted pack.
 
 | Item | Includes | Price |
 | --- | --- | --- |
 | General Admission | 1 ticket | $30 |
 | Group of 4 | General Admission x 4 | $100 |
 
-A buyer of the Group of 4 pays $100 instead of $120, a $5 saving per person.
+The buyer pays $100 instead of $120.
 
-## How bundles use your inventory
+## How inventory works
 
-Bundles draw from the same ticket inventory as the ticket they include. If General Admission has 300 tickets and you sell one Group of 4, 4 General Admission tickets are used up, and the General Admission table shows 4 more sold.
+A bundle draws from the ticket it includes. If General Admission has 300 tickets, one Group of 4 sale uses 4 of them. **Max Bundle Sales** caps the number of packs (for example 20), but a pack can only sell while enough of the included ticket remains.
 
-You can also cap the number of packs with **Max Bundle Sales**. For example, if you only want to sell 20 Group packs, set it to 20. Even then, the pack can only sell while the underlying ticket still has enough left.
-
-<Note>
-  Bundles appear in the same table as tickets in [Ticket Management](/tickets/ticket-management). In the edit panel, the **Included Tickets** line shows what the bundle contains, for example "General Admission x 4".
-</Note>
-
-{/* SCREENSHOT: images/tickets/bundles-in-ticket-table.png | Open Ticket Management for an event with General Admission (300 @ $30) and a bundle 'Group of 4' ($100) in the same session. Capture the session table showing both rows, with the bundle row highlighted. */}
+{/* SCREENSHOT: images/tickets/bundles-in-ticket-table.png | Ticket Management with General Admission (300 @ $30) and bundle 'Group of 4' ($100) in the same session. Highlight the bundle row. */}
 
 ## Manage a bundle
 
 <Steps>
-  <Step title="Find it">
-    Open [Ticket Management](/tickets/ticket-management) and search for the bundle name, or find it under its session.
-  </Step>
   <Step title="Open Edit Bundle">
-    Select the pencil icon at the end of the row.
+    In [Ticket Management](/tickets/ticket-management), select the pencil on the bundle row.
   </Step>
-  <Step title="Set the price and cap">
-    Enter the **Price** and **Max Bundle Sales**. Select **How Fees Work** to preview what the buyer pays and what you receive.
+  <Step title="Set price, cap and window">
+    Set **Price**, **Max Bundle Sales**, sale dates and optional limits.
   </Step>
-  <Step title="Set the sale window and limits">
-    Choose **Sales Start Date** and **Sales End Date**, and optionally **Limit Qty per Order** or **Limit Qty per User**.
-  </Step>
-  <Step title="Turn it on">
-    Set the **Status** to **Active**, then **Save**.
+  <Step title="Activate">
+    Set **Status** to **Active** and **Save**.
   </Step>
 </Steps>
 
-{/* SCREENSHOT: images/tickets/bundles-edit-panel.png | Click the pencil icon on the 'Group of 4' bundle row to open 'Edit Bundle'. Capture the whole panel, showing Price, Max Bundle Sales (e.g. 20), sale dates, limits, Status, and the 'Included Tickets' line reading 'General Admission x 4'. Highlight 'Included Tickets' and Max Bundle Sales. */}
+{/* SCREENSHOT: images/tickets/bundles-edit-panel.png | Edit Bundle panel for 'Group of 4'. Callouts: 1 Price, 2 Max Bundle Sales (20), 3 Included Tickets reading 'General Admission x 4', 4 Status. */}
 
 <Warning>
-  Like tickets, a bundle's **Name** and **Price** cannot be changed once it has sold. Bundles cannot be part of a release chain.
+  Name and **Price** lock after the first sale, and bundles cannot join a release chain.
 </Warning>
 
-## Reporting and promo codes
-
-- In the [Ticket Report](/tickets/ticket-report), tickets bought through a bundle show the bundle's name beneath the ticket name.
-- A [promo code](/promotions/promo-codes) can be limited to a specific bundle, so you can give a partner an extra discount on the pack only.
-
-<Note>
-  Creating a new bundle is not something this portal offers. Contact your PLVR representative if you want a new bundle added to your event.
-</Note>
-
-## Related
-
-- [Ticketing Concepts](/tickets/concepts)
-- [Scenario: General Admission in tiers](/tickets/scenario-ga-tiers)
+- Bundle tickets show the bundle name in the [Ticket Report](/tickets/ticket-report).
+- A [promo code](/promotions/promo-codes) can target one bundle.
+- This portal cannot create new bundles. Ask your PLVR representative.

@@ -1,75 +1,40 @@
 ---
 title: "Events overview"
-description: "Find your events, change their visibility, and read an event's sales and performance overview."
+description: "Find your events, set their visibility, and read sales and performance."
 ---
 
-## Your event list
+## Event list
 
-{/* SCREENSHOT: images/events/overview-events-list.png | Events page showing the greeting, Search events field, All/Upcoming/Past tabs and at least 4 event rows with different statuses (Public, Private, Inactive, Ended), View event links and the Previous/Next paging. Full page. */}
+**Events** is the first page after sign-in. Search by name, switch between **All**, **Upcoming** and **Past**, and select a row to open the event.
 
-**Events** is the first page you see after signing in. It opens with a greeting ("Good morning", "Good afternoon" and so on) and your organization's events underneath.
+{/* SCREENSHOT: images/events/overview-events-list.png | Events page with at least 4 event rows of different statuses (Public, Private, Inactive, Ended). Callouts: 1 Search, 2 tabs, 3 status menu, 4 View event link. */}
 
-- **Search.** Type in **Search events...** to filter by event name.
-- **Tabs.** Switch between **All**, **Upcoming** and **Past**.
-- **Paging.** Ten events appear per page. Use **Previous** and **Next** to move through longer lists.
+Use the status menu (3) to set an event to **Public**, **Private** or **Inactive**. **Ended** events are locked.
 
-Each row shows the event image and name, its start date and time in the event's own time zone, a **View event** link to the public event page, a **status** menu, and the event's sales: revenue and tickets sold out of tickets available.
+{/* SCREENSHOT: images/events/overview-event-status-menu.png | One event row with its status menu open. Crop to the row. */}
 
-Select a row to open that event.
+If you have no events, creating one is not self-service yet. Contact partners@plvr.io.
 
-### Event status
+## Event overview
 
-Use the status menu on a row to change an event's status to **Public**, **Private** or **Inactive**. A confirmation "Event is now ..." appears when it updates.
+Opening an event shows its **Overview**. Use the side menu to reach the event's other pages.
 
-{/* SCREENSHOT: images/events/overview-event-status-menu.png | One event row on the Events page with its status menu open showing Public, Private and Inactive. Crop to the row and menu. Highlight the status control. */}
+{/* SCREENSHOT: images/events/overview-summary-cards.png | An event's Overview for an event with sales, add-ons and personalization. Capture the title and all summary cards. */}
 
-An event with the status **Ended** is locked: its status menu is disabled and cannot be changed.
+Total Revenue combines tickets, add-ons and payment links. Conversion Rate is paid orders divided by page views. Personalization Progress and Add-ons Sold appear only when they apply.
 
-### No events yet
+The **Trend** chart plots one measure over time. Switch between **Cumulative** and **Daily**.
 
-If your organization has no events, the page explains that creating an event is not self-service yet and asks you to contact partners@plvr.io. Select the address to copy it. If a search finds nothing, the page says no events match and suggests a different search.
+{/* SCREENSHOT: images/events/overview-trend-chart.png | Trend chart with data and the measure dropdown open. Crop to the chart card. */}
 
-## The event overview
+**Performance Insights** splits revenue by source and sales by type: full price, promo code, or comp ticket (given directly, no checkout).
 
-Opening an event takes you to its **Overview** page: "Summary of your event performance and insights." The side menu on the left lets you move to other pages for that event.
+{/* SCREENSHOT: images/events/overview-performance-insights.png | Performance Insights panel for an event that used promo codes and comp tickets. Crop to the panel. */}
 
-{/* SCREENSHOT: images/events/overview-summary-cards.png | An event's Overview page (Overview in the event menu) for an event with sales, add-ons and personalization: capture the title and the full set of summary cards (Total Revenue, Tickets Sold, Personalization Progress, Add-ons Sold, Page Views, Conversion Rate). */}
+**Ticket Breakdown** shows sales and revenue per ticket type.
 
-### Summary cards
-
-| Card | What it shows |
-| --- | --- |
-| **Total Revenue** | Revenue from tickets, add-ons and payment links combined. |
-| **Tickets Sold** | Tickets sold out of the total available. |
-| **Personalization Progress** | Tickets personalized out of those that need it. Only shown for events that require personalization. |
-| **Add-ons Sold** | Add-ons sold out of the total. Only shown when the event has add-ons. |
-| **Page Views** | How many times the event page has been viewed. |
-| **Conversion Rate** | Paid orders divided by page views. |
-
-### Trend chart
-
-The **Trend** chart plots one measure over time. Choose the measure from the dropdown: **Revenue**, **Tickets Sold**, **Addons Sold** (when the event has add-ons), **Page Views** or **Conversion Rate**. You can switch between **Cumulative** and **Daily** views, and choose a time range: **All Time**, or a custom range. For conversion rate, the chart subtitle shows the average for the period.
-
-{/* SCREENSHOT: images/events/overview-trend-chart.png | Overview page Trend chart with data, the measure dropdown open showing Revenue, Tickets Sold, Addons Sold etc. Crop to the chart card. */}
-
-### Performance Insights
-
-This panel splits your results two ways.
-
-- **Revenue Source**: **Via Tickets**, **Via Add-ons** and **Via Payment Links**.
-- **Sales Attribution**:
-  - **Full Price Sales**: tickets bought at the standard listed price, including free tickets, without a promo code.
-  - **Promo Sales**: tickets bought with a promo code at checkout.
-  - **Comp Tickets**: complimentary tickets you gave directly to attendees, with no checkout.
-
-{/* SCREENSHOT: images/events/overview-performance-insights.png | Overview page Performance Insights panel showing Revenue Source (Via Tickets, Via Add-ons, Via Payment Links) and Sales Attribution (Full Price, Promo, Comp Tickets) for an event that has used promo codes and comp tickets. Crop to the panel. */}
-
-### Ticket Breakdown
-
-A table with one row per ticket type, showing **Ticket Type**, **Price**, **Sold / Total (%)**, **Composition** (full price, promo and comp) and **Revenue**, in the event's currency.
-
-{/* SCREENSHOT: images/events/overview-ticket-breakdown-table.png | Overview page Ticket Breakdown table for an event with 3 ticket tiers: show Ticket Type, Price, Sold / Total (%), Composition and Revenue columns. Crop to the table. */}
+{/* SCREENSHOT: images/events/overview-ticket-breakdown-table.png | Ticket Breakdown table for an event with 3 ticket tiers. Crop to the table. */}
 
 <Tip>
-  To go deeper on sales, see the [Ticket report](/tickets/ticket-report).
+  For more detail on sales, see the [Ticket report](/tickets/ticket-report).
 </Tip>

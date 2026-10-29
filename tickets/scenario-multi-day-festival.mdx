@@ -1,23 +1,9 @@
 ---
 title: "Scenario: Multi-day Festival"
-description: "Set up a festival that runs over several days using one session per day, with consistent tiers and clear sales per day."
+description: "Run a festival with one session per day and track each day separately."
 ---
 
-**Goal:** Your festival runs Friday, Saturday, and Sunday. Attendees should be able to buy tickets for the days they want, and you want to track each day separately.
-
-## How multi-day events work
-
-Each day is its own **session**, and every ticket belongs to one session. A Friday ticket is a Friday ticket. This means:
-
-- Each day has its own capacity, prices, and sale windows.
-- Ticket Management groups the table by session, and you can filter by **Session**.
-- The [Ticket Report](/tickets/ticket-report) and [Complimentary Tickets](/tickets/comp-tickets) can also be filtered by session.
-
-<Note>
-  Sessions and their tickets are set up with your event. If you need another day or a new ticket type, contact your PLVR representative. This portal then lets you manage them.
-</Note>
-
-## The example
+**Goal:** Friday, Saturday and Sunday, each sold and counted on its own.
 
 | Session | Ticket | Quantity | Price |
 | --- | --- | --- | --- |
@@ -25,65 +11,46 @@ Each day is its own **session**, and every ticket belongs to one session. A Frid
 | Saturday | Day Pass | 600 | $55 |
 | Sunday | Day Pass | 400 | $40 |
 
-Each day is sold and counted on its own, so Saturday selling out does not affect Friday.
+Each day is a **session** with its own capacity, prices and sale windows. Saturday selling out does not affect Friday.
+
+<Note>
+  Sessions and their tickets are set up with your event. For another day or ticket type, contact your PLVR representative.
+</Note>
 
 ## Review each day
 
+In [Ticket Management](/tickets/ticket-management), check each session's **Price**, **Total** and dates, set purchase limits for popular days, and keep a day **Inactive** until you announce it.
+
+{/* SCREENSHOT: images/tickets/multi-day-ticket-management.png | Ticket Management for the three-session example. Callouts: 1 Session filter, 2 the three per-session tables. */}
+
+## Tiers on every day
+
+Build a [release chain](/tickets/scenario-ga-tiers) on one session, then:
+
 <Steps>
-  <Step title="Open Ticket Management">
-    Go to [Ticket Management](/tickets/ticket-management). With several sessions, a table appears for each, and a **Session** filter lets you focus on one.
+  <Step title="Copy">
+    Select **Copy to...** on the chain card and tick the other sessions.
   </Step>
-  <Step title="Check each session's tickets">
-    For each day, confirm **Price**, **Total**, and sale dates. Remember that **Name** and **Price** lock after the first sale.
+  <Step title="Review matches">
+    Tiers match by ticket name. Otherwise pick the right ticket, or **Don't copy this tier**.
   </Step>
-  <Step title="Set purchase limits">
-    Use **Limit Qty per Order** and **Limit Qty per User** to stop a single buyer from taking too many tickets for a popular day.
-  </Step>
-  <Step title="Turn days on or off">
-    Use the **Status** dropdown to keep a day **Inactive** until you are ready to announce it.
+  <Step title="Turn on Auto-release">
+    Copies start paused. Fix any flagged end times, then switch it on in each session.
   </Step>
 </Steps>
 
-{/* SCREENSHOT: images/tickets/multi-day-ticket-management.png | Ticket Management for a three-session event (Friday: Day Pass 400 @ $40, Saturday: Day Pass 600 @ $55, Sunday: Day Pass 400 @ $40). Capture the Session filter dropdown and the three per-session tables. */}
-
-## Add tiers to each day
-
-Want Early Bird pricing for every day? Build a [release chain](/tickets/scenario-ga-tiers) for one session, then copy it:
-
-<Steps>
-  <Step title="Build the chain on one session">
-    Create and fill the chain for Friday's tiers, such as Early Bird then Day Pass.
-  </Step>
-  <Step title="Copy it">
-    Select **Copy to...** on the chain card, then tick the other sessions.
-  </Step>
-  <Step title="Review the matches">
-    The portal matches tiers by name. If your tickets are named the same on each day (for example "Early Bird" in every session), they match automatically. Otherwise, choose the right ticket for each tier, or **Don't copy this tier**.
-  </Step>
-  <Step title="Turn Auto-release on for each copy">
-    Copied chains start paused. Review the copies (and fix any sales end times the portal flags), then switch **Auto-release** on in each session.
-  </Step>
-</Steps>
-
-{/* SCREENSHOT: images/tickets/multi-day-copy-chain.png | Click 'Copy to...' on the chain card of the Friday session. Tick Saturday and Sunday and capture the dialog with the tier matching (names matched automatically) before confirming. */}
+{/* SCREENSHOT: images/tickets/multi-day-copy-chain.png | Copy to... on the Friday chain with Saturday and Sunday ticked and tiers matched automatically. */}
 
 <Tip>
-  Use consistent ticket names across days, such as "Early Bird" and "Day Pass", so copying and reporting stay simple.
+  Use the same ticket names on every day so copying and reporting stay simple.
 </Tip>
 
-## What about a full-festival pass?
-
-The portal manages tickets inside each session. A ticket that is valid across all days is not something you build in this portal today. If you need a pass for the whole festival, talk to your PLVR representative about how to set it up for your event. For groups that want several tickets at once, see [Group packages](/tickets/scenario-bundles).
+A single pass valid for all days is not something you build in this portal. Talk to your PLVR representative.
 
 ## Track and operate
 
-- In the [Ticket Report](/tickets/ticket-report), choose a **Session** to see only that day's sales, or export it to CSV.
-- When comping artists or press, choose the **Session** in the comp form so each guest gets a ticket for the right day. See [Comping guests](/tickets/scenario-comp-guests).
-- Promo codes can apply to **All ticket types** or to one ticket in one session, so you can discount only a slow day. See [Discount campaigns](/tickets/scenario-promo-discounts).
+- [Ticket Report](/tickets/ticket-report): filter by **Session** for one day's sales.
+- [Comp tickets](/tickets/scenario-comp-guests): choose the **Session** so guests get the right day.
+- [Promo codes](/tickets/scenario-promo-discounts): target one ticket in one session to discount a slow day.
 
-{/* SCREENSHOT: images/tickets/multi-day-ticket-report-session.png | Open Ticket Report on the multi-day event, choose Saturday in the Session filter. Capture the filters row (Date, Session, Item, Search), the summary cards and the Export button. */}
-
-## Related
-
-- [Ticketing Concepts](/tickets/concepts)
-- [Ticket Management reference](/tickets/ticket-management)
+{/* SCREENSHOT: images/tickets/multi-day-ticket-report-session.png | Ticket Report on the multi-day event with Saturday chosen in the Session filter. Capture the filters, summary cards and Export button. */}

@@ -3,96 +3,46 @@ title: "Vendors"
 description: "Create vendors, then manage their sales locations, items, and login codes."
 ---
 
-**Vendor Setup** is where you create the vendors (stalls) that sell to attendees with their wristbands, and manage what each vendor sells and who can log in. Find it under **PLVR Tap** in the event sidebar. It only appears for events with PLVR Tap enabled.
+Vendors are the stalls that charge attendees by scanning wristbands. Find **Vendor Setup** under **PLVR Tap** in the event sidebar.
 
-## The vendor list
+{/* SCREENSHOT: images/tap/tap-vendor-list.png | Open PLVR Tap > Vendor Setup with several vendors (one Inactive). Capture the Add Vendor button, search box and table. Add callouts: 1 = Add Vendor, 2 = Status dropdown, 3 = counts that jump to each tab. */}
 
-The page lists every vendor with these columns:
-
-{/* SCREENSHOT: images/tap/tap-vendor-list.png | Open PLVR Tap > Vendor Setup with several vendors (one Inactive). Capture the Add Vendor button, Search by vendor name, and the table with Vendor Name, Status, Sales Locations, Items, Login Codes and the pencil and View Details actions. */}
-
-| Column | What it shows |
-| --- | --- |
-| **Vendor Name** | Name and image. Click it to open the vendor. |
-| **Status** | **Active** or **Inactive**. You can change it right in the table. |
-| **Sales Locations** | Number of sales locations. Click to jump to that tab. |
-| **Items** | Number of items. Click to jump to that tab. |
-| **Login Codes** | Number of login codes. Click to jump to that tab. |
-
-Use **Search by vendor name** to filter the list. The pencil icon edits a vendor, and **View Details** opens it.
-
-### Add a vendor
+## Add a vendor
 
 <Steps>
-  <Step title="Click Add Vendor">
-    A **Create Vendor** panel opens.
-  </Step>
-  <Step title="Fill in the details">
-    - **Vendor Image** (optional, up to 5 MB). You can crop it after choosing a file.
-    - **Name** (required), for example "Official Merchandise".
-    - **Note** (optional, up to 200 characters). This is an internal note.
-    - **Status** (required): Active or Inactive.
-  </Step>
-  <Step title="Click Create Vendor">
-    The vendor now appears in the list.
-  </Step>
+  <Step title="Add Vendor (1)">Select it to open the form.</Step>
+  <Step title="Fill in the details">A name is required. Image, internal note, and status are optional.</Step>
+  <Step title="Create Vendor">Click the vendor name to open it.</Step>
 </Steps>
 
-{/* SCREENSHOT: images/tap/tap-vendor-create-panel.png | On Vendor Setup, click Add Vendor to open the Create Vendor panel. Fill in Name "Official Merchandise" and a Note; upload a sample image. Capture the whole panel with Vendor Image, Name, Note, Status and Create Vendor button. */}
+{/* SCREENSHOT: images/tap/tap-vendor-create-panel.png | Click Add Vendor. Fill in Name "Official Merchandise" and a Note; upload a sample image. Capture the whole panel. */}
 
 <Note>
-Inactive vendors are unavailable for login and new orders.
+Inactive vendors, sales locations, and items are unavailable for login and new orders. Items in an inactive category are unavailable everywhere.
 </Note>
 
-## Vendor detail
+## Set up a vendor
 
-Opening a vendor shows its name and status, with three tabs. Use the **Vendor Setup** link at the top to go back to the list.
+{/* SCREENSHOT: images/tap/tap-vendor-detail-tabs.png | Open a vendor. Capture the header and the three tabs (Sales Locations, Items, Login Codes), Items selected with a few items listed. */}
 
-{/* SCREENSHOT: images/tap/tap-vendor-detail-tabs.png | Open a vendor from Vendor Setup. Capture the header (name and status), the Vendor Setup back link, and the three tabs (Sales Locations, Items, Login Codes), with the Items tab selected and a few items listed. */}
+<Steps>
+  <Step title="Sales Locations">Add each place the vendor sells, such as "Main Bar".</Step>
+  <Step title="Items">Add categories and items. Each item needs a price above 0 and at least one sales location.</Step>
+  <Step title="Login Codes">Generate 1 to 200 codes at once. A note applies to the whole batch.</Step>
+</Steps>
 
-### Sales locations
+{/* SCREENSHOT: images/tap/tap-vendor-add-item-form.png | On the vendor Items tab, click Add Item. Capture the form, with at least one sales location selected. */}
 
-A sales location is a place where the vendor sells, for example "Main Bar". The table shows **Sales Location**, **Description**, **Items** (how many items are sold there), and **Status**.
+Items and categories that vendors submit themselves go through [Approvals](/tap/approvals) first. Use **Export** on the Items and Login Codes tabs to download a CSV.
 
-To add one, click the add button, then enter a **Name** (required), an optional **Description** (up to 200 characters), and a **Status**. Click **Create Sales Location**. Use the pencil icon to edit.
-
-Inactive sales locations are unavailable for new orders.
-
-### Items
-
-This tab shows **Items** with a count, and lets you manage categories and items together.
-
-- **Add Item** opens a form with: **Item Image** (optional), **Sales Locations** (required, pick at least one place where the item is sold), **Category**, **Item Name** (required), **Price** in the event currency (required, must be greater than 0), and **Status**.
-- **Category** buttons let you create categories. A category needs a **Name** (required) and a **Status**.
-- Filter the table by **Sales Location**, **Category** (including **No Category**), or **Search by item name**.
-- **Export** downloads the vendor's items as a CSV file.
-
-{/* SCREENSHOT: images/tap/tap-vendor-add-item-form.png | On the vendor Items tab, click Add Item. Capture the form with Item Image, Sales Locations, Category, Item Name, Price and Status; select at least one sales location. */}
-
-<Note>
-Inactive items are unavailable for new orders. Inactive categories and their items are unavailable at all sales locations.
-</Note>
-
-Items and categories that a vendor submits themselves go through [Approvals](/tap/approvals) before they go live.
-
-### Login codes
-
-Login codes are what a vendor's staff use to sign in at the stall. The table shows **Login Code**, **Note**, and **Status**.
-
-- Click the add button to generate codes. Choose the **Number of Login Codes** (1 to 200), add an optional **Note** (up to 200 characters, applied to every code in the batch, for example "Alex - Vendor Manager"), and set the **Status**. Click **Generate Codes**.
-- Click the copy icon next to a code to copy it.
-- **Search by login code** filters the list.
-- **Export** downloads the vendor's login codes as a CSV file.
-- To edit a code's note or status, use the pencil icon.
-
-{/* SCREENSHOT: images/tap/tap-vendor-login-codes.png | On the vendor Login Codes tab, click the add button to open the generate dialog with Number of Login Codes 3, a Note "Alex - Vendor Manager", Status Active. Capture the dialog alongside the underlying Login Codes table (Login Code, Note, Status). */}
+{/* SCREENSHOT: images/tap/tap-vendor-login-codes.png | On the vendor Login Codes tab, open the generate dialog with Number of Login Codes 3, Note "Alex - Vendor Manager", Status Active. Capture the dialog over the Login Codes table. */}
 
 <Warning>
-Inactive login codes cannot sign in or perform new actions. Set a code to Inactive if someone leaves the stall or a code is shared by mistake.
+Inactive login codes cannot sign in. Set a code to Inactive if someone leaves the stall or a code is shared by mistake.
 </Warning>
 
 ## Related
 
 - [Approvals](/tap/approvals)
 - [Spending report](/tap/spending-report)
-- [Overview of PLVR Tap](/tap/introduction)
+- [PLVR Tap overview](/tap/introduction)

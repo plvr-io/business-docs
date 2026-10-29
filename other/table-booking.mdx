@@ -1,101 +1,53 @@
 ---
 title: "Table booking"
-description: "Set up your venue's table booking: venue details, images, and the tables guests can book with their capacity and minimum spend."
+description: "Set up your venue's bookable tables."
 ---
 
-Table booking lets your organization offer tables that guests can book. It is set up once for your organization, not per event, and has two parts: **Settings** and **Tables**.
+Table booking lets guests book tables. It is set up once per organization, not per event, and has two parts: **Settings** and **Tables**.
 
 <Note>
-Table booking is organization setup. It appears as **Table Booking** in the top navigation only for owners, admins and managers. Anyone else who opens a table booking link is sent to a "no access" page.
+  **Table Booking** appears in the top navigation only for owners, admins and managers.
 </Note>
 
-## Set up table booking
-
-The first time you open **Table Booking**, you see **Set Up Table Booking**. Add your venue's details first, then the tables guests can book. Only one table booking is created per organization.
+## Set up
 
 <Steps>
-  <Step title="Fill in the details">
-    Complete the form described under [Settings](#settings). **Name** and **Currency** are required.
+  <Step title="Open Table Booking">
+    Fill in the setup form. **Name** and **Currency** are required.
   </Step>
   <Step title="Select Create Table Booking">
-    You are taken straight to **Tables**, because nothing can be booked onsite until it has tables.
+    You go straight to **Tables**.
   </Step>
   <Step title="Add your tables">
-    See [Tables](#tables).
+    Nothing can be booked until tables exist.
   </Step>
 </Steps>
 
-{/* SCREENSHOT: images/other/table-booking-setup.png | With a fresh organization (no table booking yet) as owner, open Table Booking in the top navigation. Capture the 'Set Up Table Booking' form with Name 'Lumi Lounge', Currency, Venue and the Create Table Booking button. */}
-
-After setup, opening **Table Booking** goes straight to your settings. A sidebar shows your logo, name and venue, with **Settings** and **Tables**.
+{/* SCREENSHOT: images/other/table-booking-setup.png | Set Up Table Booking form for a fresh organization with Name 'Lumi Lounge', Currency and Venue filled. Include Create Table Booking. */}
 
 ## Settings
 
-**Table Booking Settings** covers the name, currency, venue and images guests see when booking a table.
+Settings cover your logo, name, currency, venue, seat map, drinks menu and rules.
 
-{/* SCREENSHOT: images/other/table-booking-settings.png | Open Table Booking > Settings after setup. Capture the sidebar (logo, name, venue, Settings, Tables) and the 'Table Booking Settings' form with Logo, Name, Currency, Venue, Status, Seat Map, Drinks Menu, Rules and Save Changes. */}
+{/* SCREENSHOT: images/other/table-booking-settings.png | Table Booking > Settings. Callouts: 1 Currency, 2 Venue, 3 Status, 4 Save Changes. */}
 
-| Field | Required | Notes |
-| --- | --- | --- |
-| **Logo** | No | Shown as the avatar where guests book a table. You crop it to a square when you upload it. Images up to 5 MB. |
-| **Name** | Yes | Up to 200 characters, for example "Lumi Lounge". |
-| **Currency** | Yes | Every table and table order is priced in it. |
-| **Venue** | No when setting up | Search for a venue and pick it. Leave it empty to use your organization's venue. Booking times follow the venue's timezone, which is shown once saved. |
-| **Status** | Settings only | **Active** or **Inactive**. |
-| **Seat Map** | No | Opened from the **Seat map** button on the booking page. |
-| **Drinks Menu** | No | Shown on the booking **Menu** page. |
-| **Rules** | No | Shown on the booking **Rules** page. |
-
-The currency choices are USD, SGD, HKD, THB, KRW, PHP, IDR, MYR, TWD, JPY, CAD, EUR and CNY.
-
-Select **Save Changes** to apply; it is only available once you have changed something.
+- Leave **Venue** empty to use your organization's venue. Booking times follow its timezone.
+- Set **Status** (3) to Inactive to hide table booking onsite. It cannot be deleted.
 
 <Warning>
-If you change the currency, existing table and table order amounts keep their numbers and are not converted. A table priced at 500 stays at 500 in the new currency.
+  Changing the currency (1) does not convert existing amounts. A table priced at 500 stays 500.
 </Warning>
-
-### Status
-
-Table booking cannot be deleted. While it is **Inactive**, it is hidden from onsite until you set it back to **Active**. An inactive table booking shows "Inactive" in the sidebar.
-
-If saving fails because a venue is needed, the message appears under **Venue**. Pick a venue and save again.
 
 ## Tables
 
-The **Tables** page lists the tables guests can book, with the capacity and minimum spend each table order starts from. Use **Search** to filter by table name.
+Each table has a default capacity and minimum spend that prefill onsite table orders; each order can change them. Tables cannot be deleted.
 
-{/* SCREENSHOT: images/other/table-booking-tables-list.png | Open Table Booking > Tables with about 6 tables (A1 to A6, capacity 4 and minimum spend 500). Capture the Search box, Add Tables button and the table (Table Name, Default Capacity, Minimum Spend, pencil icon). */}
+{/* SCREENSHOT: images/other/table-booking-tables-list.png | Table Booking > Tables with about 6 tables (A1 to A6, capacity 4, minimum spend 500). Callouts: 1 Add Tables, 2 edit pencil. */}
 
-| Column | Meaning |
-| --- | --- |
-| **Table Name** | The table's name, for example A1. |
-| **Default Capacity** | How many people the table seats by default. |
-| **Minimum Spend** | The default minimum spend, in your table booking's currency. |
+**Add Tables** (1) adds several at once. Fill the first row, then use **Add Row**: names count up (A1, A2) and capacity and spend carry over. Up to 100 rows at a time.
 
-Capacity and minimum spend are defaults that prefill a table order onsite. Each order can still change them.
+{/* SCREENSHOT: images/other/table-booking-add-tables.png | Add Tables panel with A7 (capacity 4, minimum spend 500) and an autofilled A8 row. Include the Add N Tables button. */}
 
-### Add tables
-
-Select **Add Tables** to add several at once.
-
-<Steps>
-  <Step title="Fill in the first row">
-    Enter **Name**, **Default Capacity** and **Minimum Spend**. Name can be up to 64 characters. Capacity is a whole number from 1 to 100. Minimum spend is entered in whole currency units, such as 5000.00, and can't be negative.
-  </Step>
-  <Step title="Add more rows">
-    Select **Add Row**. The next row picks up where the last name left off (A1 becomes A2, T09 becomes T10) and keeps the same capacity and spend. A name without a trailing number is left blank for you to type. You can add up to 100 rows in one go, and remove a row with the bin icon.
-  </Step>
-  <Step title="Add the tables">
-    Select **Add N Tables**. A message confirms how many were added.
-  </Step>
-</Steps>
-
-{/* SCREENSHOT: images/other/table-booking-add-tables.png | Click 'Add Tables'. Fill two rows (A7, capacity 4, minimum spend 500, then use Add Row so the next row autofills A8). Capture the panel with the 'Add N Tables' button. */}
-
-Table names must be unique within your table booking, regardless of capital letters and extra spaces. A row that repeats an existing name, or another row's name, shows an error on that row and can't be saved.
-
-### Edit a table
-
-Select the pencil icon on a row to change the name, default capacity or minimum spend. Table orders already made from this table keep their own capacity and minimum spend.
-
-The page doesn't offer a way to delete a table.
+- Names must be unique (ignoring capitals and spaces), up to 64 characters.
+- Capacity is 1 to 100. Minimum spend cannot be negative.
+- Use the pencil (2) to edit a table. Existing orders keep their own values.

@@ -1,59 +1,24 @@
 ---
 title: "Personalization form"
-description: "Choose which attendee-identity questions are asked before a wristband is bound."
+description: "Choose the identity questions attendees answer before a wristband is bound."
 ---
 
-The **Personalization Form** controls the identity questions attendees answer when they personalize or claim a ticket, before their wristband is bound to it. It's listed in the event sidebar and only appears for events with PLVR Tap enabled.
+Attendees answer these questions when they personalize or claim a ticket. It is separate from the [registration form](/events/registration-form). Names and email are always collected, so they are not listed.
 
-It works like the [registration form](/events/registration-form), but it is a separate form with its own questions.
-
-{/* SCREENSHOT: images/tap/tap-personalization-form-page.png | Open Personalization Form in the event sidebar of a Tap event with a few preset questions and one custom question added. Capture the full page with the Quick add buttons, Custom question button, and the Preset Questions and Custom Questions tables (Question, Required, Status, drag handle). */}
+{/* SCREENSHOT: images/tap/tap-personalization-form-page.png | Open Personalization Form in a Tap event with a few preset questions and one custom question. Capture the full page. Add callouts: 1 = Quick add buttons, 2 = Custom question button, 3 = Required / Status / drag handle on a row. */}
 
 ## Add questions
 
-### Quick add
+- **Quick add** (1): adds a standard question (Gender, Nationality, Phone Number, Date of Birth, Identity Document), required by default.
+- **Custom question** (2): choose an answer type (text, number, single or multiple choice). Choice types need at least one option.
 
-Click one of the **Quick add** buttons to add a standard question. Each is added as required, and the button disappears once added:
+{/* SCREENSHOT: images/tap/tap-personalization-custom-question-panel.png | Click Custom question. Set Answer Type to Single choice and add two options. Capture the whole panel. */}
 
-- **Gender**
-- **Nationality**
-- **Phone Number**
-- **Date of Birth**
-- **Identity Document**
+## Manage questions
 
-### Custom questions
-
-<Steps>
-  <Step title="Click Custom question">
-    A **Create Custom Question** panel opens.
-  </Step>
-  <Step title="Describe the question">
-    - **Question** (required)
-    - **Description** (optional)
-    - **Answer Type** (required): **Text**, **Number**, **Single choice**, or **Multiple choice**
-    - **Options** (for the two choice types): add at least one option, using **Add Option**
-    - **Required** switch
-  </Step>
-  <Step title="Save">
-    The question appears under **Custom Questions**.
-  </Step>
-</Steps>
-
-{/* SCREENSHOT: images/tap/tap-personalization-custom-question-panel.png | On Personalization Form, click Custom question to open the Create Custom Question panel. Set Answer Type to Single choice and add two options with Add Option. Capture the whole panel with Question, Description, Answer Type, Options and Required switch visible. */}
-
-## Manage your questions
-
-Questions are listed in two tables, **Preset Questions** and **Custom Questions**. Each shows **Question**, **Required**, and **Status**.
-
-- **Required:** use the switch to make a question required or optional.
-- **Status:** set a question to **Active** or **Inactive**. Inactive questions are not asked.
-- **Order:** drag the handle on the left of a row to reorder questions within its table.
-
-<Note>
-Attendees' names and email are always collected as fixed fields, so they aren't listed here.
-</Note>
+On each row (3), toggle **Required**, set **Status** to **Inactive** to stop asking it, or drag the handle to reorder.
 
 ## Related
 
-- [Overview of PLVR Tap](/tap/introduction)
+- [PLVR Tap overview](/tap/introduction)
 - [Wristbands](/onsite/wristbands)
