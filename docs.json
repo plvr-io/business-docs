@@ -152,5 +152,6 @@
   },
   "footer": {
     "socials": {}
-  }
+  },
+  "favicon": "/favicon.ico"
 }
