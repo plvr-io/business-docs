@@ -1,87 +1,54 @@
 ---
 title: "Participants"
-description: "The full picture of one person at the desk: identity, tickets, wristbands, wallet and activity, with the actions you can take."
+description: "One person at the desk: identity, tickets, wristbands, wallet and activity, with the actions you can take."
 ---
 
-A participant profile, titled **Participant 360**, brings identity, entitlement, entry and cashless activity for one person onto a single screen. You reach it by selecting a person from [Search](/onsite/search), or from a link on a ticket, wristband, transaction or case.
-
-The buttons at the top are **Back to queue** (to the [Command Center](/onsite/command-center)) and **+ Create service case**.
+A participant profile (**Participant 360**) puts one person's identity, tickets, entry and cashless activity on one screen. Reach it by selecting a person in [Search](/onsite/search), or from a link on a ticket, wristband, transaction or case. **+ Create service case** records a problem.
 
 <Note>
-On a multi-session event a person can hold several tickets and wear several wristbands, but they share one wallet for the event. The balance never lives on a band.
+A person can hold several tickets and wristbands on a multi-session event, but shares one wallet. The balance never lives on a band.
 </Note>
 
 ## Overview
 
-The **Overview** tab opens with the participant's name, email and phone, and a verdict:
+The **Overview** tab opens with a verdict: **Ready** (go ahead), **Needs a look** (read the notes first) or **Blocked** (resolve something first).
 
-{/* SCREENSHOT: images/onsite/onsite-participant-overview.png | Open a participant profile (Participant 360) via Search, for a person on a Tap event with a Needs a look verdict and at least one What needs attention item. Capture the header buttons, verdict, fact boxes, What needs attention, and Recommended action with Start resolution. Highlight the verdict. */}
+{/* SCREENSHOT: images/onsite/onsite-participant-overview.png | Open a participant profile via Search, for a person on a Tap event with a Needs a look verdict and at least one What needs attention item. Number the verdict (1), What needs attention (2), Recommended action with Start resolution (3) and the tabs (4). */}
 
-| Verdict | Meaning |
-| --- | --- |
-| **Ready** | Everything is in order. Go ahead. |
-| **Needs a look** | You can deal with this, but read the notes first. |
-| **Blocked** | Something has to be resolved before this can go ahead. |
-
-Fact boxes summarize the selected event and its type, **Admission** (number of tickets and how many have entered), and on Tap events the active wristbands and the **Cashless balance**.
-
-### What needs attention
-
-The most important part of the page. Each item says what is wrong, the next step, and a sentence marked "Say" that you can read to the participant. Items about a particular ticket show its Ticket ID. Where the problem can't be fixed at the desk, a **Record a service case** button is offered.
-
-If nothing needs attention, it says everything is in order.
-
-### Recommended action
-
-When there is a suggested next step, a highlighted box names it and offers **Start resolution**, which opens that ticket's guided resolution. See [Tickets & Entry](/onsite/tickets).
-
-### Bought for other people
-
-If this person purchased tickets for others, a panel lists them with an **Open that person** link. This person holds none of those tickets, so don't admit them on one.
+- **What needs attention** says what is wrong, the next step, and a "Say" sentence to read to the participant. If it can't be fixed at the desk, use **Record a service case**.
+- **Recommended action** with **Start resolution** opens the ticket's guided resolution. See [Tickets & Entry](/onsite/tickets).
+- **Bought for other people** lists tickets this person purchased for others. They hold none of them, so don't admit them on one; use **Open that person**.
 
 ## Tabs
 
-| Tab | What it shows |
-| --- | --- |
-| **Overview** | The summary above. |
-| **Tickets** | Every ticket this person holds for the event: Ticket ID, state, type, session and time, guidance for the participant, and wristband (on Tap events). **Resolve** opens the guided resolution. If you arrived from a search result, that ticket is highlighted. |
-| **Wristbands** (Tap events) | Every band bound to this person, newest first, with replaced bands kept: band, ticket, when bound, state (Active or ended, with the reason) and an **Open** link. |
-| **Cashless** (Tap events) | The wallet and recent money. See below. |
-| **Activity** | A timeline of what has happened for this person, with time, place, method and result. It loads when you open the tab. |
+The **Tickets** tab has **Resolve** per ticket. **Wristbands** and **Cashless** appear on Tap events; replaced bands stay listed. **Activity** is a timeline of what has happened for this person.
 
 ### Cashless
 
-The **Cashless** tab shows the wallet balance, whether it is **Active** or **Frozen**, and a note about ownership. If the person has no wallet yet, it says one is created when their details are completed.
+The tab shows the wallet balance, whether it is Active or Frozen, and recent money. For the event-wide ledger, see [Cashless](/onsite/cashless).
 
-{/* SCREENSHOT: images/onsite/onsite-participant-cashless-tab.png | On a participant profile, open the Cashless tab for a person with a wallet and recent transactions. Capture the balance and Active status, the three actions (Correct the balance, Issue a reward credit, Freeze the wallet) and Recent money. */}
+{/* SCREENSHOT: images/onsite/onsite-participant-cashless-tab.png | On a participant profile, open the Cashless tab for a person with a wallet and recent transactions. Number the balance and status (1), the three action buttons (2) and Recent money (3). */}
 
-Three actions are offered here, because a money change has to name whose balance it moves:
-
-| Action | What it does | What it does not do |
+| Action | Use it to | Not for |
 | --- | --- | --- |
-| **Correct the balance** | Adjusts the balance by the amount it was recorded out by. | It is a correction, not a refund or a top-up. It doesn't create or reverse a payment. |
-| **Issue a reward credit** | Adds new money to the wallet as a reward or goodwill gesture. | It is never a correction. To fix a misrecorded amount, use **Correct the balance**. |
-| **Freeze the wallet** / **Unfreeze the wallet** | Stops (or restores) all cashless spending for this person, on every band they hold. | Doesn't stop them entering, and doesn't freeze any wristband. |
+| **Correct the balance** | Fix a misrecorded amount. | Refunds or top-ups. It creates or reverses no payment. |
+| **Issue a reward credit** | Add goodwill money, with a label the participant sees. | Corrections. |
+| **Freeze the wallet** / **Unfreeze the wallet** | Stop or restore all cashless spending on every band they hold. | Entry, or freezing a band. |
 
-The action panel works as described in [Tickets & Entry](/onsite/tickets#the-action-panel). The money actions also ask for:
+These use the [action panel](/onsite/tickets#the-action-panel). **Correct the balance** also needs:
 
-- **Correct the balance:** the **amount the balance is out by**, in whole currency (not cents), with a minus sign to take money off; **Evidence** (the cash count, terminal slip or receipt number); a written account in **What did you verify?** (at least 12 characters); and the confirmation tick box. Enter the amount the balance is out by, not the total that should be there. The panel shows "Will apply" with the signed amount before you confirm.
-- **Issue a reward credit:** the **amount to credit** (a positive amount, in whole currency) and a **label shown to the participant**, such as "Loyalty Reward".
+- the amount the balance is **out by** (not the total it should be), in whole currency, with a minus to take money off. **Will apply** shows the signed amount before you confirm;
+- **Evidence**, such as a cash count, terminal slip or receipt number;
+- **What did you verify?** (at least 12 characters) and the confirmation tick box.
 
-**Recent money** lists the latest ledger rows with time, type, channel, reference, signed amount, balance after and status. For the event-wide ledger, see [Cashless](/onsite/cashless).
+**Issue a reward credit** needs a positive amount in whole currency and a label.
 
 ## What you can do
 
-The right-hand **What you can do** panel offers every action for the selected ticket, wristband and wallet in one place, with the recommended one first and the rest under **Show everything else**. Actions that don't apply, such as undoing a check-in that never happened, are left out. Actions an event can never run, such as wristband actions on a Ticket-only event, are not shown. See [Tickets & Entry](/onsite/tickets) for entry actions, [Wristbands](/onsite/wristbands) for band actions, and above for wallet actions.
+The **What you can do** panel offers every action for the selected ticket, wristband and wallet, recommended first, the rest under **Show everything else**. See [Tickets & Entry](/onsite/tickets), [Wristbands](/onsite/wristbands) and the wallet actions above.
 
-{/* SCREENSHOT: images/onsite/onsite-participant-what-you-can-do.png | On a participant profile with a selected ticket, capture the right-hand What you can do panel with the recommended action highlighted and Show everything else expanded, including a Supervisor-locked action and Record a service case. */}
+{/* SCREENSHOT: images/onsite/onsite-participant-what-you-can-do.png | On a participant profile with a selected ticket, capture What you can do with the recommended action highlighted and Show everything else expanded, including a Supervisor-locked action and Record a service case. */}
 
-When a person has several tickets, actions apply to the ticket you selected in search. If you opened the profile another way, they apply to the first ticket, so check the **You are acting on** box in the action panel before confirming.
-
-Actions marked **Supervisor** are disabled unless you are a supervisor. The panel says "Only a supervisor can do this. Ask one, or open a case."
-
-**Record a service case** is at the bottom for when nothing resolves the problem.
-
-## Service context
-
-If the person has an open case, a **Service context** panel shows the reported issue, a link to the case, its state, and how many other open cases they have. See [Service cases](/onsite/cases).
+- With several tickets, actions apply to the ticket you selected in search, otherwise the first one. Check **You are acting on** before confirming.
+- **Supervisor** actions are disabled unless you are a supervisor.
+- If nothing resolves the problem, use **Record a service case**. An open case also shows a **Service context** panel; see [Service cases](/onsite/cases).

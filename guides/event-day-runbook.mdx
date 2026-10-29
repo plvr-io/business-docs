@@ -1,113 +1,72 @@
 ---
 title: "Event day runbook"
-description: "Run your event with Onsite Operations: who does what on shift, how to handle entry, wristbands, cashless problems, guests, door sales and escalations."
+description: "Run the day from Onsite Operations: shifts, entry, wristbands, cashless problems and escalations."
 ---
 
-On the day, **Onsite Operations** is your control room. Open it from the event menu. Its first screen, the **Command Center**, shows what needs attention and lets you search for any guest.
-
-<Note>
-What you see depends on the event type. A **Ticket-only event** has entry by QR scan or manual check-in, and no wristbands or cashless wallet. A **Tap event** admits guests by wristband and also shows the **Wristbands** and **Cashless** workspaces. See [Command Center](/onsite/command-center).
-</Note>
+**Onsite Operations** is your control room. Its **Command Center** shows what needs attention and lets you search any guest. Ticket-only events admit by QR scan or manual check-in. Tap events admit by wristband and add **Wristbands** and **Cashless**. See [Command Center](/onsite/command-center).
 
 ## Before doors open
 
-<Check>Every team member has an **Active** login code under **Onsite Staff**, and top-up staff are tied to the right station.</Check>
-<Check>Spare wristbands are added (Tap events) and the **Approvals** list has no pending items.</Check>
-<Check>Door sales poster is printed and in place, if you are selling at the door. See [Door sales](/promotions/door-sales).</Check>
-<Check>Someone on the desk has opened the **Command Center** and knows where **Search** and **+ New service case** are.</Check>
+<Check>Every team member has an **Active** code in **Onsite Staff**, top-up staff tied to the right station.</Check>
+<Check>Spare wristbands added and **Approvals** empty (Tap events).</Check>
+<Check>Door sales poster in place, if selling at the door. See [Door sales](/promotions/door-sales).</Check>
+<Check>The desk knows where **Search** and **+ New service case** are.</Check>
 
-## Who does what on shift
+## Who does what
 
-Each person signs in with a login code, and each code has a **Role** chosen when you create it under **Onsite Staff**. The **Role** list describes what each role is for, so pick the one that fits the job and use the **Note** to record who holds the code. Plan your shifts around jobs like these.
+| Job | Where |
+| --- | --- |
+| Gate team: admit guests | [Tickets & Entry](/onsite/tickets) |
+| Top-up team (Tap) | [Top-up setup](/tap/top-up-setup) |
+| Desk: resolve entry and wristband problems | [Search](/onsite/search) |
+| Supervisor: restricted wristband actions | [Wristbands](/onsite/wristbands) |
+| Event lead: watch Command Center, review escalations | [Service cases](/onsite/cases) |
 
-| Job | What they do | Where |
-| --- | --- | --- |
-| Gate team | Admit guests, check tickets | [Tickets & Entry](/onsite/tickets) |
-| Top-up team | Add money to wallets at their assigned station (Tap events) | [Top-up setup](/tap/top-up-setup) |
-| Desk operators | Search, resolve entry and wristband problems, record cases | [Search](/onsite/search) |
-| Supervisor | Handles restricted wristband actions and decisions the desk cannot make | [Wristbands](/onsite/wristbands) |
-| You or the event lead | Watch the Command Center, review escalated cases | [Service cases](/onsite/cases) |
+Each code's **Role** is set in **Onsite Staff**. Keep the Command Center open all day. It refreshes about every 30 seconds, and the **Attention queue** is ordered by risk, so work from the top.
 
-<Tip>
-Keep the Command Center open on one screen all day. It refreshes about every 30 seconds.
-</Tip>
+{/* SCREENSHOT: images/guides/runbook-command-center.png | Command Center on a Tap event mid-event. Callouts: 1 Open service cases / Blocked from entry / Unresolved top-ups counts, 2 Operational health banner, 3 Attention queue, 4 Search, 5 + New service case. */}
 
-## Watch the floor
-
-On the Command Center, check these regularly:
-
-- **Open service cases** and **Blocked from entry** counts.
-- **Unresolved top-ups** (Tap events), which counts money that may have been taken without the balance going up.
-- The **Operational health** banner, which appears as **Degraded** or **Incident** only when something is wrong.
-- **Floor alerts**, which appear when several failures cluster together.
-- The **Attention queue**, ordered by risk and then by waiting time. Work from the top.
-
-{/* SCREENSHOT: images/guides/runbook-command-center.png | Onsite Operations Command Center on a Tap event mid-event. Capture Open service cases, Blocked from entry, Unresolved top-ups counts, the Operational health banner, Floor alerts, the Attention queue, Search and the '+ New service case' button. */}
-
-## Handle common situations
+## Common situations
 
 <AccordionGroup>
   <Accordion title="A guest cannot get in">
-    1. Find them with **Search** by Ticket ID, email, order number or wristband.
-    2. Read **Why it matched** on the result. If it says the match was the purchaser, the ticket belongs to someone else. Open the right person.
-    3. Select **Resolve**. The page tells you in plain words what is wrong and gives a "Say to the participant" sentence.
-    4. Use the recommended action, such as **Admit with an override** (needs a written account of what you verified and the confirmation tick box). Use **Allow re-entry** when someone returns after leaving.
-
-    See [Tickets & Entry](/onsite/tickets).
+    **Search** by ticket ID, email, order number or wristband, check **Why it matched**, then **Resolve** and follow the recommended action (such as **Admit with an override** or **Allow re-entry**). See [Tickets & Entry](/onsite/tickets).
   </Accordion>
   <Accordion title="Wristband lost, broken or not working">
-    - **Replace the wristband** retires the old band and binds a new one to the same ticket. The balance is not affected.
-    - **Report the wristband lost or stolen** stops the band immediately.
-    - **Freeze the wristband** stops one band. To stop all spending, use **Freeze the wallet** on the participant's profile.
-    - If a band is already bound to someone else, you will see an **Ownership conflict**. Use **Investigate ownership** and let a supervisor decide.
-
-    See [Wristbands](/onsite/wristbands).
+    **Replace the wristband** (balance unaffected), **Report the wristband lost or stolen**, or **Freeze the wristband**. To stop all spending use **Freeze the wallet** on the profile. An **Ownership conflict** goes to a supervisor. See [Wristbands](/onsite/wristbands).
   </Accordion>
   <Accordion title="A top-up did not arrive">
-    1. Open **Cashless** from the Command Center and search the guest's email or reference.
-    2. Select **Investigate** on the unresolved top-up to see where it broke.
-    3. Do not tell the guest no money was taken unless you have checked, and do not ask them to pay again.
-    4. If you cannot settle it, select **Open a payment review case**.
-
-    The console does not refund or move money between wallets. See [Cashless](/onsite/cashless).
+    Open **Cashless**, search the guest, and **Investigate** the unresolved top-up. Do not tell the guest no money was taken, and do not ask them to pay again. If stuck, **Open a payment review case**. The console cannot refund. See [Cashless](/onsite/cashless).
   </Accordion>
   <Accordion title="Balance needs fixing">
-    On the participant's **Cashless** tab, use **Correct the balance** for a misrecorded amount, or **Issue a reward credit** as goodwill. Both ask for details and are recorded against your name. See [Participants](/onsite/participants).
+    On the participant's **Cashless** tab: **Correct the balance** or **Issue a reward credit**. Both are recorded against your name. See [Participants](/onsite/participants).
   </Accordion>
-  <Accordion title="A VIP or approved guest is not on the list">
-    Open **Guests**. Search by name or email, and select **Check in**. If they are not listed, use **Add an approved guest** and record **Who approved this?**. Never admit on a name match alone. See [Guests](/onsite/guests).
+  <Accordion title="An approved guest is not on the list">
+    In **Guests**, search and **Check in**, or **Add an approved guest** and record who approved. Never admit on a name match alone. See [Guests](/onsite/guests).
   </Accordion>
-  <Accordion title="Someone wants to buy a ticket at the door">
-    Point them to the door sales poster. When they scan the QR code they land on your event page and buy on their phone. Watch **Tickets Sold** on the **Door Sales** page.
+  <Accordion title="Someone wants to buy at the door">
+    Point them to the poster. They scan it and buy on their phone.
   </Accordion>
 </AccordionGroup>
 
-{/* SCREENSHOT: images/guides/runbook-search-resolve.png | Onsite Operations > Search. Search by ticket ID or email and show a result with 'Why it matched'. Then click Resolve and capture the page with the plain-words explanation, 'Say to the participant' sentence and recommended actions. */}
+{/* SCREENSHOT: images/guides/runbook-search-resolve.png | Onsite Operations > Search result showing 'Why it matched', then the Resolve page with the plain-words explanation, 'Say to the participant' sentence and recommended actions. */}
 
-## When you cannot fix it: service cases
+## When you cannot fix it
 
-Nobody should be turned away with nothing recorded. If no action solves the problem, record a service case with **+ New service case** (or **Record a service case** on a profile).
+Never turn someone away with nothing recorded. Use **+ New service case**: describe the problem, **Add evidence** (a reference number, named confirmation or note; verbal agreement is not evidence), then **Send for review** if you cannot safely act, or close it as resolved or cannot be resolved. See [Service cases](/onsite/cases).
 
-1. Pick **What kind of problem?** and describe **What happened at the desk?**.
-2. If the guest could not be found, type what they showed you exactly as they gave it.
-3. Select **Add evidence**: a **Reference number**, a **Named confirmation**, or a **Note**. Verbal agreement alone is not evidence.
-4. Choose **Send for review** and the kind of review (**Identity dispute**, **Payment review**, **Ticket entitlement review** or **Operational incident**) if you cannot safely act.
-5. Conclude with **Close as resolved** and what the guest was told, or **Conclude: cannot be resolved** with the reason.
-
-{/* SCREENSHOT: images/guides/runbook-service-case-form.png | Click '+ New service case'. Fill 'What kind of problem?' and 'What happened at the desk?' and open Add evidence. Capture the form with Send for review and the conclusion buttons. */}
-
-See [Service cases](/onsite/cases).
+{/* SCREENSHOT: images/guides/runbook-service-case-form.png | '+ New service case' form filled, with Add evidence open. Callouts: 1 problem type, 2 Add evidence, 3 Send for review, 4 conclusion buttons. */}
 
 ## End of the day
 
 <Steps>
   <Step title="Clear the queue">
-    Open **Service cases** and work through **Still open** until it is empty or each remaining case has a clear next step.
+    Work **Service cases** > **Still open** down to nothing, or a clear next step each.
   </Step>
   <Step title="Turn off codes">
-    In **Onsite Staff**, set codes for finished shifts to **Inactive**, and do the same for vendor login codes in **Vendor Setup**.
+    Set finished staff and vendor codes to **Inactive**.
   </Step>
   <Step title="Note the numbers">
-    Note **Tickets issued** and **Entered** from **Tickets & Entry**, and the cashless cards, for the after-event review. See [After the event](/guides/after-the-event).
+    **Tickets issued**, **Entered** and the cashless cards, for [After the event](/guides/after-the-event).
   </Step>
 </Steps>

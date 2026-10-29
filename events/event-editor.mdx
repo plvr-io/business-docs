@@ -1,80 +1,44 @@
 ---
 title: "Event editor"
-description: "Edit your event's public page: images, name, times, price label, button text, description and terms."
+description: "Edit your event's public page."
 ---
 
-The **Event Editor** lets you edit your event page directly. It is laid out like the page buyers see, so what you edit is what they get. Open it from **Event Editor** in the event menu.
+**Event Editor** (in the event menu) looks like the page buyers see. Select the pencil beside an item to edit it. Nothing is published until you select **Save Event** (top right).
 
-Next to each editable item is a pencil icon. Select it to edit that item, then confirm. Nothing is published until you select **Save Event** at the top right.
-
-{/* SCREENSHOT: images/events/editor-full-page.png | Event Editor page of an event (Event Editor in the event menu) with a complete event: main image, gallery, name, time, price strip, About and Terms. Show the pencil icons and the Save Event button at top right. Full-page capture, scrolled to top. */}
+{/* SCREENSHOT: images/events/editor-full-page.png | Event Editor for a complete event, scrolled to top. Callouts: 1 main image, 2 gallery, 3 name, 4 time pencil, 5 price strip pencil, 6 Save Event. */}
 
 ## What you can edit
 
-{/* SCREENSHOT: images/events/editor-time-picker.png | Event Editor with the start/end time editor open (pencil beside the time clicked), showing the Start and End date-time pickers, the time zone and the confirm button. Crop to the time area. */}
+- **Main image (1), required:** cropped to a square. Gallery (2): up to 15 images, drag to reorder.
+- **Name (3), required.**
+- **Start and end time (4):** the end must be after the start, and once set it cannot be cleared. The time zone is fixed.
+- **About, required** and **Terms and Conditions**, optional.
+- **Price label and button text (5):** leave blank for the defaults.
 
-<AccordionGroup>
-  <Accordion title="Main image (required)">
-    The cover image at the top left of the page. Images are cropped to a square when you upload them, and are resized to at most 1200 by 1200 pixels. If the event has no main image, the page shows "Main image is required" and you cannot save.
-  </Accordion>
-  <Accordion title="Gallery">
-    Up to 15 extra images. Upload, drag to reorder, and select an image to view it larger. Gallery images are also cropped to a square.
-  </Accordion>
-  <Accordion title="Event name (required)">
-    Select the pencil beside the name, type the new name, and confirm. The confirm button stays disabled while the name is empty. Press Enter to confirm or Escape to cancel.
-  </Accordion>
-  <Accordion title="Start and end time">
-    Select the pencil beside the time. Pick a date and time for **Start** and **End**. The start time is required.
+{/* SCREENSHOT: images/events/editor-time-picker.png | Event Editor with the start/end time editor open. Crop to the time area. */}
 
-    - The end time must be after the start time.
-    - If you move the start past the end, the end moves to one hour after the new start.
-    - Once an event has an end time, you cannot clear it here, only change it.
-    - Times use the event's own time zone, which is shown beside them and cannot be changed in the editor.
-  </Accordion>
-  <Accordion title="Price label and button text">
-    The strip beside the ticket price controls what buyers see before they buy. Select its pencil to edit.
+| Field | Rules |
+| --- | --- |
+| **Price label** | Up to 12 characters, or 28 if it includes **Insert lowest price**. |
+| **Button text** | Up to 8 characters, letters and spaces only. Default is "Buy now". |
 
-    **Price label** replaces the ticket price shown on the page. Leave it blank to keep the default, which is the ticket price.
-    - Up to 12 characters of plain text, or up to 28 characters if it includes the lowest ticket price.
-    - To include the current lowest price, select **Insert lowest price**. This adds a placeholder that is replaced with the live price. It is the only placeholder you can use.
+{/* SCREENSHOT: images/events/editor-price-label-button-text.png | Price label and button text strip in edit mode with 'From {lowest price}' (via Insert lowest price) and 'Join'. Crop to the strip. */}
 
-    **Button text** is the wording on the purchase button. Leave it blank to keep the default, "Buy now".
-    - Up to 8 characters.
-    - Letters and spaces only. No numbers, punctuation or emoji.
-
-    The editor shows a message under the field if something is not allowed.
-  </Accordion>
-  <Accordion title="About (required)">
-    The event description. Select the pencil to open the text editor. Long text is shortened with a **See all** toggle. The description cannot be empty.
-  </Accordion>
-  <Accordion title="Terms and Conditions">
-    Optional additional terms shown on the event page, edited the same way as About.
-  </Accordion>
-</AccordionGroup>
-
-{/* SCREENSHOT: images/events/editor-price-label-button-text.png | Event Editor with the price label and button text strip in edit mode: type a price label like 'From {lowest price}' using Insert lowest price, and button text 'Join'. Show the Insert lowest price button and character limits. Crop to the strip. */}
-
-## Shown but not editable here
-
-Some parts of the page come from the event's details and have no pencil, so you can't change them here: the date and location lines under the name, age or other restrictions, the line-up of artists, the organizing organizations, and the venue (with an **Open in map** link).
+The date, location, restrictions, line-up, organizers and venue come from the event's details and cannot be edited here.
 
 ## Checkout consent
 
-Below the preview you will find **Checkout consent**: the checkboxes buyers tick when they buy a ticket or RSVP. Each one saves on its own with its own **Save** button, separately from **Save Event**.
+Below the preview, the checkboxes buyers tick at checkout. Each saves separately with its own **Save** button.
 
-- **Required consent.** Every buyer must tick this before paying. It is always shown and cannot be turned off. PLVR's Terms of Use and Privacy Policy always come first and are locked; anything you add continues after them in the same checkbox. You can use bold text and links. Ready-made snippets such as house rules, an age restriction and photography are offered as starting points.
-- **Marketing consent.** An optional, separate checkbox for buyers who want updates from you. It is off unless you turn on its switch. It always starts unticked and can never be required. State who is writing and which channels you will use.
+- **Required consent:** always on. PLVR's Terms of Use and Privacy Policy come first and are locked; your text follows.
+- **Marketing consent:** optional and off by default. Buyers are never forced to tick it.
 
-Each consent has a length limit, and a counter shows how much you have used. A **Buyer checkout preview** updates as you type.
-
-{/* SCREENSHOT: images/events/editor-checkout-consent.png | Event Editor scrolled to Checkout consent: the Required consent and Marketing consent (switch turned on) boxes with character counters, their Save buttons and the Buyer checkout preview. Crop to the section. */}
+{/* SCREENSHOT: images/events/editor-checkout-consent.png | Checkout consent section with Marketing consent switched on, and the Buyer checkout preview. Crop to the section. */}
 
 ## Saving
 
-**Save Event** is at the top right. It is enabled only when you have made a change and all required fields are valid. While saving it reads "Saving...", then you see "Event updated successfully". If it fails you see "Failed to save. Please try again."
-
-When you save, your event name, description, terms, price label and button text are checked for words that are not allowed. If any are found, you see a message listing them and nothing is saved until you revise the text.
+Your text is checked for disallowed words; if any are found, nothing saves until you revise it.
 
 <Warning>
-  If you leave the page with unsaved changes, you are asked to confirm. Choosing **Leave without Saving** discards your edits.
+  Leaving with unsaved changes and choosing **Leave without Saving** discards your edits.
 </Warning>

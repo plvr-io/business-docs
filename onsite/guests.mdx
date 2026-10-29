@@ -1,49 +1,32 @@
 ---
 title: "Guests"
-description: "Check a name against the guest list, admit guests at the door, and add someone who was approved on the day."
+description: "Check names against the guest list, admit guests and add approved ones."
 ---
 
-The **Guests** workspace is for invite lists. Use it to check a name against the list, admit the guest, or add someone who was approved on the day. Open it from the [Command Center](/onsite/command-center).
+The **Guests** workspace is for invite lists. Open it from the [Command Center](/onsite/command-center). Search by name or email; the list shows 25 per page.
 
-## Find a guest
-
-Search by **name or email** and select **Search**. The list shows 25 guests per page; use **Previous** and **Next** to move through it.
-
-{/* SCREENSHOT: images/onsite/onsite-guests-list.png | Open Onsite Operations > Command Center > Guests with an invite list that includes Checked in and Not checked in guests and one row with a possible-duplicate warning. Capture the search box and table (Name, Email, Entry) with Check in and Undo check-in buttons. */}
-
-| Column | Meaning |
-| --- | --- |
-| **Name** | The guest's full name. |
-| **Email** | Their email, or a dash if none is on file. |
-| **Entry** | **Checked in** or **Not checked in**. |
+{/* SCREENSHOT: images/onsite/onsite-guests-list.png | Open Onsite Operations > Command Center > Guests with Checked in and Not checked in guests and one row with a possible-duplicate warning. Number the search box (1), the duplicate warning (2) and the Check in / Undo check-in buttons (3). */}
 
 <Warning>
-A name is not an identity. If more than one guest could match, the row shows a warning note under the name. Confirm who the person is before you admit them. Don't admit on a name match alone.
+A name is not an identity. If several guests could match, a warning shows under the name. Confirm who the person is before admitting them.
 </Warning>
 
 ## Admit a guest
 
-Select **Check in** on the guest's row. No reason is needed, because admitting is ordinary work at the gate. A confirmation message appears and the row updates to **Checked in**.
+Select **Check in** on the guest's row. No reason is needed.
 
 ## Undo a check-in
 
-If a guest was checked in by mistake, select **Undo check-in** on their row. A side panel opens, naming the guest, and explains:
-
-- **What will happen:** this guest-list entry can be used again.
-- **What will not happen:** the original admission stays in the activity log.
-
-Choose a **Reason** from the list (required), add an optional **Note**, and select **Confirm**. Undoing needs a reason because it is a correction and has to be explainable afterwards.
+Select **Undo check-in**, choose a **Reason** (required), optionally add a **Note**, and select **Confirm**. The guest-list entry can be used again, but the original admission stays in the activity log.
 
 ## Add an approved guest
 
-Select **Add an approved guest** to add someone who wasn't on the list but was approved. Fill in:
+Select **Add an approved guest** for someone who wasn't on the list.
 
-{/* SCREENSHOT: images/onsite/onsite-guests-add-approved-form.png | On Guests, click Add an approved guest. Fill in Full name, Ticket type ID and Who approved this? with sample values. Capture the panel with the enabled Add guest button. */}
+{/* SCREENSHOT: images/onsite/onsite-guests-add-approved-form.png | On Guests, click Add an approved guest. Fill in Full name, Ticket type ID and Who approved this? with sample values. Capture the panel with the Add guest button enabled. */}
 
-| Field | Required | Notes |
-| --- | --- | --- |
-| **Full name** | Yes | As they'll give it at the door. |
-| **Ticket type ID** | Yes | Which ticket type this guest counts as. Get it from [Ticket management](/tickets/ticket-management). A guest still counts against a ticket type. |
-| **Who approved this?** | Yes | For example "Approved by the promoter by phone, 20:15". It is stored with the action, because without it nobody can tell afterwards whether the addition was authorised. |
+All three fields are required:
 
-**Add guest** stays disabled until all three are filled in. The addition is recorded with the reason "Approved guest addition".
+- **Full name:** as they'll give it at the door.
+- **Ticket type ID:** the ticket type the guest counts against. Find it in [Ticket management](/tickets/ticket-management).
+- **Who approved this?** Who and when, for example "Approved by the promoter by phone, 20:15". Without it nobody can later tell whether the addition was authorised.

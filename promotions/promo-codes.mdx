@@ -1,67 +1,38 @@
 ---
 title: "Promo Codes"
-description: "Create discount codes for your tickets, set limits and time windows, and track how each code performs."
+description: "Create discount codes, set limits and time windows, and track performance."
 ---
 
-**Promo Codes** let you offer percentage or fixed-amount discounts on your tickets. You can create codes one at a time or generate many at once.
+Offer percentage or fixed-amount discounts. Create codes one at a time or generate many at once.
 
-## Summary cards
+{/* SCREENSHOT: images/promotions/promo-codes-list.png | Open Promotions > Promo Codes with 4 or 5 codes (mix of Percentage and Fixed Amount, one Unlimited, one 12/50, one Inactive). Capture summary cards, search box, Create and Export CSV buttons and the full table. */}
 
-The cards at the top show **Tickets Sold**, **Revenue**, and **Cost** across your promo codes.
-
-## The promo code list
-
-Search codes with **Search promo codes**. The table shows:
-
-- **Code**: the code text, with a copy button.
-- **Description**: your description, or a dash when empty.
-- **Discount Type** and **Discount**: percentage or fixed amount, and its value.
-- **Uses/Limit**: how many times the code has been used out of its limit, for example `12/50`, or `Unlimited`. Select the heading to sort.
-- **Apply to**: **All ticket types**, or the specific session and ticket. Select the heading to sort.
-- **Revenue** and **Cost**: money tied to orders that used the code, with the event currency in the heading. Select either heading to sort.
-- **Status**: **Active** or **Inactive**. Change it right from the dropdown.
-
-{/* SCREENSHOT: images/promotions/promo-codes-list.png | Open Promotions > Promo Codes with 4 or 5 codes (mix of Percentage and Fixed Amount, one Unlimited, one 12/50, one Inactive). Capture summary cards (Tickets Sold, Revenue, Cost), the search box, Create and Export CSV buttons and the full table. */}
-
-Select **Export CSV** to download the list.
+The list shows usage against each code's limit, plus revenue and cost. Change a code's **Status** right in the table, or select **Export CSV** to download the list.
 
 ## Create a promo code
 
-Select **Create** to open the **Create Promo Code** panel.
+Select **Create**.
 
 <Steps>
-  <Step title="Choose how to generate codes">
-    Choose a **Generation Method**: **Manual** to type one code yourself, or **Bulk Generate** to create many at once.
-  </Step>
-  <Step title="Name the code or set bulk options">
-    For **Manual**, enter the **Code** (required). For **Bulk Generate**, enter a **Quantity (Max. 100)** from 1 to 100, and an optional **Code Prefix**, such as "PLVR". Codes are generated for you.
-  </Step>
-  <Step title="Set the discount">
-    Pick a **Discount Type**: **Percentage** or **Fixed Amount**. Then enter the **Discount Value**. A percentage must be a positive whole number. A fixed amount is in the event currency (whole numbers only for currencies without decimals, otherwise up to two decimal places).
-  </Step>
-  <Step title="Choose what it applies to">
-    **Apply To** is **All ticket types** or **Specific ticket type**. For a specific type, choose the session and ticket under **Ticket Type**.
-  </Step>
-  <Step title="Add limits (optional)">
-    Turn on **Usage Limit** and enter the **Maximum transactions allowed for this code**, a positive whole number. Turn on **Time Limit** to set a start and end date and time. Without a limit, the code has no cap or no expiry.
-  </Step>
-  <Step title="Add a description and remarks, then save">
-    **Description** is optional. **Remarks** is for your own notes. Save to create the code.
-  </Step>
+  <Step title="Pick a method">**Manual** for one code you type, or **Bulk Generate** for up to 100 codes with an optional prefix.</Step>
+  <Step title="Set the discount">Choose **Percentage** or **Fixed Amount** and enter the value.</Step>
+  <Step title="Choose what it applies to">All ticket types, or a specific session and ticket.</Step>
+  <Step title="Add limits (optional)">Turn on **Usage Limit** (maximum orders) and/or **Time Limit** (start and end). Without them the code never runs out or expires.</Step>
+  <Step title="Save">**Description** is shown in the list, and **Remarks** are for your own notes.</Step>
 </Steps>
 
-{/* SCREENSHOT: images/promotions/promo-codes-create-panel.png | Click Create to open 'Create Promo Code'. Choose Generation Method Manual, Code SPRING20, Percentage 20, Apply To 'Specific ticket type', Usage Limit ON (50) and Time Limit ON with dates. Capture the whole panel top to bottom (scroll-stitch if needed). */}
+{/* SCREENSHOT: images/promotions/promo-codes-create-panel.png | Click Create to open 'Create Promo Code'. Choose Manual, Code SPRING20, Percentage 20, Apply To 'Specific ticket type', Usage Limit ON (50) and Time Limit ON with dates. Capture the whole panel (scroll-stitch if needed). */}
 
 ## Edit, clone, or view usage
 
-Open the menu at the end of a row:
+Use the menu at the end of a row.
 
-- **Edit**: change a code's settings. The code text itself cannot be changed. When editing, a **Status** switch lets you turn the code on or off.
-- **Clone**: opens **Create Promo Code** pre-filled with the same settings, with an empty code, so you can make a similar one quickly.
-- **View Usage**: opens the **Usage Log** for that code. It shows the number of uses against the limit, and a table of **Buyer**, **Tickets** and **Date & Time** for each order. A **Session** column appears for events with several sessions.
+- **Edit**: change settings or switch the code on or off. The code text cannot be changed.
+- **Clone**: start a new code with the same settings.
+- **View Usage**: see each order that used the code.
 
-{/* SCREENSHOT: images/promotions/promo-codes-usage-log.png | On a code with some usage, open the row menu (Edit, Clone, View Usage) and capture it. Then capture the Usage Log with uses against limit and the Buyer, Tickets, Date & Time table (two images stitched or the menu alone if one only). */}
+{/* SCREENSHOT: images/promotions/promo-codes-usage-log.png | On a code with some usage, capture the row menu (Edit, Clone, View Usage) and the Usage Log it opens. */}
 
 <Tip>
-  To see promo codes on individual orders, add the **Promo Code** column from the [Ticket Report](/tickets/ticket-report).
+  To see promo codes on individual orders, add the **Promo Code** column in the [Ticket Report](/tickets/ticket-report).
 </Tip>

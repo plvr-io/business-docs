@@ -1,75 +1,38 @@
 ---
 title: "RSVP"
-description: "Review RSVP requests, approve or reject attendees, and export the list."
+description: "Approve or reject RSVP requests and export the list."
 ---
 
-The **RSVP** page helps you "track event RSVPs and attendance confirmations." Open it from **RSVP** in the event menu.
+**RSVP** (in the event menu) is where you review requests to attend.
 
-{/* SCREENSHOT: images/events/rsvp-page-overview.png | RSVP page (RSVP in the event menu) for an event with a mix of pending, approved and rejected requests: show the four summary cards (Total, Approved, Pending, Declined), the status filter and the attendee table with Approve/Reject buttons on pending rows. Full page. */}
+{/* SCREENSHOT: images/events/rsvp-page-overview.png | RSVP page with pending, approved and rejected requests. Callouts: 1 summary cards, 2 status filter, 3 Approve/Reject buttons, 4 Actions icons, 5 Bulk Actions, 6 Export CSV. */}
 
-## Summary
+Filter by **Pending**, **Approved** or **Rejected** (2). The summary card calls rejected requests "Declined"; it is the same thing.
 
-Four cards at the top show how requests are going:
+## Approve or reject
 
-- **Total**: all RSVP requests received.
-- **Approved**: approved out of the total.
-- **Pending**: still waiting for your decision, out of the total.
-- **Declined**: declined out of the total.
+Select **Approve** or **Reject** (3) on a pending row. With more than one ticket type, you choose the **Ticket Type** when approving. Approving needs at least one ticket type on the event.
 
-## The attendee list
-
-Each row is one request, with these columns: a checkbox, **Attendee** (name and email), **Status**, **Registration Time** and **Actions**.
-
-Use the filter at the top to show only **Pending**, **Approved** or **Rejected** requests. Clear it to show **All**.
-
-### Statuses
-
-{/* SCREENSHOT: images/events/rsvp-status-badges.png | RSVP attendee table with one Pending, one Approved (green) and one Rejected (red) row visible side by side. Crop to those rows including the Status column. */}
-
-| Status | What it means |
-| --- | --- |
-| **Pending** | Waiting for your decision. The row shows **Approve** and **Reject** buttons. |
-| **Approved** | You approved the attendee and gave them a ticket. Shown in green. |
-| **Rejected** | You rejected the request. Shown in red. |
-
-<Note>
-  The summary card calls this outcome "Declined", while the list and filter call it "Rejected". They are the same thing.
-</Note>
-
-## Approve or reject one attendee
-
-{/* SCREENSHOT: images/events/rsvp-approve-ticket-selection.png | RSVP page for an event with 3 ticket types: after clicking Approve on a pending row, show the ticket type selection that appears. Crop to the row and selection. */}
-
-- **Approve.** Select **Approve** on a pending row. If your event has a single ticket type, the attendee is approved with it straight away. If there is more than one, a window asks you to select a **Ticket Type**. The button is unavailable if the event has no ticket types.
-- **Reject.** Select **Reject**. The attendee is rejected immediately.
-
-You see a confirmation such as "&lt;name&gt; has been approved" or "&lt;name&gt; has been rejected".
+{/* SCREENSHOT: images/events/rsvp-approve-ticket-selection.png | After clicking Approve on a pending row for an event with 3 ticket types, the ticket type selection. Crop to the row and selection. */}
 
 ## Edit a status
 
-{/* SCREENSHOT: images/events/rsvp-edit-attendee-window.png | The 'Edit Attendee' window open for a pending attendee, with the Status dropdown open and a Ticket Type field visible after choosing approved. Crop to the dialog. */}
+The pencil (4) opens **Edit Attendee**. Approving requires a ticket type.
 
-The pencil in the **Actions** column opens **Edit Attendee**. Choose a new **Status** (**approved**, **rejected** or **pending**). Choosing approved requires a **Ticket Type**. Select **Confirm** to save.
+- Approved attendees cannot be edited.
+- Rejected attendees can only be moved back to pending.
 
-- Approved attendees cannot be edited, so no pencil appears on their rows.
-- A rejected attendee can only be moved back to **pending**.
+The book icon (4) opens that attendee's **Form Responses** from your [registration form](/events/registration-form).
 
-## View form responses
-
-{/* SCREENSHOT: images/events/rsvp-form-responses-window.png | The 'Form Responses' view opened from the book icon in Actions for an attendee who answered registration questions. Crop to the dialog. */}
-
-The book icon in **Actions** opens **Form Responses**, showing the answers that attendee gave on your [registration form](/events/registration-form).
+{/* SCREENSHOT: images/events/rsvp-edit-attendee-window.png | Edit Attendee for a pending attendee, with the Status dropdown open and Ticket Type visible. Crop to the dialog. */}
 
 ## Bulk actions
 
-{/* SCREENSHOT: images/events/rsvp-bulk-actions.png | RSVP table with three pending attendees ticked and the Bulk Actions panel open showing the status and ticket type choices and the Confirm button. Highlight the Bulk Actions button and the clear (X) button. */}
+Tick rows, then select **Bulk Actions** (5), choose a status (and ticket type if approving), then **Confirm**.
 
-Tick the checkboxes to select several attendees, then select **Bulk Actions**. Choose a status, and a ticket type if you are approving, then **Confirm**.
+- Up to 50 attendees at once.
+- All selected attendees must share the same status, and approved attendees cannot be selected.
 
-- You can select up to 50 attendees at a time. At the limit the button reads "maximum reached".
-- Selected attendees must share the same status. You cannot mix statuses in one bulk action, and approved attendees cannot be selected.
-- Use the **X** beside the button to clear your selection.
+{/* SCREENSHOT: images/events/rsvp-bulk-actions.png | Three pending attendees ticked and the Bulk Actions panel open. Highlight the Bulk Actions button. */}
 
-## Export
-
-Select **Export CSV** to download the list. While it prepares, the button reads "Exporting...".
+Select **Export CSV** (6) to download the list.

@@ -1,71 +1,53 @@
 ---
 title: "Scenario: VIP Tickets and Add-ons"
-description: "Offer a small number of premium tickets and sell extras such as parking or merchandise alongside them."
+description: "Offer a few premium tickets and sell extras such as parking alongside them."
 ---
 
-**Goal:** Sell a limited number of VIP tickets at a premium, and offer extras (parking, merchandise) that buyers can add.
-
-## The example
+**Goal:** Limited VIP tickets at a premium, plus extras buyers can add.
 
 | Item | Quantity | Price | Notes |
 | --- | --- | --- | --- |
 | General Admission | 400 | $30 | Main ticket |
 | VIP | 50 | $90 | Limited |
-| Parking Pass (add-on) | 80 | $10 | Linked to General Admission and VIP |
-| Event T-shirt (add-on) | 100 | $25 | Linked to VIP only |
+| Parking Pass (add-on) | 80 | $10 | General Admission and VIP |
+| Event T-shirt (add-on) | 100 | $25 | VIP only |
 
-## Part 1: Limit your VIP tickets
+## Part 1: Limit VIP
 
-<Steps>
-  <Step title="Set a small Total Quantity">
-    In [Ticket Management](/tickets/ticket-management), edit the VIP ticket and set **Total Quantity** to 50. Scarcity is built in: when 50 are sold, VIP is sold out.
-  </Step>
-  <Step title="Limit how many one person can buy">
-    Set **Limit Qty per Order** and **Limit Qty per User** (for example 4 and 4) so VIP tickets spread across more buyers.
-  </Step>
-  <Step title="Use a description">
-    Add a **Description** (up to 200 characters) explaining what VIP includes.
-  </Step>
-  <Step title="Schedule when it opens">
-    Choose a **Sales Start Date** later than General Admission if you want VIP to appear as a second wave, or keep it **Inactive** until you announce it.
-  </Step>
-</Steps>
+In [Ticket Management](/tickets/ticket-management), edit the VIP ticket:
 
-{/* SCREENSHOT: images/tickets/vip-addons-edit-vip-ticket.png | Ticket Management > click the pencil on the VIP ticket (50 @ $90). Capture the Edit Ticket panel showing Total Quantity 50, Limit Qty per Order 4, Limit Qty per User 4, a Description, and the sales dates. */}
+- **Total Quantity** 50. When they are gone, VIP is sold out.
+- **Limit Qty per Order** and **per User** (for example 4) to spread tickets across buyers.
+- **Description** of what VIP includes.
+- A later **Sales Start Date**, or keep it **Inactive**, to launch it as a second wave.
+
+{/* SCREENSHOT: images/tickets/vip-addons-edit-vip-ticket.png | Edit Ticket panel for VIP (50 @ $90). Callouts: 1 Total Quantity 50, 2 Limit Qty per Order and per User (4), 3 Description, 4 sales dates. */}
 
 ## Part 2: Create add-ons
 
+On the **Add-ons** tab select **Create Add-on**, then:
+
 <Steps>
-  <Step title="Open the Add-ons tab">
-    In Ticket Management, select the **Add-ons** tab, then **Create Add-on**.
-  </Step>
-  <Step title="Name it and pick the session">
-    Choose the **Session**, enter the **Add-on Name** (for example "Parking Pass"), set **Status**, and add a **Description** that explains it to attendees.
+  <Step title="Name it">
+    Choose the **Session** and enter the **Add-on Name** and **Description**.
   </Step>
   <Step title="Choose who can buy it">
-    Under **Linked to**, select the tickets it can be purchased with. Parking: General Admission and VIP. T-shirt: VIP only.
+    **Linked to**: parking for General Admission and VIP, T-shirt for VIP only.
   </Step>
   <Step title="Pick the inventory">
-    **Own inventory** gives the add-on its own quantity (80 parking spaces). **Sync from ticket** uses another ticket type's inventory, so each add-on sold reduces that ticket's availability. Choose Own inventory for physical extras like parking and merchandise.
+    Use **Own inventory** for physical extras like parking and merchandise.
   </Step>
-  <Step title="Set the price and limits">
-    Enter **Total Quantity**, **Face Value**, and optional sales dates and per-order or per-user limits. Then save.
+  <Step title="Set quantity and price">
+    **Total Quantity** and **Face Value**, then save.
   </Step>
 </Steps>
 
-{/* SCREENSHOT: images/tickets/vip-addons-create-addon.png | Ticket Management > Add-ons tab > Create Add-on. Fill in Session, Add-on Name 'Parking Pass', Status Active, Linked to General Admission and VIP, Inventory Source 'Own inventory', Total Quantity 80, Face Value 10. Capture the whole panel. Highlight Linked to and Inventory Source. */}
+{/* SCREENSHOT: images/tickets/vip-addons-create-addon.png | Create Add-on filled: Parking Pass, Active, Linked to General Admission and VIP, Own inventory, Quantity 80, Face Value 10. Callouts: 1 Linked to, 2 Inventory Source. */}
 
 <Note>
-  Add-ons are not tickets: they cannot be added to a release chain, and the inventory source cannot be changed after creating them.
+  Add-ons cannot join a release chain, and their inventory source cannot be changed after creation.
 </Note>
 
-## Track the results
+Sold add-ons appear in the [Ticket Report](/tickets/ticket-report) with an **Add-on** label.
 
-The [Ticket Report](/tickets/ticket-report) lists add-ons with an **Add-on** label and shows an **Add-ons Sold** card when the event has add-ons.
-
-{/* SCREENSHOT: images/tickets/vip-addons-ticket-report.png | Ticket Report for an event with some sold add-ons. Capture the summary cards including 'Add-ons Sold' and a few table rows where Item shows the 'Add-on' label. */}
-
-## Related
-
-- [Ticketing Concepts](/tickets/concepts)
-- [Ticket Management reference](/tickets/ticket-management)
+{/* SCREENSHOT: images/tickets/vip-addons-ticket-report.png | Ticket Report with sold add-ons: the 'Add-ons Sold' card and a few rows with the Add-on label. */}

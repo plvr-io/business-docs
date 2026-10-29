@@ -1,63 +1,35 @@
 ---
 title: "Search"
-description: "Find the person at the desk by Ticket ID, email, wristband, order number or payment reference, and see why each result matched."
+description: "Find the person at the desk by any identifier and see why each result matched."
 ---
 
-Search is how most desk interactions begin. You can start it from the search box on the [Command Center](/onsite/command-center), or directly on the **Search results** page.
+Search is where most desk interactions begin. Use the box on the [Command Center](/onsite/command-center) or the **Search results** page. Enter at least three characters and press Enter. The type is detected automatically and shown in the box.
 
-## Run a search
+{/* SCREENSHOT: images/onsite/onsite-search-box.png | On the Command Center, type an email into the search box and press Enter. Capture the search box with its auto-detected label and the Clear button. */}
 
-Type any identifier into the search box and press Enter. The type is detected automatically, and a label inside the box confirms what the search understood, for example "Email, auto-detected".
-
-{/* SCREENSHOT: images/onsite/onsite-search-box.png | Open Onsite Operations > Command Center, type an email into the search box and press Enter to reach the Search results page. Capture the search box with its auto-detected label (for example Email, auto-detected) and the Clear button. */}
-
-You can search by:
-
-- Ticket ID
-- Email or name (attendee or purchaser)
-- QR code content
-- Order number
-- Payment reference
-- Top-up or spend reference
-- Wristband ID or wristband UID
-
-Searches need at least three characters. Select **Clear** to empty the box and start again.
+You can search by Ticket ID, email or name (attendee or purchaser), QR code content, order number, payment reference, top-up or spend reference, or wristband ID or UID.
 
 ## Read the results
 
-The page shows how many possible participants were found and what the search matched on, then one card per candidate. Select the person who is actually at the desk.
+Each card is a possible person. Pick the one actually at the desk.
 
-Each card shows:
+{/* SCREENSHOT: images/onsite/onsite-search-results.png | Search for an email matching both a ticket holder and the purchaser of a group order so one amber card appears. Number Why it matched (1), the amber purchaser-match card (2), the ticket and entry details (3) and the Select / Resolve now buttons (4). */}
 
-{/* SCREENSHOT: images/onsite/onsite-search-results.png | Search for an email that matches both a ticket holder and a purchaser of a group order so at least one amber card appears. Capture the results count and the candidate cards showing Why it matched, Ticket, Entry and Wristband, with Select and Resolve now buttons. Highlight the amber purchaser-match card. */}
-
-- **Name and email** of the participant.
-- **Why it matched**, in a sentence under the email. This matters: an email that matches the ticket holder and an email that matches the purchaser, not the holder, are completely different people at the door. When the match is the buyer rather than the holder, the card is highlighted in amber and the sentence says so.
-- **Group order**, if the order covers several tickets. Pick the person and ticket you are dealing with.
-- **Open cases**, if the participant already has open service cases.
-- **Ticket**: the Ticket ID, ticket type and session.
-- **Entry**: whether they have entered (with the time), plus a state label such as Valid, Entered, Transfer pending or Cancelled.
-- **Wristband** (Tap events only): the wristband ID, or "Not bound".
+**Why it matched** matters most. A match on the ticket holder and a match on the purchaser are different people at the door. A purchaser match is highlighted in amber.
 
 <Warning>
 Don't admit someone because they bought a ticket. If the card says the match was the purchaser, the ticket belongs to someone else. Open that person instead.
 </Warning>
 
-### Actions on a result
+- **Select** opens the full profile. See [Participants](/onsite/participants).
+- **Resolve now** skips the profile and opens that ticket's guided resolution. See [Tickets & Entry](/onsite/tickets).
 
-| Button | What it does |
-| --- | --- |
-| **Select** | Opens the participant's full profile. See [Participants](/onsite/participants). |
-| **Resolve now** | Skips the profile and opens the guided resolution for that ticket. See [Tickets & entry](/onsite/tickets). |
+## When nothing matches
 
-## When nothing matches, or it is the wrong person
+Below the results, **Nothing matched** (or **Not the right person?**) suggests what to try next. **Create unmatched case** records what the person told you so they aren't turned away with nothing. See [Service cases](/onsite/cases).
 
-Search never ends on a blank page. Below the results, a panel titled **Nothing matched** (or **Not the right person?**) lists suggested next things to try.
-
-{/* SCREENSHOT: images/onsite/onsite-search-nothing-matched.png | Search for a nonsense string such as ZZZ999 that matches nothing. Capture the Nothing matched panel with suggestions and the Create unmatched case button. */}
-
-It also offers **Create unmatched case**. This records what the person told you and escalates it, so they aren't turned away with nothing. The text you searched is stored exactly as typed, together with the time and your name, so it can be reconciled later. See [Service cases](/onsite/cases).
+{/* SCREENSHOT: images/onsite/onsite-search-nothing-matched.png | Search for ZZZ999. Capture the Nothing matched panel with suggestions and the Create unmatched case button. */}
 
 <Tip>
-Don't tidy up what the guest gave you. If an unmatched case is needed, the exact spelling and capitalization they presented is the only evidence the case has.
+Don't tidy up what the guest gave you. The exact spelling and capitalization they presented is the only evidence the case has.
 </Tip>

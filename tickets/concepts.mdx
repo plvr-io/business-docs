@@ -1,127 +1,59 @@
 ---
 title: "Ticketing Concepts"
-description: "A plain-language tour of sessions, ticket types, bundles, add-ons, release chains, limits, and fees, and how they fit together."
+description: "The building blocks of ticketing and how they fit together."
 ---
-
-Before you set up sales, it helps to know the building blocks. This page explains each one in everyday terms. The step-by-step guides that follow show them in action.
-
-## The big picture
 
 ```text
 Event
  └── Session (a day, a show, a time slot)
       ├── Tickets  (Early Bird, General Admission, VIP ...)
-      │     └── optionally grouped in a Release Chain (sell one tier after another)
-      ├── Bundles  (a ticket sold in a pack, such as "4-Pack")
-      └── Add-ons  (parking, merchandise, extras bought alongside tickets)
+      │     └── optionally in a Release Chain (one tier opens after another)
+      ├── Bundles  (a ticket sold as a pack)
+      └── Add-ons  (parking, merchandise, extras)
 ```
 
-Everything you manage lives in [Ticket Management](/tickets/ticket-management), organized by session.
+All of it is managed in [Ticket Management](/tickets/ticket-management).
 
 ## Sessions
 
-A **session** is one occasion that people can attend, such as Friday night, Saturday afternoon, or a single show date. Every ticket belongs to exactly one session. If your event has only one session, you will not see session filters or session columns anywhere in the portal. They appear automatically when you have more than one.
-
-Why it matters:
-
-- Capacity, prices, and sale dates are set per ticket within a session.
-- Ticket Management, the [Ticket Report](/tickets/ticket-report), and [Complimentary Tickets](/tickets/comp-tickets) all let you look at one session at a time.
-- A ticket for Friday cannot be used on Saturday. For a multi-day event, see [Multi-day festival](/tickets/scenario-multi-day-festival).
+A **session** is one occasion people can attend, such as Friday night or one show date. Every ticket belongs to exactly one session, and a Friday ticket cannot be used on Saturday. Session filters and columns only appear when your event has more than one. See [Multi-day festival](/tickets/scenario-multi-day-festival).
 
 ## Ticket types
 
-A **ticket type** is one kind of ticket you sell, for example "Early Bird", "General Admission", or "VIP". Each one has its own:
+A **ticket type** is one kind of ticket, with its own price, quantity, sale window, status and optional purchase limits.
 
-- **Price**
-- **Total Quantity** (how many you will sell)
-- **Sales Start Date** and **Sales End Date**
-- **Status**: **Active** or **Inactive**
-- Optional purchase limits: **Limit Qty per Order** (1 to 10) and **Limit Qty per User** (1 to 20)
+{/* SCREENSHOT: images/tickets/concepts-ticket-table.png | Open Tickets > Ticket Management, Tickets tab, one-session event. One table with an Active, an Inactive and an Ended ticket. Crop to the table; add callout 1 on the Status dropdown and 2 on the Total / Sold / Available columns. */}
 
-The table shows **Total**, **Sold**, and **Available** for each type, so you always know how many are left.
+| Status | Meaning |
+| --- | --- |
+| **Active** | On sale and visible, once its sales start date arrives. |
+| **Inactive** | Hidden from buyers. Use it to hold back or pause a ticket. |
+| **Ended** | Set automatically after the sales end time. Cannot be reactivated. |
 
-{/* SCREENSHOT: images/tickets/concepts-ticket-table.png | Open Tickets > Ticket Management, Tickets tab, for an event with one session. Show one table with tickets in each status (Active, Inactive and Ended) and the columns Ticket Type, Price, Total, Sold, Available, Status. Crop to the table and highlight the Status dropdown. */}
-
-### Status: Active, Inactive, Ended
-
-- **Active**: on sale and visible to buyers (once its sales start date arrives).
-- **Inactive**: hidden from buyers. Use it to hold back a ticket you are not ready to sell, or to pause one.
-- **Ended**: set automatically after the sales end time. It cannot be reactivated by changing the status.
-
-<Note>
-  A ticket is only purchasable when it is **Active** and the current time is between its sales start and end. An Active ticket with a future start date shows how many days remain until sales begin.
-</Note>
-
-## Capacity
-
-**Total Quantity** is the number of tickets you will sell of that type. You can raise it at any time. You cannot set it lower than what has already sold. Each ticket type has its own capacity, so your overall capacity for a session is the sum of its ticket types.
-
-<Tip>
-  Because capacity belongs to ticket types, selling several tiers does not add capacity on its own. If your venue holds 500 people, make sure your tier quantities add up to 500 or less, plus anything you plan to comp.
-</Tip>
+- **Total Quantity** can be raised any time, but not below what has sold. Your session capacity is the sum of its ticket types, so make tier quantities add up to your venue limit, plus anything you plan to comp.
+- **Limit Qty per Order** (up to 10) and **Limit Qty per User** (up to 20) are optional.
+- **Name** and **Price** are locked after the first sale.
 
 ## Release chains
 
-A **release chain** puts several ticket types in a fixed order, such as Early Bird, then General Admission, then Final Release. The portal puts the next tier on sale for you when the current one is nearly sold out. You do not need to be online to flip the switch. See [Release chains](/tickets/ticket-management#release-chains) for the controls, and [Selling General Admission in tiers](/tickets/scenario-ga-tiers) for a full walkthrough.
+A **release chain** puts ticket types in order, such as Early Bird, General Admission, Final Release, and opens the next tier automatically when the current one is nearly sold out. See [Release chains](/tickets/ticket-management#release-chains) and [Selling General Admission in tiers](/tickets/scenario-ga-tiers).
 
-{/* SCREENSHOT: images/tickets/concepts-release-chain-panel.png | Open Ticket Management for an event with the 3-tier example (Early Bird 100 @ $20, General Admission 300 @ $30, Final Release 100 @ $40) in a release chain named 'GA' with Auto-release on. Expand the 'Release Chains' panel above the ticket table. Capture the panel with all three tier cards and their status lines. */}
+{/* SCREENSHOT: images/tickets/concepts-release-chain-panel.png | Ticket Management with the 3-tier example (Early Bird 100 @ $20, General Admission 300 @ $30, Final Release 100 @ $40) in a chain named 'GA' with Auto-release on. Expand the Release Chains panel and capture all three tier cards. */}
 
 ## Bundles
 
-A **bundle** is a ticket sold as a pack, for example a "Group of 4" that includes four General Admission tickets. In the portal a bundle appears in the same table as your tickets, with the tickets it includes listed in its edit panel (for example, General Admission x 4). Bundles draw from the inventory of the ticket they include, so selling a Group of 4 uses up four of the included tickets' availability. The **Max Bundle Sales** field lets you cap how many packs you sell. See [Group packages with bundles](/tickets/scenario-bundles).
+A **bundle** is a ticket sold as a pack, such as a Group of 4. It draws from the included ticket's inventory, and **Max Bundle Sales** caps the number of packs. See [Group packages](/tickets/scenario-bundles).
 
 ## Add-ons
 
-**Add-ons** are extras that buyers purchase alongside a ticket, such as parking, merchandise, or a drink voucher. Each add-on is linked to the ticket types it can be bought with, and either has its own quantity or shares the quantity of a ticket type. They are managed on the **Add-ons** tab. See [Selling VIP and add-ons](/tickets/scenario-vip-addons).
+**Add-ons** are extras bought alongside a ticket, such as parking. Each is linked to the tickets it can be bought with and has its own quantity or shares a ticket's. See [VIP and add-ons](/tickets/scenario-vip-addons).
 
-## Sale windows
+## Fees
 
-Each ticket has a **Sales Start Date** and **Sales End Date** with an hour and minute. Use them to schedule when a ticket appears and disappears. Tiers like Early Bird usually get an end date well before the event.
+The **Price** is the ticket price. Buyers may see service fees and VAT on top, depending on your fee setup. Select **How Fees Work** next to the price to see what the buyer pays and what you receive.
 
-## Purchase limits
+{/* SCREENSHOT: images/tickets/concepts-how-fees-work.png | Ticket Management > pencil on any ticket > Edit Ticket. Enter Price 30, then open 'How Fees Work'. Capture the Price field and the opened breakdown. */}
 
-- **Limit Qty per Order** caps how many of that ticket one checkout can include (up to 10).
-- **Limit Qty per User** caps how many one person can buy in total (up to 20).
+## Promo codes and comp tickets
 
-Leave them empty for no limit.
-
-## Price, fees, and what you receive
-
-The **Price** you set is the ticket price. Buyers may see additional service fees and VAT on top, depending on your event's fee setup, and some of that may be absorbed by you. Select **How Fees Work** next to the price in the edit panel to see exactly what the buyer pays and what you receive, before you save.
-
-{/* SCREENSHOT: images/tickets/concepts-how-fees-work.png | Open Ticket Management, click the pencil on any ticket to open 'Edit Ticket', enter a Price (e.g. 30), then click 'How Fees Work' under the price. Capture the Price field and the opened breakdown showing ticket price, service fee, VAT and the amount you receive. */}
-
-<Warning>
-  A ticket's **Name** and **Price** are locked after the first sale. If you plan to change either, do it before you open sales.
-</Warning>
-
-## Promo codes
-
-A [promo code](/promotions/promo-codes) gives a percentage or fixed-amount discount. It can apply to all ticket types, or to one specific ticket or bundle in one session. Codes can have a usage limit and a time limit.
-
-## Complimentary (comp) tickets
-
-[Comp tickets](/tickets/comp-tickets) are free tickets you issue to named people such as artists, press, sponsors, or staff. They come out of the same inventory as paid tickets, so they reduce what remains for sale. See [Comping guests, artists, and press](/tickets/scenario-comp-guests).
-
-## Where to go next
-
-<CardGroup cols={2}>
-  <Card title="Tiers: Early Bird to Final Release" href="/tickets/scenario-ga-tiers">
-    Sell one ticket in stages with a release chain.
-  </Card>
-  <Card title="Multi-day festival" href="/tickets/scenario-multi-day-festival">
-    Use one session per day.
-  </Card>
-  <Card title="Group packages" href="/tickets/scenario-bundles">
-    Sell packs of tickets as bundles.
-  </Card>
-  <Card title="VIP and add-ons" href="/tickets/scenario-vip-addons">
-    Limited premium tickets with extras.
-  </Card>
-  <Card title="Discount campaigns" href="/tickets/scenario-promo-discounts">
-    Targeted promo codes for partners and offers.
-  </Card>
-  <Card title="Comping guests" href="/tickets/scenario-comp-guests">
-    Issue free tickets to artists, press, and staff.
-  </Card>
-</CardGroup>
+A [promo code](/promotions/promo-codes) discounts all tickets or one ticket or bundle. [Comp tickets](/tickets/comp-tickets) are free tickets for named people and come out of the same inventory as paid ones. See [Discount campaigns](/tickets/scenario-promo-discounts) and [Comping guests](/tickets/scenario-comp-guests).

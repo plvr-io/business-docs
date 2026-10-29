@@ -3,92 +3,50 @@ title: "Onsite staff"
 description: "Create and manage login codes for your gate, binding and top-up teams."
 ---
 
-**Onsite Staff** is where you create and manage access for your onsite team. Open it from **Onsite Staff** in the event sidebar. Each person on your team signs in with a login code, and each code has a role that decides what it can do.
+Open **Onsite Staff** in the event sidebar to manage access for event-day staff. Each person signs in with a login code, and the code's role decides what it can do.
 
 <Note>
-This page is about login codes for event-day staff. To invite people to your organization's Business Portal, see [Team](/organization/team).
+To invite people to your Business Portal organization instead, see [Team](/organization/team).
 </Note>
 
-## The staff list
+{/* SCREENSHOT: images/onsite/onsite-staff-list.png | Open Onsite Staff with codes of several roles, including a Top-up staff code with a station and one Inactive. Number the Role filter and Search (1), Export (2), Add Staff (3) and the Status column (4). */}
 
-Each row is one login code.
-
-{/* SCREENSHOT: images/onsite/onsite-staff-list.png | Open Onsite Staff in the event sidebar with codes of several roles, including a Top-up staff code with a station, and one Inactive. Capture the Role filter, Search, Export, Add Staff button and the table (Role, Login Code, Note, Status, Last Login, Expires). */}
-
-| Column | Meaning |
-| --- | --- |
-| **Role** | The role of the code. For Top-up staff, the assigned top-up station is shown underneath. |
-| **Login Code** | The code, with a copy button. |
-| **Note** | Your own label, such as "Alex - Main Gate". |
-| **Status** | **Active** or **Inactive**. Change it directly in the list. |
-| **Last Login** | When the code was last used, or "Never". |
-| **Expires** | When the code expires, or "Never". |
-
-To narrow the list, pick a role from **Role** (or **All Roles**) or type in **Search** to search by login code. Select **Export** to download the list as a CSV; the export respects the role and search you have applied.
+Filter by role or search by login code. **Export** downloads a CSV of what you've filtered. **Status** can be changed directly in the list.
 
 ## Add staff
 
-Select **Add Staff**. The panel has two tabs: **Manual Creation** and **CSV Import**. A "login code created" message confirms how many codes were made.
+Select **Add Staff**, then use one of two tabs.
 
-{/* SCREENSHOT: images/onsite/onsite-staff-add-manual.png | On Onsite Staff, click Add Staff and stay on Manual Creation. Choose the Top-up staff role so the Top-up Station field appears; set Number of Login Codes to 5 and add a Note. Capture the whole panel with both tabs visible. */}
-
-### Manual creation
+### Manual Creation
 
 <Steps>
   <Step title="Choose a role">
-    Pick from **Role**. Each role is shown with a short description of what it is for.
+    Top-up staff also need a **Top-up Station**, set up in [Top-up setup](/tap/top-up-setup).
   </Step>
-  <Step title="Choose a top-up station (Top-up staff only)">
-    If you choose the Top-up staff role, a **Top-up Station** field appears and is required. Stations are set up in [Top-up setup](/tap/top-up-setup).
+  <Step title="Set the number of codes">
+    1 to 200, all with the same role and note (up to 200 characters).
   </Step>
-  <Step title="Set how many codes">
-    **Number of Login Codes** must be a whole number from 1 to 200. Every code in the batch is the same role.
-  </Step>
-  <Step title="Add a note (optional)">
-    **Note** can be up to 200 characters. The same note is applied to every code in the batch.
-  </Step>
-  <Step title="Choose a status">
-    **Active** (the default) or **Inactive**.
-  </Step>
-  <Step title="Select Generate Codes">
-    The codes appear in the list.
+  <Step title="Choose a status and select Generate Codes">
+    **Active** (default) or **Inactive**.
   </Step>
 </Steps>
 
-### CSV import
+{/* SCREENSHOT: images/onsite/onsite-staff-add-manual.png | Click Add Staff on Manual Creation. Choose Top-up staff so Top-up Station appears; set Number of Login Codes to 5 and add a Note. Capture the whole panel with both tabs visible. */}
 
-Use CSV import to create codes for named people in one go.
+### CSV Import
 
-{/* SCREENSHOT: images/onsite/onsite-staff-add-csv.png | On Onsite Staff, click Add Staff and open the CSV Import tab. Capture the panel with Download Template, the upload area and Upload CSV button. Optionally upload an invalid file so the Line N: reason error list shows. */}
+Use this to create codes for named people in one go. Select **Download Template** (specific to this event; keep the first four columns unchanged), fill it in, then upload it. CSV only, up to 200 records.
 
-<Steps>
-  <Step title="Download the template">
-    Select **Download Template**. It is specific to this event. Keep the first four columns unchanged.
-  </Step>
-  <Step title="Fill it in and upload it">
-    Drop your CSV file onto the upload area, or click to choose one. Only CSV files are accepted, with a maximum of 200 staff records.
-  </Step>
-  <Step title="Select Upload CSV">
-    If any row is invalid, nothing is created. The panel lists the problems as "Line N: reason" so you can fix the file and upload it again.
-  </Step>
-</Steps>
+{/* SCREENSHOT: images/onsite/onsite-staff-add-csv.png | Click Add Staff and open CSV Import. Capture Download Template, the upload area and Upload CSV. Optionally upload an invalid file to show the Line N: reason error list. */}
 
 <Warning>
-Codes are created only when every row is valid. A single bad row means no codes are created from that file.
+One bad row means no codes are created. Fix the lines listed and upload again.
 </Warning>
 
-## Edit a staff login
+## Edit a login
 
-Select the pencil icon on a row. You can change:
-
-- **Note**
-- **Status**
-- **Top-up Station**, for Top-up staff
-
-The role is shown but can't be changed. To switch someone to a different role, create a new code for that role.
-
-Select **Save Changes** to apply. You can also change a code's **Status** straight from the list.
+Select the pencil icon to change the **Note**, **Status** or (Top-up staff) **Top-up Station**, then **Save Changes**. A role can't be changed; create a new code instead.
 
 <Tip>
-Set a code to **Inactive** to turn it off without deleting it, for example when someone's shift ends.
+Set a code to **Inactive** to turn it off without deleting it, for example when a shift ends.
 </Tip>

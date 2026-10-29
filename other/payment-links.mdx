@@ -1,66 +1,34 @@
 ---
 title: "Payment Links"
-description: "Create one-time payment links for custom amounts, share them by URL or QR code, and track who has paid."
+description: "Charge a buyer a custom amount through a one-time link."
 ---
 
-**Payment Links** let you charge a buyer a specific amount for a specific item, for example a VIP table, without creating a ticket. You create a link, share it with the buyer, and they pay through it.
+**Payment Links** let you charge a specific amount for a specific item, such as a VIP table, without creating a ticket. Create a link, send it to the buyer, and track payment.
 
-## Summary cards
+{/* SCREENSHOT: images/other/payment-links-list.png | Payment Links with four links: pending, paid, expired and closed. Callouts: 1 Revenue and Successful Payments cards, 2 Create Link, 3 Export CSV, 4 Status column, 5 row menu and refresh button. */}
 
-- **Revenue**: total revenue from payment links, in the event currency.
-- **Successful Payments**: the number of links that have been paid out of all links created.
+<Warning>
+  Each link can be paid only once and expires 24 hours after creation.
+</Warning>
 
 ## Create a link
 
-Select **Create Link** to open the panel.
-
 <Steps>
-  <Step title="Describe the item">
-    Enter the **Item** name (for example "VIP Table") and the **Item Price**. Both are required. The price must be greater than zero, with up to two decimal places (whole numbers only for currencies without decimals).
-  </Step>
-  <Step title="Check what you receive">
-    **You Receive** shows the amount you will receive after fees for the price you entered.
+  <Step title="Select Create Link (2)">
+    Enter the **Item** and **Item Price** (above zero). **You Receive** shows your amount after fees.
   </Step>
   <Step title="Enter buyer details">
-    **Buyer Name** is required and is shown on the receipt. **Buyer Email** is required and is where the receipt is sent. Tick **Use my email** to fill in your own email address.
+    Buyer name and email are required; the receipt goes to that email. **Remarks** are internal only.
   </Step>
-  <Step title="Add remarks and save">
-    **Remarks** is optional and for internal use only. It is not shown to the buyer. Select **Save** to create the link.
+  <Step title="Select Save">
+    Then share the link.
   </Step>
 </Steps>
 
-{/* SCREENSHOT: images/other/payment-links-create-panel.png | Click 'Create Link'. Fill Item 'VIP Table', Item Price 500, Buyer Name and Buyer Email (tick 'Use my email'), Remarks 'Table 4'. Capture the full panel including the 'You Receive' amount and Save. */}
+{/* SCREENSHOT: images/other/payment-links-create-panel.png | Create Link panel filled in: Item 'VIP Table', price 500, buyer details with 'Use my email' ticked, Remarks 'Table 4'. Include You Receive and Save. */}
 
-<Warning>
-  Each link can only be paid once, and links expire 24 hours after they are created.
-</Warning>
+## Manage links
 
-## Manage your links
+Use the row menu (5) to **Copy URL**, **Create QR Code** or **Close Link** (pending links), or **Download Receipt** (paid links). A closed link cannot be reopened. Use the refresh button to check whether a link has been paid.
 
-Search the list with **Search by email or item**. The table shows **Buyer** (name and email), **Item**, **Price**, **Status**, **Revenue**, **Payment Method**, and **Remarks**.
-
-{/* SCREENSHOT: images/other/payment-links-list.png | Open Payment Links with four links: one each of pending, paid, expired and closed. Capture the Revenue and Successful Payments cards, the 'Search by email or item' box, Create Link and Export CSV buttons and the table (Buyer, Item, Price, Status, Revenue, Payment Method, Remarks). */}
-
-Each link has one of these statuses:
-
-| Status | Meaning |
-| --- | --- |
-| **pending** | Created and waiting for payment. |
-| **paid** | The buyer has paid. |
-| **expired** | The link was not paid in time. |
-| **closed** | You closed the link. |
-
-Open the menu at the end of a row for actions:
-
-- **Copy URL**: copies the payment link so you can send it to the buyer.
-- **Create QR Code**: for pending links, opens **Payment Link Details** with a QR code you can download with **Download QR Code**, plus the **Payment URL**.
-- **Close Link**: for pending links. After you confirm **Close Link?**, buyers can no longer open the link and it cannot be reopened.
-- **Download Receipt**: for paid links, downloads the receipt.
-
-The refresh button next to the menu updates a single row so you can check whether a link has been paid.
-
-{/* SCREENSHOT: images/other/payment-links-row-menu-and-qr.png | On a pending link open the row menu (Copy URL, Create QR Code, Close Link, plus the refresh button), then capture the 'Payment Link Details' window with the QR code, 'Download QR Code' and the Payment URL. Two crops are fine if needed (name the second with suffix -qr). */}
-
-## Export
-
-Select **Export CSV** to download the list of payment links.
+{/* SCREENSHOT: images/other/payment-links-row-menu-and-qr.png | On a pending link, the open row menu, then the Payment Link Details window with the QR code and Payment URL. Second crop may use suffix -qr. */}

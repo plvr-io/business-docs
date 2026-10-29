@@ -1,53 +1,21 @@
 ---
 title: "Spending report"
-description: "Review sales by vendor and by item, and export summaries and vendor settlement reports."
+description: "Review sales by vendor and item, and export settlement reports."
 ---
 
-The **Spending Report** shows how much was spent at your event, broken down by vendor and by item. Find it under **PLVR Tap** in the event sidebar. It only appears for events with PLVR Tap enabled.
+Shows how much was spent at your event. Find it under **PLVR Tap** in the event sidebar.
 
-## Tabs
+{/* SCREENSHOT: images/tap/tap-spending-report-by-vendor.png | Open PLVR Tap > Spending Report on an event with sales, By Vendor tab. Add callouts: 1 = By Vendor / By Item tabs, 2 = Total row, 3 = Export Summary and Export All Vendor Reports, 4 = Export Report on a vendor row. */}
 
-- **By Vendor:** one row per vendor.
-- **By Item:** one row per item, with the vendor's name underneath.
-
-Use **Search** to filter: by vendor name on the By Vendor tab, or by vendor name or item name on the By Item tab. The table is paged, 10 rows per page.
-
-A pinned **Total** row at the top adds up everything that matches your search, not only the current page.
-
-{/* SCREENSHOT: images/tap/tap-spending-report-by-vendor.png | Open PLVR Tap > Spending Report on an event with sales, By Vendor tab. Capture tabs, Search, Export Summary and Export All Vendor Reports buttons, the pinned Total row, and several vendor rows with Export Report. Highlight the Total row and the column headers. */}
-
-## Columns
-
-Hover the info icon on a column for its definition. Amounts use the event currency.
-
-**By Vendor**
-
-| Column | Meaning |
-| --- | --- |
-| **Successful Txns** | Number of successful spending transactions. |
-| **Cancelled Txns** | Number of cancelled spending transactions. |
-| **Gross Sales** | Original transaction amount before refunds. |
-| **Refunded Amount** | Amount refunded from the transaction. |
-| **Net Sales** | Gross Sales minus Refunded Amount. |
-
-**By Item**
-
-| Column | Meaning |
-| --- | --- |
-| **Net Items Sold** | Items sold after refunded quantities are deducted. |
-| **Gross Sales**, **Refunded Amount**, **Net Sales** | Same as above, for that item. |
+Switch between **By Vendor** and **By Item** (1), and use **Search** to filter. The **Total** row (2) covers everything matching your search, not just the current page. Net Sales is Gross Sales minus refunds. Hover a column's info icon for its definition.
 
 ## Exports
 
 Exports download as Excel files.
 
-- **Export Summary** exports the current tab (vendor summary or item summary), using your search.
-- **Export Report** on a vendor row downloads that vendor's settlement report. Use it when settling with the vendor.
-- **Export All Vendor Reports** (By Vendor tab) prepares one report per vendor for the whole event. A progress label shows while it runs, and the files download when ready.
-
-<Note>
-If a report can't be loaded or exported, a message appears. Try again, or use **Retry** on the table.
-</Note>
+- **Export Summary** (3): the current tab, with your search applied.
+- **Export Report** (4): one vendor's settlement report. Use it when settling with that vendor.
+- **Export All Vendor Reports** (3): one report per vendor. Files download when ready.
 
 ## Related
 
