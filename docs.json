@@ -3,9 +3,9 @@
   "theme": "mint",
   "name": "PLVR Business Portal",
   "colors": {
-    "primary": "#7C3AED",
-    "light": "#A78BFA",
-    "dark": "#5B21B6"
+    "primary": "#5E4B8A",
+    "light": "#A99BD0",
+    "dark": "#3A2E59"
   },
   "navigation": {
     "tabs": [
@@ -153,5 +153,5 @@
   "footer": {
     "socials": {}
   },
-  "favicon": "/favicon.ico"
+  "favicon": "/favicon.png"
 }
