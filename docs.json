@@ -153,5 +153,18 @@
   "footer": {
     "socials": {}
   },
-  "favicon": "/favicon.png"
+  "favicon": "/favicon.png",
+  "navbar": {
+    "links": [
+      {
+        "label": "PLVR",
+        "href": "https://www.plvr.io"
+      }
+    ],
+    "primary": {
+      "type": "button",
+      "label": "Open Portal",
+      "href": "https://business.plvr.io"
+    }
+  }
 }
