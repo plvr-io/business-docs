@@ -5,7 +5,9 @@ description: "Edit tickets and bundles, switch them on or off, create add-ons, a
 
 **Ticket Management** controls what attendees can buy. It has a **Tickets** tab and an **Add-ons** tab. Filter by status, session (multi-session events only) or name.
 
-{/* SCREENSHOT: images/tickets/ticket-management-overview.png | Tickets > Ticket Management, Tickets tab, two-session event. Include an Active ticket whose start date is in the future. Callouts: 1 tabs, 2 filters (Ticket Status, Session, Search), 3 Status dropdown, 4 pencil icon. */}
+<Frame>
+  <img src="/images/tickets/ticket-management-overview.svg" alt="Ticket Management with the Tickets and Add-ons tabs, the filters, a ticket table, the Status dropdown and the edit pencil" />
+</Frame>
 
 ## Turn a ticket on or off
 
@@ -15,7 +17,9 @@ Use the dropdown in the **Status** column. **Active** tickets are on sale, **Ina
 
 Select the pencil icon at the end of a row to open **Edit Ticket** (or **Edit Bundle**).
 
-{/* SCREENSHOT: images/tickets/ticket-management-edit-panel.png | Click the pencil on a ticket that has already sold some. Capture the full Edit Ticket panel with How Fees Work expanded. Callouts: 1 locked Name and Price, 2 Total Quantity, 3 sales dates, 4 purchase limits, 5 How Fees Work. */}
+<Frame>
+  <img src="/images/tickets/ticket-management-edit-panel.svg" alt="Edit Ticket panel with locked Name and Price, Total Quantity, sales dates, purchase limits and How fees work" />
+</Frame>
 
 - **Name** and **Price** are locked after the first sale.
 - **Total Quantity** cannot go below the number sold. For bundles it is **Max Bundle Sales**.
@@ -23,11 +27,15 @@ Select the pencil icon at the end of a row to open **Edit Ticket** (or **Edit Bu
 - **Limit Qty per Order**: 1 to 10. **Limit Qty per User**: 1 to 20.
 - Sales dates and times are required.
 
+When reviewing the price, check **Buyer pays** and **You receive** to understand the fee breakdown.
+
 ## Release chains
 
 A release chain sells tiers one after another and opens the next tier automatically when the current one is nearly sold out. The next tier opens at the percentage shown in the panel (for example 98%), not necessarily at the last ticket. Worked example: [General Admission in tiers](/tickets/scenario-ga-tiers).
 
-{/* SCREENSHOT: images/tickets/ticket-management-release-chains-panel.png | Expand the Release Chains panel on a session with a three-tier chain. Callouts: 1 New chain, 2 Auto-release switch, 3 tier progress bar with tick, 4 Activity log, 5 Copy to..., 6 Delete. */}
+<Frame>
+  <img src="/images/tickets/ticket-management-release-chains-panel.svg" alt="Release Chains panel with New chain, Activity log, Auto-release, tier progress bars, Copy to and Delete" />
+</Frame>
 
 <Steps>
   <Step title="Create a chain">
@@ -43,7 +51,9 @@ A release chain sells tiers one after another and opens the next tier automatica
 
 Each tier shows its state: waiting, **On sale**, sold out with the next tier opened, or a warning. Chained tickets show a badge such as "GA - 2/3" in the table, and a finished chain shows **Exhausted**.
 
-{/* SCREENSHOT: images/tickets/ticket-management-chain-tier-messages.png | A chain with tiers in different states (On sale, waiting, Sold out - next tier opened), plus the matching ticket table rows with the 'GA - 2/3' badge. */}
+<Frame>
+  <img src="/images/tickets/ticket-management-chain-tier-messages.svg" alt="A release chain with tiers in different states and the matching ticket rows with chain badges" />
+</Frame>
 
 Two warnings worth knowing:
 
@@ -56,13 +66,17 @@ Other controls: **Activity log** (history of sell-outs and activations), **Copy 
 
 On the **Add-ons** tab, select **Create Add-on**.
 
-{/* SCREENSHOT: images/tickets/ticket-management-create-addon.png | Add-ons tab > Create Add-on with Inventory Source 'Sync from ticket'. Callouts: 1 Linked to, 2 Inventory Source, 3 Source Ticket Type, 4 Add-on Sales Limit, 5 Face Value. */}
+<Frame>
+  <img src="/images/tickets/ticket-management-create-addon.svg" alt="Create Add-on panel with Linked to, Inventory Source, Source Ticket Type, Add-on Sales Limit and Face Value" />
+</Frame>
 
 - **Linked to**: the tickets the add-on can be bought with.
 - **Inventory Source**: **Own inventory** gives it its own quantity. **Sync from ticket** draws from a ticket's inventory, so each add-on sold reduces that ticket's availability.
 - **Face Value**: the price.
 - Sales dates are optional. The inventory source cannot be changed after creation.
 
-{/* SCREENSHOT: images/tickets/ticket-management-addons-table.png | Add-ons tab with 2 or 3 add-ons. Capture the Add-on Status filter, the table and the edit icon. */}
+<Frame>
+  <img src="/images/tickets/ticket-management-addons-table.svg" alt="Add-ons tab with the Add-on Status filter, the add-ons table and the edit icon" />
+</Frame>
 
 See also [Ticketing Concepts](/tickets/concepts), [Ticket Report](/tickets/ticket-report) and [Complimentary Tickets](/tickets/comp-tickets).

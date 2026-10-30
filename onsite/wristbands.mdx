@@ -13,7 +13,9 @@ Balances belong to people, not bands. Replacing a band doesn't move money, and f
 
 Search by wristband ID, Ticket ID or holder email. **Not working** lists stopped bands.
 
-{/* SCREENSHOT: images/onsite/onsite-wristband-list.png | Open Onsite Operations > Command Center > Wristbands with bands in Working, Frozen and Stopped states. Number the search and filters (1), the State column (2) and the row actions Freeze, Take off, Bind to ticket (3). */}
+<Frame>
+  <img src="/images/onsite/onsite-wristband-list.svg" alt="Wristbands list with search, state column and row actions" />
+</Frame>
 
 Row actions: **Freeze** / **Unfreeze** (band stops or resumes working for entry and payment), **Take off** (ends the binding) and **Bind to ticket** (asks for the Ticket ID). They use the [action panel](/onsite/tickets#the-action-panel). Freezing leaves the balance and ticket unchanged; taking off leaves the balance, entry history and purchases untouched.
 
@@ -23,7 +25,9 @@ Row actions: **Freeze** / **Unfreeze** (band stops or resumes working for entry 
 
 Select **+ Add wristbands** to register spare bands before doors open.
 
-{/* SCREENSHOT: images/onsite/onsite-wristband-add-panel.png | On Wristbands, click + Add wristbands. Enter three UIDs, one per line, and a Note. Capture the panel with the Add 3 bands button, and the result list if possible. */}
+<Frame>
+  <img src="/images/onsite/onsite-wristband-add-panel.svg" alt="Add wristbands panel with three UIDs and Add 3 bands button" />
+</Frame>
 
 <Steps>
   <Step title="Enter the bands">
@@ -43,13 +47,17 @@ This creates no wallet and binds nothing. The result lists each band as newly re
 
 Select a band to see its summary, **Band history** and **Bindings**. Refused attempts and replaced bindings are kept on purpose, so "what happened" and "which band did they have then" can always be answered. **Add note** opens the [case form](/onsite/cases).
 
-{/* SCREENSHOT: images/onsite/onsite-wristband-detail-page.png | Open a bound wristband page. Number the summary cards (1), Band history (2) and Bindings (3). */}
+<Frame>
+  <img src="/images/onsite/onsite-wristband-detail-page.svg" alt="Wristband page with summary cards, band history and bindings" />
+</Frame>
 
 ### Available actions
 
 Each action says what it does and what it leaves alone; one that can't be used says why.
 
-{/* SCREENSHOT: images/onsite/onsite-wristband-available-actions.png | On a wristband page, capture Available actions showing several actions, including a Restricted action marked Supervisor and an unavailable action with its reason. */}
+<Frame>
+  <img src="/images/onsite/onsite-wristband-available-actions.svg" alt="Available actions panel with a restricted action and an unavailable action" />
+</Frame>
 
 | Action | Notes |
 | --- | --- |
@@ -67,6 +75,8 @@ Most ask for a reason. **Restricted** actions are supervisor-only, are recorded 
 
 If a ticket tried to bind a band already bound to someone else, the page shows **Binding blocked** and an **Ownership conflict** panel comparing **Currently bound** with **Requesting bind**. Whoever has entry and spending on the band has been using it.
 
-{/* SCREENSHOT: images/onsite/onsite-wristband-ownership-conflict.png | Open a band with a bind conflict. Capture the Binding blocked label and Ownership conflict panel. Number Currently bound (1), Requesting bind (2) and Investigate ownership (3). */}
+<Frame>
+  <img src="/images/onsite/onsite-wristband-ownership-conflict.svg" alt="Binding blocked label and Ownership conflict panel" />
+</Frame>
 
 Rebinding detaches both people from the band they wear, so settle ownership first. Select **Investigate ownership** to record the case and escalate it. A supervisor can then use **Force rebind the wristband**.

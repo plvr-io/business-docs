@@ -11,7 +11,9 @@ For event-wide reporting see [Cashless activity](/tap/cashless-activity). To con
 
 Everything is split by channel. **Online** top-ups went through a payment provider and have a payment reference. **Onsite** ones were booked at a station against cash or a terminal and have none; reconcile them by station, method and cash record.
 
-{/* SCREENSHOT: images/onsite/onsite-cashless-overview.png | Open Onsite Operations > Command Center > Cashless on a Tap event with at least one unresolved top-up. Number the top-ups unresolved bar with Show N (1), the Needs attention panel (2) and the Totals cards (3). */}
+<Frame>
+  <img src="/images/onsite/onsite-cashless-overview.svg" alt="Cashless overview with unresolved top-ups bar, totals and Needs attention panel" />
+</Frame>
 
 ## Unresolved top-ups
 
@@ -23,7 +25,9 @@ If any wallets are frozen, a notice says how many. A frozen wallet stops spendin
 
 Every movement of money is a row with its amount and the balance it left behind. Search by email, name, reference, station or stall, and filter by channel, type or **Unresolved only**. Select a row's arrow for its [transaction detail](#transaction-detail).
 
-{/* SCREENSHOT: images/onsite/onsite-cashless-ledger.png | On the Cashless workspace, scroll to the Money ledger. Show varied types and statuses, including one Expired top-up with an Investigate link. Number the filters (1) and the Investigate link (2). */}
+<Frame>
+  <img src="/images/onsite/onsite-cashless-ledger.svg" alt="Money ledger with filters and an Investigate link" />
+</Frame>
 
 The **Top-up stations** panel shows each station's activity with a health label (Healthy, Watch, Degraded).
 
@@ -35,7 +39,9 @@ The only money write is **Correct the balance**, done from the wallet. See [Part
 
 Select **Investigate** on an unresolved top-up to open **Top-up not reflected**. It shows three layers that must agree: **Payment provider**, **Top-up entry** and **Wallet balance**. **Where it broke** gives the diagnosis.
 
-{/* SCREENSHOT: images/onsite/onsite-cashless-topup-investigation.png | From the Cashless ledger, click Investigate on an unresolved online top-up. Capture the whole page. Number the three layers (1), the Reconciliation panel (2) and Where it broke (3). */}
+<Frame>
+  <img src="/images/onsite/onsite-cashless-topup-investigation.svg" alt="Top-up not reflected page with three layers, Reconciliation and Where it broke" />
+</Frame>
 
 <Warning>
 Expired does not mean not charged. Don't tell a guest no money was taken unless you have checked.
@@ -50,6 +56,8 @@ Expired does not mean not charged. Don't tell a guest no money was taken unless 
 
 The top band shows status, type, amount, balance after and now, the participant, and a sentence you can read aloud to them. Below it, **What was bought** lists items and refunds so far, and **What you can do** suggests next steps.
 
-{/* SCREENSHOT: images/onsite/onsite-cashless-transaction-detail.png | From the Cashless ledger, click the arrow on a Purchase row with a partial refund. Number the top band (1), the refunded column in What was bought (2) and What you can do (3). */}
+<Frame>
+  <img src="/images/onsite/onsite-cashless-transaction-detail.svg" alt="Transaction detail with a partly refunded purchase" />
+</Frame>
 
 Check the refunded column before agreeing to anything further. "Not on this event" means the reference belongs to another event or is mistyped.
