@@ -1,33 +1,142 @@
 ---
 title: "Ticket Management"
-description: "Edit tickets and bundles, switch them on or off, create add-ons, and automate tiers with release chains."
+description: "Create and edit tickets and bundles, manage add-ons, and automate tiers with release chains."
 ---
 
-**Ticket Management** controls what attendees can buy. It has a **Tickets** tab and an **Add-ons** tab. Filter by status, session (multi-session events only) or name.
+Open your event and go to **Tickets → Ticket Management**. On the **Tickets** tab, filter by **Ticket Status** or search by ticket or bundle name. For a multi-session event, use the **Session** filter or expand a session. Find extras on the **Add-ons** tab.
 
-{/* SCREENSHOT: images/tickets/ticket-management-overview.png | Tickets > Ticket Management, Tickets tab, two-session event. Include an Active ticket whose start date is in the future. Callouts: 1 tabs, 2 filters (Ticket Status, Session, Search), 3 Status dropdown, 4 pencil icon. */}
+<Frame>
+  <img
+    src="/images/sample-ticket-ticket-list.png"
+    alt="Sample Event ticket list with Create bundle and Create ticket, filters, prices and quantities"
+  />
+</Frame>
+
+## Create a ticket
+
+On the **Tickets** tab, select **Create ticket**. Select the name, description or price in **Mobile preview** to jump to that field.
+
+<Frame>
+  <img
+    src="/images/sample-ticket-create-ticket.png"
+    alt="Create Ticket form with Mobile preview, ticket details, quantity and price"
+  />
+</Frame>
+
+<Steps>
+  <Step title="Enter the ticket details">
+    - Select a **Session** if the event has more than one.
+    - Enter the **Ticket name** and choose a **Status**. **Inactive** keeps the ticket hidden.
+    - Add an optional **Description** of up to 200 characters.
+  </Step>
+  <Step title="Set inventory and price">
+    - Under **Inventory**, enter a **Total ticket quantity** of at least one.
+    - Under **Pricing**, enter the base **Price per ticket** in the event currency. Enter **0** for a free ticket.
+    - Check **Buyer pays** and **You receive**. Select **How fees work** for the breakdown of fees and any tax. See [Fees](/tickets/concepts#fees).
+  </Step>
+  <Step title="Set when and how many tickets buyers can purchase">
+    - Open **Sales period** and set a date and time for **Sales start** and **Sales end** in the event time zone. End sales after the start, in the future, and by the end of the session.
+    - Open **Purchase limits** and set **Tickets per order** (1–10) and **Tickets per buyer** (1–20). Both are required.
+  </Step>
+  <Step title="Review ticket settings and create">
+    - Under **Ticket appearance**, choose a color and check the QR preview.
+    - Under **Ticket options**, set **Require Personalization** or **Allow ticket transfer** as needed. Configure personalization questions in the [Personalization form](/tap/personalization-form). With PLVR Tap enabled, you can also turn on **Support wristband binding**.
+    - Review **Mobile preview**, then select **Create ticket**. The new ticket appears in the list.
+  </Step>
+</Steps>
+
+<Frame>
+  <img
+    src="/images/sample-ticket-ticket-settings.png"
+    alt="Create Ticket with the Sales period and Purchase limits sections expanded"
+  />
+</Frame>
+
+## Create a bundle
+
+To sell a pack of the same ticket, create that ticket first. On **Tickets**, select **Create bundle**.
+
+<Steps>
+  <Step title="Choose the included ticket">
+    Select a **Session** if prompted. Enter a **Bundle name**, choose one **Included ticket** from that session, and set **Tickets / bundle** (1–10). Set **Status** and add an optional **Description** of up to 200 characters.
+  </Step>
+  <Step title="Set the bundle limit and price">
+    Set **Bundle sales limit** and the base **Price per bundle** for the whole pack. **Original total** shows the base price of the same number of individual tickets.
+  </Step>
+  <Step title="Set the sales period and purchase limits">
+    Set the required **Sales period**, **Bundles per order** and **Bundles per buyer**. Sales must end by the end of the session. The caps are 10 tickets per order and 20 per buyer. A 4-pack allows up to 2 bundles per order and 5 per buyer.
+  </Step>
+  <Step title="Review and create">
+    Check **Mobile preview**, then select **Create bundle**. The bundle appears with its included ticket.
+  </Step>
+</Steps>
+
+<Frame>
+  <img
+    src="/images/sample-ticket-create-bundle.png"
+    alt="Create Bundle form with Included ticket, Tickets per bundle and Bundle sales limit"
+  />
+</Frame>
+
+### Check shared stock
+
+Each bundle uses the included ticket’s inventory. The maximum **Bundle sales limit** is the included ticket’s total quantity divided by **Tickets / bundle**, rounded down.
+
+**Available now** is the smaller of the remaining bundle limit and the number of full packs shared stock can cover. Expand **Availability details** to see both. In Sample Event, 120 tickets can cover 30 four-packs. The sales limit has room for 20, so **Available now** shows 20.
+
+<Frame>
+  <img
+    src="/images/sample-ticket-bundle-stock.png"
+    alt="Sample bundle stock showing 120 tickets, 4 per bundle and 20 bundles available"
+  />
+</Frame>
 
 ## Turn a ticket on or off
 
-Use the dropdown in the **Status** column. **Active** tickets are on sale, **Inactive** ones are hidden, and **Ended** is automatic and cannot be changed.
+Use the dropdown in the **Status** column. **Active** makes the item visible to buyers when its sales period is open. **Inactive** hides it from buyers. **Ended** is set automatically after sales end and cannot be changed in the status dropdown.
+
+To pause all sales for a session, set each ticket and bundle in that session to **Inactive**. To resume, set the ones you want to sell back to **Active**.
 
 ## Edit a ticket or bundle
 
-Select the pencil icon at the end of a row to open **Edit Ticket** (or **Edit Bundle**).
+Select the row’s pencil icon to open **Edit Ticket** or **Edit Bundle**. Select **Save** to apply changes. After **Cancel**, choose **Keep editing** or **Discard changes** if prompted.
 
-{/* SCREENSHOT: images/tickets/ticket-management-edit-panel.png | Click the pencil on a ticket that has already sold some. Capture the full Edit Ticket panel with How Fees Work expanded. Callouts: 1 locked Name and Price, 2 Total Quantity, 3 sales dates, 4 purchase limits, 5 How Fees Work. */}
+<Frame>
+  <img
+    src="/images/sample-ticket-edit-ticket.png"
+    alt="Edit Ticket before its first sale, showing the read-only session and Sold count"
+  />
+</Frame>
 
-- **Name** and **Price** are locked after the first sale.
-- **Total Quantity** cannot go below the number sold. For bundles it is **Max Bundle Sales**.
-- **Description**: up to 200 characters.
-- **Limit Qty per Order**: 1 to 10. **Limit Qty per User**: 1 to 20.
-- Sales dates and times are required.
+| Field | When it locks |
+| --- | --- |
+| **Ticket name** and **Price per ticket** | After the first sale or issuance from that ticket’s stock, including free tickets, comp tickets and stock used through a bundle or a synced add-on. |
+| **Bundle name** and **Price per bundle** | After that bundle first sells or is issued. |
+| **Session** | When the ticket or bundle is created. |
+| **Included ticket** and **Tickets / bundle** | When the bundle is created. |
+
+Name and price stay locked if sales are later refunded or stock is restored.
+
+<Frame>
+  <img
+    src="/images/sample-ticket-edit-bundle.png"
+    alt="Edit Bundle showing the information icon next to Included ticket and the locked composition fields"
+  />
+</Frame>
+
+### Adjust quantity and sales settings
+
+- **Total ticket quantity** can be adjusted to a whole number at least as high as **Sold**, with a minimum of one. Ticket **Sold** counts individual tickets sold or issued, including comps and stock used by bundles and synced add-ons. Select the info icon next to **Sold** for details.
+- **Bundle sales limit** can be adjusted to a whole number at least as high as the bundle’s **Sold**, with a minimum of one. Bundle **Sold** counts packs. The bundle limit applies only to the bundle.
+- You can update the **Status**, **Description**, **Sales period** and **Purchase limits**. When changing **Sales end**, choose a time in the future and no later than the end of the session.
 
 ## Release chains
 
 A release chain sells tiers one after another and opens the next tier automatically when the current one is nearly sold out. The next tier opens at the percentage shown in the panel (for example 98%), not necessarily at the last ticket. Worked example: [General Admission in tiers](/tickets/scenario-ga-tiers).
 
-{/* SCREENSHOT: images/tickets/ticket-management-release-chains-panel.png | Expand the Release Chains panel on a session with a three-tier chain. Callouts: 1 New chain, 2 Auto-release switch, 3 tier progress bar with tick, 4 Activity log, 5 Copy to..., 6 Delete. */}
+<Frame>
+  <img src="/images/tickets/ticket-management-release-chains-panel.svg" alt="Release Chains panel with New chain, Activity log, Auto-release, tier progress bars, Copy to and Delete" />
+</Frame>
 
 <Steps>
   <Step title="Create a chain">
@@ -43,7 +152,9 @@ A release chain sells tiers one after another and opens the next tier automatica
 
 Each tier shows its state: waiting, **On sale**, sold out with the next tier opened, or a warning. Chained tickets show a badge such as "GA - 2/3" in the table, and a finished chain shows **Exhausted**.
 
-{/* SCREENSHOT: images/tickets/ticket-management-chain-tier-messages.png | A chain with tiers in different states (On sale, waiting, Sold out - next tier opened), plus the matching ticket table rows with the 'GA - 2/3' badge. */}
+<Frame>
+  <img src="/images/tickets/ticket-management-chain-tier-messages.svg" alt="A release chain with tiers in different states and the matching ticket rows with chain badges" />
+</Frame>
 
 Two warnings worth knowing:
 
@@ -56,13 +167,17 @@ Other controls: **Activity log** (history of sell-outs and activations), **Copy 
 
 On the **Add-ons** tab, select **Create Add-on**.
 
-{/* SCREENSHOT: images/tickets/ticket-management-create-addon.png | Add-ons tab > Create Add-on with Inventory Source 'Sync from ticket'. Callouts: 1 Linked to, 2 Inventory Source, 3 Source Ticket Type, 4 Add-on Sales Limit, 5 Face Value. */}
+<Frame>
+  <img src="/images/tickets/ticket-management-create-addon.svg" alt="Create Add-on panel with Linked to, Inventory Source, Source Ticket Type, Add-on Sales Limit and Face Value" />
+</Frame>
 
 - **Linked to**: the tickets the add-on can be bought with.
 - **Inventory Source**: **Own inventory** gives it its own quantity. **Sync from ticket** draws from a ticket's inventory, so each add-on sold reduces that ticket's availability.
 - **Face Value**: the price.
 - Sales dates are optional. The inventory source cannot be changed after creation.
 
-{/* SCREENSHOT: images/tickets/ticket-management-addons-table.png | Add-ons tab with 2 or 3 add-ons. Capture the Add-on Status filter, the table and the edit icon. */}
+<Frame>
+  <img src="/images/tickets/ticket-management-addons-table.svg" alt="Add-ons tab with the Add-on Status filter, the add-ons table and the edit icon" />
+</Frame>
 
 See also [Ticketing Concepts](/tickets/concepts), [Ticket Report](/tickets/ticket-report) and [Complimentary Tickets](/tickets/comp-tickets).

@@ -9,9 +9,13 @@ Open **Onsite Staff** in the event sidebar to manage access for event-day staff.
 To invite people to your Business Portal organization instead, see [Team](/organization/team).
 </Note>
 
-{/* SCREENSHOT: images/onsite/onsite-staff-list.png | Open Onsite Staff with codes of several roles, including a Top-up staff code with a station and one Inactive. Number the Role filter and Search (1), Export (2), Add Staff (3) and the Status column (4). */}
+<Frame>
+  <img src="/images/onsite/onsite-staff-list.svg" alt="Onsite Staff list with role filter, search, Export, Add Staff and Status column" />
+</Frame>
 
 Filter by role or search by login code. **Export** downloads a CSV of what you've filtered. **Status** can be changed directly in the list.
+
+Before the event, check **Status** and **Expires** in the staff list. Use **Last Login** to see whether the code has already been used to sign in. Share each login code only with the staff member assigned to it.
 
 ## Add staff
 
@@ -21,7 +25,7 @@ Select **Add Staff**, then use one of two tabs.
 
 <Steps>
   <Step title="Choose a role">
-    Top-up staff also need a **Top-up Station**, set up in [Top-up setup](/tap/top-up-setup).
+    For ticket-only events, **Check-in Ticket** lets staff scan ticket QR codes to check attendees in. **Supervisor** gives staff access to all workspaces available for that event so they can support the onsite team. Top-up staff also need a **Top-up Station**, set up in [Top-up setup](/tap/top-up-setup).
   </Step>
   <Step title="Set the number of codes">
     1 to 200, all with the same role and note (up to 200 characters).
@@ -31,13 +35,17 @@ Select **Add Staff**, then use one of two tabs.
   </Step>
 </Steps>
 
-{/* SCREENSHOT: images/onsite/onsite-staff-add-manual.png | Click Add Staff on Manual Creation. Choose Top-up staff so Top-up Station appears; set Number of Login Codes to 5 and add a Note. Capture the whole panel with both tabs visible. */}
+<Frame>
+  <img src="/images/onsite/onsite-staff-add-manual.svg" alt="Create Onsite Staff panel on the Manual Creation tab" />
+</Frame>
 
 ### CSV Import
 
 Use this to create codes for named people in one go. Select **Download Template** (specific to this event; keep the first four columns unchanged), fill it in, then upload it. CSV only, up to 200 records.
 
-{/* SCREENSHOT: images/onsite/onsite-staff-add-csv.png | Click Add Staff and open CSV Import. Capture Download Template, the upload area and Upload CSV. Optionally upload an invalid file to show the Line N: reason error list. */}
+<Frame>
+  <img src="/images/onsite/onsite-staff-add-csv.svg" alt="Create Onsite Staff panel on the CSV Import tab" />
+</Frame>
 
 <Warning>
 One bad row means no codes are created. Fix the lines listed and upload again.

@@ -1,44 +1,41 @@
 ---
 title: "Event editor"
-description: "Edit your event's public page."
+description: "Edit your event page and checkout settings."
 ---
 
-**Event Editor** (in the event menu) looks like the page buyers see. Select the pencil beside an item to edit it. Nothing is published until you select **Save Event** (top right).
+Open an event and select **Event Editor** in the event menu. Edit the form on the right and check the **Mobile preview** on the left. Select a section in the preview to jump to its settings.
 
-{/* SCREENSHOT: images/events/editor-full-page.png | Event Editor for a complete event, scrolled to top. Callouts: 1 main image, 2 gallery, 3 name, 4 time pencil, 5 price strip pencil, 6 Save Event. */}
+<Frame>
+  <img
+    src="/images/self-service-editor-demo.png"
+    alt="Event Editor with the mobile preview, Event info and Checkout tabs, and Save changes"
+  />
+</Frame>
 
-## What you can edit
+## Event info
 
-- **Main image (1), required:** cropped to a square. Gallery (2): up to 15 images, drag to reorder.
-- **Name (3), required.**
-- **Start and end time (4):** the end must be after the start, and once set it cannot be cleared. The time zone is fixed.
-- **About, required** and **Terms and Conditions**, optional.
-- **Price label and button text (5):** leave blank for the defaults.
+- **Basics** — Edit the **Event name**, **Event URL**, visibility and square **Main image**. Upload and reorder secondary images. Changing the **Event URL** replaces the current event link.
+- **Location & time** — Select the **Venue** before setting session dates and times. Times use the venue's time zone. If you add more than one session, give each a unique name. Keep at least one session. Sessions with linked tickets or orders can't be removed.
+- **Content** — Update **About**, genres and the line-up. Use **Add with Spotify Link** to add an artist.
+- **Pricing** — Choose **Currency** and how fees appear. **All-in pricing** shows the price with buyer fees and tax included. With this setting off, buyer fees and tax are added at checkout. Use **Insert lowest price** in the optional **Price label**. Leave **Button text** blank to use **Buy now**.
+- **Entry & terms** and **More settings** — Set entry requirements, update **Terms and conditions**, and enable **PLVR Tap** as needed.
 
-{/* SCREENSHOT: images/events/editor-time-picker.png | Event Editor with the start/end time editor open. Crop to the time area. */}
+<Note>
+  Event currency locks when the first **Ticket**, **Bundle** or **Add-on** is successfully created. Free and inactive items also lock the currency.
+</Note>
 
-| Field | Rules |
-| --- | --- |
-| **Price label** | Up to 12 characters, or 28 if it includes **Insert lowest price**. |
-| **Button text** | Up to 8 characters, letters and spaces only. Default is "Buy now". |
+Use **Fill with AI** to fill in **Event info** from text you paste. It fills empty fields by default. Turn on **Replace existing values** to update fields you already filled in, then review the result before saving.
 
-{/* SCREENSHOT: images/events/editor-price-label-button-text.png | Price label and button text strip in edit mode with 'From {lowest price}' (via Insert lowest price) and 'Join'. Crop to the strip. */}
+## Checkout
 
-The date, location, restrictions, line-up, organizers and venue come from the event's details and cannot be edited here.
-
-## Checkout consent
-
-Below the preview, the checkboxes buyers tick at checkout. Each saves separately with its own **Save** button.
-
-- **Required consent:** always on. PLVR's Terms of Use and Privacy Policy come first and are locked; your text follows.
-- **Marketing consent:** optional and off by default. Buyers are never forced to tick it.
-
-{/* SCREENSHOT: images/events/editor-checkout-consent.png | Checkout consent section with Marketing consent switched on, and the Buyer checkout preview. Crop to the section. */}
+- **Contact details** and **Booking details** — **Full Name** and **Email Address** are always required. Use [Registration form](/events/registration-form) to add or edit booking questions.
+- **Tax** — Turn on tax and enter a rate if applicable. Changes apply to new orders.
+- **Consent** — PLVR's Terms of Use and Privacy Policy are fixed. Add your own terms under **Additional terms**. **Marketing consent** is off by default. When you enable it, buyers can choose whether to opt in.
 
 ## Saving
 
-Your text is checked for disallowed words; if any are found, nothing saves until you revise it.
+Select **Save changes** to save edits from both tabs. If the editor flags content for review, revise the highlighted fields and save again.
 
 <Warning>
-  Leaving with unsaved changes and choosing **Leave without Saving** discards your edits.
+  Choosing **Leave without saving** discards your unsaved edits.
 </Warning>
