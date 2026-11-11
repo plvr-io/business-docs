@@ -87,11 +87,11 @@
             "group": "Events",
             "pages": [
               "events/overview",
+              "events/create-an-event",
               "events/event-editor",
               "events/registration-form",
               "events/rsvp",
-              "events/followers",
-              "events/create-an-event"
+              "events/followers"
             ]
           },
           {
