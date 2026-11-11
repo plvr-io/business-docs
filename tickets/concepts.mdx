@@ -16,14 +16,17 @@ All of it is managed in [Ticket Management](/tickets/ticket-management).
 
 ## Sessions
 
-A **session** is one occasion people can attend, such as Friday night or one show date. Every ticket belongs to exactly one session, and a Friday ticket cannot be used on Saturday. Session filters and columns only appear when your event has more than one. See [Multi-day festival](/tickets/scenario-multi-day-festival).
+A **session** is one occasion people can attend, such as Friday night or one show date. Every ticket and bundle belongs to one session. For example, a Friday ticket is valid for the Friday session. Session filters and columns only appear when your event has more than one. See [Multi-day festival](/tickets/scenario-multi-day-festival).
 
 ## Ticket types
 
-A **ticket type** is one kind of ticket, with its own price, quantity, sale window, status and optional purchase limits.
+A **ticket type** is one kind of ticket, with its own price, quantity, sales period, status and required purchase limits.
 
 <Frame>
-  <img src="/images/tickets/concepts-ticket-table.svg" alt="Ticket Management table with an Active, an Inactive and an Ended ticket, marking the Status dropdown and the Total, Sold and Available columns" />
+  <img
+    src="/images/tickets-guide-ticket-list.png"
+    alt="Ticket Management showing the Create bundle and Create ticket buttons, filters and ticket table"
+  />
 </Frame>
 
 | Status | Meaning |
@@ -32,9 +35,9 @@ A **ticket type** is one kind of ticket, with its own price, quantity, sale wind
 | **Inactive** | Hidden from buyers. Use it to hold back or pause a ticket. |
 | **Ended** | Set automatically after the sales end time. Cannot be reactivated. |
 
-- **Total Quantity** can be raised any time, but not below what has sold. Your session capacity is the sum of its ticket types, so make tier quantities add up to your venue limit, plus anything you plan to comp.
-- **Limit Qty per Order** (up to 10) and **Limit Qty per User** (up to 20) are optional.
-- **Name** and **Price** are locked after the first sale.
+- **Total ticket quantity** is the ticket’s inventory limit. Plan quantities across your ticket types against the venue capacity and allow for comp tickets in that stock.
+- **Tickets per order** (1–10) and **Tickets per buyer** (1–20) are required and counted in tickets. The limits apply separately to each ticket type.
+- **Ticket name** and **Price per ticket** lock after the first sale or issuance from that ticket’s stock. See [Edit a ticket or bundle](/tickets/ticket-management#edit-a-ticket-or-bundle) for the lock and stock rules.
 
 ## Release chains
 
@@ -46,7 +49,11 @@ A **release chain** puts ticket types in order, such as Early Bird, General Admi
 
 ## Bundles
 
-A **bundle** is a ticket sold as a pack, such as a Group of 4. It draws from the included ticket's inventory, and **Max Bundle Sales** caps the number of packs. See [Group packages](/tickets/scenario-bundles).
+A **bundle** groups several of the same ticket from one session, such as a 4-pack. It shares the included ticket’s inventory. **Bundle sales limit** caps the total packs you can sell. **Available now** reflects both the remaining pack limit and the remaining shared ticket stock.
+
+Set **Bundles per order** and **Bundles per buyer** in packs. PLVR converts the quantities to tickets to enforce the caps of 10 tickets per order and 20 per buyer. For a 4-pack, that means up to 2 packs per order and 5 per buyer. **Sold** counts packs for a bundle and individual tickets for a ticket type.
+
+See [Create a bundle](/tickets/ticket-management#create-a-bundle) and [Group packages](/tickets/scenario-bundles).
 
 ## Add-ons
 
@@ -54,10 +61,18 @@ A **bundle** is a ticket sold as a pack, such as a Group of 4. It draws from the
 
 ## Fees
 
-The **Price** is the ticket price. Buyers may see service fees and VAT on top, depending on your fee setup. Select **How Fees Work** next to the price to see what the buyer pays and what you receive.
+**Price per ticket** and **Price per bundle** are the base prices you enter, before buyer fees and tax. A bundle price is for the whole pack.
+
+- **All-in pricing** shows the full price to buyers up front, including applicable buyer fees and tax.
+- **Split pricing** shows the base price up front and adds applicable buyer fees and tax at checkout.
+
+Under **Pricing**, check **Buyer pays** and **You receive**, then open **How fees work** to see the buyer service fee, any fee you absorb and any tax. When tax is enabled, **You Receive (incl. tax)** includes the tax collected. See **Revenue excluding tax** for the amount without it. The bundle breakdown shows amounts for the whole pack.
 
 <Frame>
-  <img src="/images/tickets/concepts-how-fees-work.svg" alt="Price field with the Buyer pays and You receive summary next to the How Fees Work breakdown" />
+  <img
+    src="/images/tickets-guide-fee-breakdown.png"
+    alt="How Fees Work panel showing Cost to buyer and Your Revenue with amounts redacted"
+  />
 </Frame>
 
 ## Promo codes and comp tickets
