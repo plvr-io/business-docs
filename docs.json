@@ -90,7 +90,8 @@
               "events/event-editor",
               "events/registration-form",
               "events/rsvp",
-              "events/followers"
+              "events/followers",
+              "untitled-page"
             ]
           },
           {
