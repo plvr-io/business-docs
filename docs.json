@@ -86,8 +86,8 @@
           {
             "group": "Events",
             "pages": [
-              "events/overview",
               "events/create-an-event",
+              "events/overview",
               "events/event-editor",
               "events/registration-form",
               "events/rsvp",
