@@ -1,0 +1,43 @@
+---
+title: "シナリオ：バンドルによるグループパッケージ"
+description: "4人グループ券など、1枚あたりの価格がお得になるパックを販売します。"
+---
+
+**目標：** 割引パックで、グループでのまとめ買いを促します。
+
+| 商品 | 内容 | 価格 |
+| --- | --- | --- |
+| General Admission | チケット1枚 | $30 |
+| Group of 4 | General Admission x 4 | $100 |
+
+購入者は $120 ではなく $100 を支払います。
+
+## 在庫の仕組み
+
+バンドルは、含まれるチケットの在庫を消費します。General Admission が300枚ある場合、Group of 4 が1つ売れるとそのうち4枚が使われます。**Max Bundle Sales**（バンドルの最大販売数）でパックの数に上限（例：20）を設けられますが、パックが販売できるのは、含まれるチケットの在庫が十分に残っている間だけです。
+
+{/* SCREENSHOT: images/tickets/bundles-in-ticket-table.png | Ticket Management with General Admission (300 @ $30) and bundle 'Group of 4' ($100) in the same session. Highlight the bundle row. */}
+
+## バンドルを管理する
+
+<Steps>
+  <Step title="Edit Bundle を開く">
+    [チケット管理](/ja/tickets/ticket-management)で、バンドルの行にある鉛筆アイコンを選択します。
+  </Step>
+  <Step title="価格、上限、販売期間を設定する">
+    **Price**（価格）、**Max Bundle Sales**、販売期間、および必要に応じて購入上限を設定します。
+  </Step>
+  <Step title="有効にする">
+    **Status**（ステータス）を **Active**（有効）にして **Save**（保存）します。
+  </Step>
+</Steps>
+
+{/* SCREENSHOT: images/tickets/bundles-edit-panel.png | Edit Bundle panel for 'Group of 4'. Callouts: 1 Price, 2 Max Bundle Sales (20), 3 Included Tickets reading 'General Admission x 4', 4 Status. */}
+
+<Warning>
+  名前と **Price** は最初の販売後にロックされます。また、バンドルはリリースチェーンに追加できません。
+</Warning>
+
+- バンドルのチケットは、[チケットレポート](/ja/tickets/ticket-report)にバンドル名付きで表示されます。
+- [プロモコード](/ja/promotions/promo-codes)は、1つのバンドルを対象にできます。
+- このポータルでは新しいバンドルを作成できません。PLVR の担当者にご依頼ください。

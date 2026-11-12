@@ -1,0 +1,53 @@
+---
+title: "シナリオ：VIP チケットとアドオン"
+description: "数量限定のプレミアムチケットを用意し、駐車券などのオプションもあわせて販売します。"
+---
+
+**目標：** 数量限定の VIP チケットをプレミアム価格で販売し、購入者が追加できるオプションも用意します。
+
+| 商品 | 数量 | 価格 | 備考 |
+| --- | --- | --- | --- |
+| General Admission | 400 | $30 | メインのチケット |
+| VIP | 50 | $90 | 数量限定 |
+| Parking Pass（アドオン） | 80 | $10 | General Admission と VIP |
+| Event T-shirt（アドオン） | 100 | $25 | VIP のみ |
+
+## パート1：VIP を限定する
+
+[チケット管理](/ja/tickets/ticket-management)で VIP チケットを編集します。
+
+- **Total Quantity**（総数）を50にします。売り切れると VIP は完売になります。
+- **Limit Qty per Order**（注文あたりの上限）と **per User**（ユーザーあたりの上限）を設定し（例：4）、より多くの購入者にチケットが行き渡るようにします。
+- **Description**（説明）に VIP の特典内容を記載します。
+- 第2弾として販売開始したい場合は、**Sales Start Date**（販売開始日）を遅らせるか、**Inactive**（無効）のままにしておきます。
+
+{/* SCREENSHOT: images/tickets/vip-addons-edit-vip-ticket.png | Edit Ticket panel for VIP (50 @ $90). Callouts: 1 Total Quantity 50, 2 Limit Qty per Order and per User (4), 3 Description, 4 sales dates. */}
+
+## パート2：アドオンを作成する
+
+**Add-ons**（アドオン）タブで **Create Add-on**（アドオンを作成）を選択し、以下を行います。
+
+<Steps>
+  <Step title="名前を付ける">
+    **Session**（セッション）を選び、**Add-on Name**（アドオン名）と **Description** を入力します。
+  </Step>
+  <Step title="購入できる人を選ぶ">
+    **Linked to**（紐付け先）：駐車券は General Admission と VIP、T シャツは VIP のみ。
+  </Step>
+  <Step title="在庫を選ぶ">
+    駐車場やグッズなど物理的なオプションには **Own inventory**（独自の在庫）を使います。
+  </Step>
+  <Step title="数量と価格を設定する">
+    **Total Quantity** と **Face Value**（額面）を入力して保存します。
+  </Step>
+</Steps>
+
+{/* SCREENSHOT: images/tickets/vip-addons-create-addon.png | Create Add-on filled: Parking Pass, Active, Linked to General Admission and VIP, Own inventory, Quantity 80, Face Value 10. Callouts: 1 Linked to, 2 Inventory Source. */}
+
+<Note>
+  アドオンはリリースチェーンに追加できません。また、作成後に在庫の参照元を変更することはできません。
+</Note>
+
+販売されたアドオンは、[チケットレポート](/ja/tickets/ticket-report)に **Add-on** ラベル付きで表示されます。
+
+{/* SCREENSHOT: images/tickets/vip-addons-ticket-report.png | Ticket Report with sold add-ons: the 'Add-ons Sold' card and a few rows with the Add-on label. */}

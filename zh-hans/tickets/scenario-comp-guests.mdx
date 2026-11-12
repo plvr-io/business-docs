@@ -1,0 +1,39 @@
+---
+title: "场景：为嘉宾、艺人和媒体发放赠票"
+description: "向艺人、媒体、赞助商和工作人员发放免费门票，同时掌握容量情况。"
+---
+
+**目标：** 让不需要付费的人免费入场，同时不搞乱容量统计。
+
+赠票与付费门票共用同一库存：在 300 张 General Admission（普通票）中发出 20 张赠票后，剩余 280 张可供销售。
+
+<Warning>
+  请在售罄之前决定是否为嘉宾预留库存。如果需要一个专门的赠票票种，请联系你的 PLVR 对接人。
+</Warning>
+
+## 示例：30 位媒体和艺人嘉宾
+
+<Steps>
+  <Step title="准备名单">
+    准备一份包含 Name（姓名）、Email（邮箱）、Quantity（数量）的表格。
+  </Step>
+  <Step title="打开 Bulk Creation">
+    在[赠票](/zh-hans/tickets/comp-tickets)中选择 **Create Complimentary Tickets**（创建赠票），然后选择 **Bulk Creation**（批量创建）。选择 **Session**（场次）和 **Ticket Type**（票种）。
+  </Step>
+  <Step title="导入并检查">
+    粘贴或上传 CSV，并修正所有被标记的行。
+  </Step>
+  <Step title="发送邮件或下载">
+    开启邮件即可直接发送（每位收件人最多 10 张），或者保持关闭，稍后再下载 PDF。
+  </Step>
+  <Step title="添加备注并保存">
+    添加“Press（媒体）”之类的备注，方便日后查找这一批赠票。
+  </Step>
+</Steps>
+
+{/* SCREENSHOT: images/tickets/comp-guests-bulk-filled.png | Create Complimentary Tickets > Bulk Creation, Session and Ticket Type selected, email ON, about 5 sample recipients, Remarks 'Press'. Capture the full panel including counters and Save. */}
+
+- 每个票种单独一批：如果艺人拿 VIP、媒体拿普通票，请分两批创建。
+- 只有一两位嘉宾时，请使用 **Single Creation**（单个创建）。
+
+{/* SCREENSHOT: images/tickets/comp-guests-end-state.png | Complimentary Tickets page after saving about 30 recipients. Capture the summary cards and first rows with Sent Date and Remarks 'Press'. */}

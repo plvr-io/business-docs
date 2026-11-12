@@ -1,0 +1,39 @@
+---
+title: "シナリオ：ゲスト、アーティスト、プレスへの招待チケット"
+description: "定員を管理しながら、アーティスト、プレス、スポンサー、スタッフに無料チケットを発行します。"
+---
+
+**目標：** 支払いが不要な人を無料で入場させつつ、定員の把握を失わないようにします。
+
+招待チケットは有料チケットと同じ在庫から発行されます。General Admission 300枚のうち20枚を招待チケットにすると、販売できるのは残りの280枚です。
+
+<Warning>
+  完売する前に、ゲスト用に在庫を確保しておくかどうかを決めておきましょう。招待専用のチケット種別が必要な場合は、PLVR の担当者にご依頼ください。
+</Warning>
+
+## 例：プレスとアーティストのゲスト30名
+
+<Steps>
+  <Step title="リストを用意する">
+    名前（Name）、メールアドレス（Email）、枚数（Quantity）を記載したスプレッドシートを用意します。
+  </Step>
+  <Step title="Bulk Creation を開く">
+    [招待チケット](/ja/tickets/comp-tickets)で **Create Complimentary Tickets**（招待チケットを作成）を選択し、**Bulk Creation**（一括作成）を選びます。**Session**（セッション）と **Ticket Type**（チケット種別）を選択します。
+  </Step>
+  <Step title="インポートして確認する">
+    CSV を貼り付けるかアップロードし、エラーが表示された行を修正します。
+  </Step>
+  <Step title="メール送信またはダウンロード">
+    メール送信をオンにすると直接送信されます（1人あたり最大10枚）。オフのままにして、あとで PDF をダウンロードすることもできます。
+  </Step>
+  <Step title="備考を追加して保存する">
+    「Press」などの備考を付けておくと、あとでバッチを見つけやすくなります。
+  </Step>
+</Steps>
+
+{/* SCREENSHOT: images/tickets/comp-guests-bulk-filled.png | Create Complimentary Tickets > Bulk Creation, Session and Ticket Type selected, email ON, about 5 sample recipients, Remarks 'Press'. Capture the full panel including counters and Save. */}
+
+- 1つのバッチにつき1つのチケット種別です。アーティストには VIP、プレスには General Admission を発行する場合は、2回に分けてバッチを作成します。
+- ゲストが1〜2名の場合は **Single Creation**（個別作成）を使います。
+
+{/* SCREENSHOT: images/tickets/comp-guests-end-state.png | Complimentary Tickets page after saving about 30 recipients. Capture the summary cards and first rows with Sent Date and Remarks 'Press'. */}

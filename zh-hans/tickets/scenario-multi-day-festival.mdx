@@ -1,0 +1,63 @@
+---
+title: "场景：多日音乐节"
+description: "每天设置一个场次来举办音乐节，并分别跟踪每一天的数据。"
+---
+
+**目标：** 周五、周六和周日，每一天都单独销售、单独统计。
+
+| 场次 | 门票 | 数量 | 价格 |
+| --- | --- | --- | --- |
+| 周五 | Day Pass（单日票） | 400 | $40 |
+| 周六 | Day Pass | 600 | $55 |
+| 周日 | Day Pass | 400 | $40 |
+
+每一天都是一个**场次**，拥有独立的容量、价格和销售时段。周六售罄不会影响周五。
+
+<Note>
+  场次及其门票会随活动一起设置。如需新增某一天或某个票种，请联系你的 PLVR 对接人。
+</Note>
+
+## 检查每一天
+
+在[门票管理](/zh-hans/tickets/ticket-management)中，检查每个场次的 **Price**（价格）、**Total**（总数）和日期，为热门日期设置购买上限，并在正式公布前将某一天保持为 **Inactive**（停用）。
+
+{/* SCREENSHOT: images/tickets/multi-day-ticket-management.png | Ticket Management for the three-session example. Callouts: 1 Session filter, 2 the three per-session tables. */}
+
+## 每天都分档
+
+先在一个场次上搭建[放票链](/zh-hans/tickets/scenario-ga-tiers)，然后：
+
+<Steps>
+  <Step title="复制">
+    在放票链卡片上选择 **Copy to...**（复制到……），并勾选其他场次。
+  </Step>
+  <Step title="检查匹配结果">
+    档位按门票名称匹配。若未匹配，请手动选择正确的门票，或选择 **Don't copy this tier**（不复制此档位）。
+  </Step>
+  <Step title="开启 Auto-release">
+    复制后的放票链默认处于暂停状态。修正所有被标记的结束时间，然后在每个场次中开启 **Auto-release**（自动放票）。
+  </Step>
+</Steps>
+
+<Frame>
+  <img
+    src="/images/sample-copy-release-chain.png"
+    alt="复制放票链对话框，显示目标场次和档位匹配选项"
+    className="mx-auto"
+    style={{ width:"67%" }}
+  />
+</Frame>
+
+<Tip>
+  每天使用相同的门票名称，可以让复制和报表都保持简单。
+</Tip>
+
+适用于所有天数的通票无法在本后台中自行搭建。请联系你的 PLVR 对接人。
+
+## 跟踪与运营
+
+- [门票报表](/zh-hans/tickets/ticket-report)：按 **Session**（场次）筛选，查看某一天的销售情况。
+- [赠票](/zh-hans/tickets/scenario-comp-guests)：选择 **Session**，确保嘉宾拿到对应日期的门票。
+- [优惠码](/zh-hans/tickets/scenario-promo-discounts)：针对某个场次中的某种门票设置折扣，提振销售较慢的一天。
+
+{/* SCREENSHOT: images/tickets/multi-day-ticket-report-session.png | Ticket Report on the multi-day event with Saturday chosen in the Session filter. Capture the filters, summary cards and Export button. */}

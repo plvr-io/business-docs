@@ -1,0 +1,84 @@
+---
+title: "シナリオ：一般入場チケットの段階販売"
+description: "一般入場チケットを段階的に販売し、リリースチェーンで各段階を自動的に販売開始します。"
+---
+
+**目標：** 入場チケットは1種類のまま、需要の高まりに応じて価格を上げていきます。
+
+| 段階 | 数量 | 価格 |
+| --- | --- | --- |
+| Early Bird | 100 | $20 |
+| General Admission | 300 | $30 |
+| Final Release | 100 | $40 |
+
+定員500名。完売した場合の売上：100 x $20 + 300 x $30 + 100 x $40 = $15,000。
+
+<Tabs>
+  <Tab title="リリースチェーンを使うべきケース">
+    夜間であっても、前の段階が売り切れた瞬間に次の価格で販売を開始したい場合。
+  </Tab>
+  <Tab title="販売期間のみを使うべきケース">
+    決まった日付で、または手動で段階を切り替えたい場合。両方を組み合わせることもできます。日付を安全策として設定し、チェーンで前倒しで次の段階に進めます。
+  </Tab>
+</Tabs>
+
+{/* SCREENSHOT: images/tickets/ga-tiers-initial-tickets.png | Ticket Management with the three tickets before any chain exists: Early Bird Active, the other two Inactive, each with a future sales end date. */}
+
+## 設定方法
+
+<Steps>
+  <Step title="チケットを確認する">
+    [チケット管理](/ja/tickets/ticket-management)で **Price**（価格）、**Total**（総数）、日付を確認します。名前と価格は最初の販売後にロックされます。
+  </Step>
+  <Step title="ステータスと終了日時を設定する">
+    Early Bird を **Active**（有効）、残りの2つを **Inactive**（無効）にします。すべての段階に未来の終了日時が必要で、後の段階の終了日時は前の段階より早くならないようにします。
+  </Step>
+  <Step title="チェーンを作成する">
+    **Release Chains**（リリースチェーン）で **New chain**（新規チェーン）を選択し、「GA」と名前を付けて **Create**（作成）します。
+  </Step>
+  <Step title="段階を順番に追加する">
+    **+ Add existing ticket**（既存のチケットを追加）で、Early Bird、General Admission、Final Release の順に追加します。
+  </Step>
+  <Step title="Auto-release をオンにする">
+    オンにするまで、チェーンは一時停止の状態で始まります。
+  </Step>
+</Steps>
+
+{/* SCREENSHOT: images/tickets/ga-tiers-chain-configured.png | Release Chains panel after setup: chain 'GA' with the three tiers in order, Auto-release ON, Early Bird 'On sale' with a partly filled bar. Callouts: 1 Auto-release, 2 the '98%' line, 3 Activity log icon. */}
+
+## 販売が進むと
+
+購入者には販売中の段階だけが表示されます。その段階がほぼ売り切れると（必ずしも最後の1枚ではなく、パネルに表示される割合に達した時点で）、次の段階が自動的に **Active** になります。Final Release の後、チェーンは **Exhausted**（終了）と表示されます。
+
+{/* SCREENSHOT: images/tickets/ga-tiers-second-tier-open.png | After Early Bird has sold out: Release Chains panel and ticket table together. Early Bird 'Sold out - next tier opened', General Admission Active at $30 with the auto-activated note and 'GA - 2/3' badge. */}
+
+<Note>
+  決済途中の未払い注文が、一時的にチケットを確保することがあります。それが解放されると、前の段階のチケットが数枚再び販売中に表示されることがあります。
+</Note>
+
+<Tip>
+  購入者のページには、段階の一覧やカウントダウンは表示されません。各チケットの **Description**（説明）で段階販売について説明しましょう。例：「Early Bird：先着100枚限定」。
+</Tip>
+
+{/* SCREENSHOT: images/tickets/ga-tiers-attendee-view.png | Public event page (via 'view Event') with only Early Bird Active: one General Admission option and the Description 'Early Bird: first 100 tickets only'. */}
+
+## 状況を見守る
+
+- **Activity log**（アクティビティログ、履歴アイコン）には、すべての売り切れと販売開始が記録されます。
+- 一時停止するには **Auto-release** をオフにします。チケットのステータスはそのまま維持されます。
+- 後の段階を手動で有効にすると、それより前の段階は自動では有効になりません。手動で有効にするか、削除してください。
+
+{/* SCREENSHOT: images/tickets/ga-tiers-activity-log.png | Activity log open with a few entries (auto-release on, sell-out, automatic activation). */}
+
+## 他のセッションで再利用する
+
+チェーンのカードで **Copy to...**（コピー先...）を使います。段階は名前で照合され、コピーは一時停止の状態で始まるため、確認後に **Auto-release** をオンにしてください。[複数日開催のフェスティバル](/ja/tickets/scenario-multi-day-festival)をご覧ください。
+
+<Frame>
+  <img
+    src="/images/sample-copy-release-chain.png"
+    alt="別のセッションの段階を照合またはスキップするオプションが表示された、リリースチェーンのコピーダイアログ"
+    className="mx-auto"
+    style={{ width:"67%" }}
+  />
+</Frame>

@@ -1,0 +1,72 @@
+---
+title: "活动当天执行手册"
+description: "通过 Onsite Operations 掌控全天：班次、入场、手环、无现金问题和升级处理。"
+---
+
+**Onsite Operations**（现场运营）是你的控制室。其中的 **Command Center**（指挥中心）会显示需要关注的事项，并可搜索任意嘉宾。仅售门票的活动通过 QR 码扫码或手动签到入场；Tap 活动则通过手环入场，并额外提供 **Wristbands**（手环）和 **Cashless**（无现金）功能。请参阅[指挥中心](/zh-hans/onsite/command-center)。
+
+## 开门之前
+
+<Check>每位团队成员在 **Onsite Staff** 中都有一个 **Active**（启用）的登录码，充值人员已关联到正确的站点。</Check>
+<Check>已添加备用手环，且 **Approvals**（审批）列表已清空（Tap 活动）。</Check>
+<Check>如果在入口售票，现场售票海报已就位。请参阅[现场售票](/zh-hans/promotions/door-sales)。</Check>
+<Check>服务台人员知道 **Search**（搜索）和 **+ New service case**（新建服务工单）在哪里。</Check>
+
+## 分工
+
+| 工作 | 位置 |
+| --- | --- |
+| 入口团队：放行嘉宾入场 | [门票与入场](/zh-hans/onsite/tickets) |
+| 充值团队（Tap） | [充值设置](/zh-hans/tap/top-up-setup) |
+| 服务台：解决入场和手环问题 | [搜索](/zh-hans/onsite/search) |
+| 主管：执行受限的手环操作 | [手环](/zh-hans/onsite/wristbands) |
+| 活动负责人：关注指挥中心、审核升级事项 | [服务工单](/zh-hans/onsite/cases) |
+
+每个登录码的 **Role**（角色）在 **Onsite Staff** 中设置。全天保持指挥中心处于打开状态。它大约每 30 秒刷新一次，**Attention queue**（待关注队列）按风险排序，请从上往下处理。
+
+{/* SCREENSHOT: images/guides/runbook-command-center.png | Command Center on a Tap event mid-event. Callouts: 1 Open service cases / Blocked from entry / Unresolved top-ups counts, 2 Operational health banner, 3 Attention queue, 4 Search, 5 + New service case. */}
+
+## 常见情况
+
+<AccordionGroup>
+  <Accordion title="嘉宾无法入场">
+    通过门票 ID、邮箱、订单号或手环进行 **Search**，查看 **Why it matched**（匹配原因），然后选择 **Resolve**（处理）并按照推荐操作执行（例如 **Admit with an override**（强制放行）或 **Allow re-entry**（允许再次入场））。请参阅[门票与入场](/zh-hans/onsite/tickets)。
+  </Accordion>
+  <Accordion title="手环丢失、损坏或无法使用">
+    选择 **Replace the wristband**（更换手环，余额不受影响）、**Report the wristband lost or stolen**（挂失手环）或 **Freeze the wristband**（冻结手环）。如需停止所有消费，请在个人资料中使用 **Freeze the wallet**（冻结钱包）。**Ownership conflict**（归属冲突）需交由主管处理。请参阅[手环](/zh-hans/onsite/wristbands)。
+  </Accordion>
+  <Accordion title="充值未到账">
+    打开 **Cashless**，搜索该嘉宾，并对未完成的充值选择 **Investigate**（调查）。不要告诉嘉宾没有扣款，也不要让对方再付一次。如果无法解决，请选择 **Open a payment review case**（创建支付审核工单）。控制台无法退款。请参阅[无现金](/zh-hans/onsite/cashless)。
+  </Accordion>
+  <Accordion title="余额需要修正">
+    在参与者的 **Cashless** 标签页中：选择 **Correct the balance**（修正余额）或 **Issue a reward credit**（发放奖励额度）。这两项操作都会记录在你的名下。请参阅[参与者](/zh-hans/onsite/participants)。
+  </Accordion>
+  <Accordion title="已获批准的嘉宾不在名单上">
+    在 **Guests**（嘉宾）中搜索并 **Check in**（签到），或选择 **Add an approved guest**（添加已批准嘉宾）并记录批准人。切勿仅凭姓名匹配就放行。请参阅[嘉宾](/zh-hans/onsite/guests)。
+  </Accordion>
+  <Accordion title="有人想在门口买票">
+    引导对方到海报前。扫描海报后即可在手机上购票。
+  </Accordion>
+</AccordionGroup>
+
+{/* SCREENSHOT: images/guides/runbook-search-resolve.png | Onsite Operations > Search result showing 'Why it matched', then the Resolve page with the plain-words explanation, 'Say to the participant' sentence and recommended actions. */}
+
+## 无法解决时
+
+绝不要在没有任何记录的情况下拒绝某人入场。使用 **+ New service case**：描述问题，选择 **Add evidence**（添加证据）（参考编号、具名确认或备注；口头同意不算证据），如果无法安全处理，请选择 **Send for review**（提交审核），或者将其关闭为已解决或无法解决。请参阅[服务工单](/zh-hans/onsite/cases)。
+
+{/* SCREENSHOT: images/guides/runbook-service-case-form.png | '+ New service case' form filled, with Add evidence open. Callouts: 1 problem type, 2 Add evidence, 3 Send for review, 4 conclusion buttons. */}
+
+## 当天收尾
+
+<Steps>
+  <Step title="清空队列">
+    处理 **Service cases** > **Still open**（仍未关闭）中的工单，直到清零，或为每个工单明确下一步。
+  </Step>
+  <Step title="停用登录码">
+    将已结束工作的工作人员和商户登录码设为 **Inactive**（停用）。
+  </Step>
+  <Step title="记录数据">
+    记下 **Tickets issued**（已发出门票）、**Entered**（已入场）以及无现金相关卡片中的数据，供[活动结束后](/zh-hans/guides/after-the-event)使用。
+  </Step>
+</Steps>

@@ -1,0 +1,53 @@
+---
+title: "情境：VIP 票與加購項目"
+description: "提供少量高級票券，並一併販售停車等額外項目。"
+---
+
+**目標：**以較高價格販售限量 VIP 票，並提供購票者可加購的額外項目。
+
+| 項目 | 數量 | 價格 | 備註 |
+| --- | --- | --- | --- |
+| General Admission（一般入場） | 400 | $30 | 主要票券 |
+| VIP | 50 | $90 | 限量 |
+| Parking Pass（停車證，加購項目） | 80 | $10 | General Admission 與 VIP |
+| Event T-shirt（活動 T 恤，加購項目） | 100 | $25 | 僅限 VIP |
+
+## 第 1 部分：限制 VIP 數量
+
+在[票券管理](/zh-hant/tickets/ticket-management)中編輯 VIP 票券：
+
+- **Total Quantity**（總數量）設為 50。賣完後 VIP 就會顯示售完。
+- 設定 **Limit Qty per Order**（每筆訂單上限）與 **per User**（每位使用者上限）（例如 4 張），讓票券分散給更多購票者。
+- 在 **Description**（說明）中寫明 VIP 包含哪些內容。
+- 設定較晚的 **Sales Start Date**（開賣日期），或先維持 **Inactive**（停用），作為第二波開賣。
+
+{/* SCREENSHOT: images/tickets/vip-addons-edit-vip-ticket.png | Edit Ticket panel for VIP (50 @ $90). Callouts: 1 Total Quantity 50, 2 Limit Qty per Order and per User (4), 3 Description, 4 sales dates. */}
+
+## 第 2 部分：建立加購項目
+
+在 **Add-ons**（加購項目）分頁中選擇 **Create Add-on**（建立加購項目），接著：
+
+<Steps>
+  <Step title="命名">
+    選擇 **Session**（場次），並輸入 **Add-on Name**（加購項目名稱）與 **Description**。
+  </Step>
+  <Step title="選擇誰可以購買">
+    **Linked to**（綁定票種）：停車證綁定 General Admission 與 VIP，T 恤僅綁定 VIP。
+  </Step>
+  <Step title="選擇庫存來源">
+    停車、周邊商品等實體額外項目請使用 **Own inventory**（獨立庫存）。
+  </Step>
+  <Step title="設定數量與價格">
+    設定 **Total Quantity** 與 **Face Value**（票面價格），然後儲存。
+  </Step>
+</Steps>
+
+{/* SCREENSHOT: images/tickets/vip-addons-create-addon.png | Create Add-on filled: Parking Pass, Active, Linked to General Admission and VIP, Own inventory, Quantity 80, Face Value 10. Callouts: 1 Linked to, 2 Inventory Source. */}
+
+<Note>
+  加購項目無法加入釋票鏈，且建立後就無法變更其庫存來源。
+</Note>
+
+已售出的加購項目會出現在[票券報表](/zh-hant/tickets/ticket-report)中，並帶有 **Add-on** 標籤。
+
+{/* SCREENSHOT: images/tickets/vip-addons-ticket-report.png | Ticket Report with sold add-ons: the 'Add-ons Sold' card and a few rows with the Add-on label. */}

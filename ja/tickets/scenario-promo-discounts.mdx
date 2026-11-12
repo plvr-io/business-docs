@@ -1,0 +1,47 @@
+---
+title: "シナリオ：プロモコードによる割引キャンペーン"
+description: "パートナーへの特典、期間限定オファー、売れ行きの悪いチケットの割引。"
+---
+
+**目標：** 公開価格を変えずに、対象を絞った割引を提供します。購入者は決済時にコードを入力します。各項目の詳細は[プロモコード](/ja/promotions/promo-codes)をご覧ください。
+
+## パートナー向けコード：10%オフ、50回まで
+
+<Steps>
+  <Step title="コードを作成する">
+    [プロモコード](/ja/promotions/promo-codes)で **Create**（作成）を選択します。**Generation Method: Manual**（生成方法：手動）、**Code**（コード）：PARTNER10。
+  </Step>
+  <Step title="割引を設定する">
+    **Discount Type: Percentage**（割引タイプ：割合）、**Discount Value**（割引値）：10。
+  </Step>
+  <Step title="制限を設ける">
+    **Apply To: Specific ticket type**（適用対象：特定のチケット種別）を選び、セッションとチケットを選択します。**Usage Limit**（利用上限）をオンにして50と入力します。
+  </Step>
+</Steps>
+
+{/* SCREENSHOT: images/tickets/promo-discounts-partner-form.png | Promotions > Promo Codes > Create, filled: Manual, PARTNER10, Percentage 10, Specific ticket type with General Admission, Usage Limit ON 50. Capture the whole panel. */}
+
+## その他の設定例
+
+- **フラッシュセール**：**Time Limit**（期間限定）をオンにして開始・終了日時を設定し、**Apply To: All ticket types**（すべてのチケット種別）を選びます。
+- **ユニークコード**：**Bulk Generate**（一括生成）で最大100個のコードを生成します。**Code Prefix**（コードの接頭辞）は任意です。1回限りにするには **Usage Limit** を1にします。
+- **定額割引**：**Discount Type: Fixed Amount**（定額）で、たとえば $5 オフにします。
+
+<Frame>
+  <img
+    src="/images/sample-promo-codes-bulk-generate.png"
+    alt="数量とコードの接頭辞が入力された一括生成フォーム"
+    className="mx-auto"
+    style={{ width:"31%" }}
+  />
+</Frame>
+
+<Warning>
+  1つのチケット向けのコードは、他のチケットには使えません。[リリースチェーン](/ja/tickets/scenario-ga-tiers)の段階に対しては、すべての段階でコードを使えるようにしたい場合は **All ticket types** を選んでください。
+</Warning>
+
+## 成果を確認する
+
+Promo Codes ではコードごとに **Uses/Limit**（利用数/上限）、**Revenue**（売上）、**Cost**（割引額）が表示され、**View Usage**（利用状況を表示）で購入者ごとの一覧を確認できます。[チケットレポート](/ja/tickets/ticket-report)では注文ごとのコードが表示されます。割引ではなくチャネルを計測したい場合は、[トラッキングリンク](/ja/promotions/tracking-links)をご覧ください。
+
+{/* SCREENSHOT: images/tickets/promo-discounts-performance.png | Promo Codes list with a few used codes (e.g. PARTNER10 at 12/50). Callouts: 1 Uses/Limit, 2 Revenue, 3 Cost. */}

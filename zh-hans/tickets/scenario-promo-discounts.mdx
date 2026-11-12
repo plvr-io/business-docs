@@ -1,0 +1,47 @@
+---
+title: "场景：用优惠码开展折扣活动"
+description: "回馈合作伙伴、开展限时优惠，或为销售较慢的某种门票打折。"
+---
+
+**目标：** 在不改变公开价格的前提下进行定向折扣。购票者在结账时输入优惠码。各字段的详细说明请参阅[优惠码](/zh-hans/promotions/promo-codes)。
+
+## 合作伙伴优惠码：九折，限用 50 次
+
+<Steps>
+  <Step title="创建优惠码">
+    在[优惠码](/zh-hans/promotions/promo-codes)中选择 **Create**（创建）。**Generation Method**（生成方式）选择 **Manual**（手动），**Code**（优惠码）填写 PARTNER10。
+  </Step>
+  <Step title="设置折扣">
+    **Discount Type**（折扣类型）选择 **Percentage**（百分比），**Discount Value**（折扣值）填写 10。
+  </Step>
+  <Step title="设置限制">
+    **Apply To**（适用范围）选择 **Specific ticket type**（指定票种），并选择场次和门票。开启 **Usage Limit**（使用上限）并填写 50。
+  </Step>
+</Steps>
+
+{/* SCREENSHOT: images/tickets/promo-discounts-partner-form.png | Promotions > Promo Codes > Create, filled: Manual, PARTNER10, Percentage 10, Specific ticket type with General Admission, Usage Limit ON 50. Capture the whole panel. */}
+
+## 其他设置方式
+
+- **限时抢购**：开启 **Time Limit**（时间限制）并设置开始和结束时间，**Apply To** 选择 **All ticket types**（所有票种）。
+- **唯一优惠码**：使用 **Bulk Generate**（批量生成）最多生成 100 个优惠码，可选填 **Code Prefix**（优惠码前缀），并将 **Usage Limit** 设为 1 实现一码一用。
+- **固定金额**：**Discount Type** 选择 **Fixed Amount**（固定金额），例如立减 $5。
+
+<Frame>
+  <img
+    src="/images/sample-promo-codes-bulk-generate.png"
+    alt="批量生成表单，已填写数量和优惠码前缀"
+    className="mx-auto"
+    style={{ width:"31%" }}
+  />
+</Frame>
+
+<Warning>
+  针对某一种门票的优惠码不能用于其他门票。对于[放票链](/zh-hans/tickets/scenario-ga-tiers)中的档位，如果希望优惠码对每一档都有效，请选择 **All ticket types**。
+</Warning>
+
+## 查看效果
+
+优惠码页面会显示每个优惠码的 **Uses/Limit**（已用/上限）、**Revenue**（收入）和 **Cost**（成本），**View Usage**（查看使用情况）会列出每位购票者。[门票报表](/zh-hans/tickets/ticket-report)会显示每个订单使用的优惠码。如果想追踪渠道而不是折扣，请参阅[追踪链接](/zh-hans/promotions/tracking-links)。
+
+{/* SCREENSHOT: images/tickets/promo-discounts-performance.png | Promo Codes list with a few used codes (e.g. PARTNER10 at 12/50). Callouts: 1 Uses/Limit, 2 Revenue, 3 Cost. */}

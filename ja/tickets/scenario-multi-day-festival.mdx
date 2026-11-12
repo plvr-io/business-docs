@@ -1,0 +1,63 @@
+---
+title: "シナリオ：複数日開催のフェスティバル"
+description: "1日につき1セッションでフェスティバルを運営し、日ごとに個別に管理します。"
+---
+
+**目標：** 金曜日、土曜日、日曜日をそれぞれ独立して販売・集計します。
+
+| セッション | チケット | 数量 | 価格 |
+| --- | --- | --- | --- |
+| Friday | Day Pass | 400 | $40 |
+| Saturday | Day Pass | 600 | $55 |
+| Sunday | Day Pass | 400 | $40 |
+
+各日は独自の定員、価格、販売期間を持つ**セッション**です。土曜日が売り切れても金曜日には影響しません。
+
+<Note>
+  セッションとそのチケットは、イベントと一緒に設定されます。開催日やチケット種別を追加したい場合は、PLVR の担当者にご連絡ください。
+</Note>
+
+## 各日を確認する
+
+[チケット管理](/ja/tickets/ticket-management)で各セッションの **Price**（価格）、**Total**（総数）、日付を確認し、人気の日には購入上限を設定し、告知するまではその日を **Inactive**（無効）にしておきます。
+
+{/* SCREENSHOT: images/tickets/multi-day-ticket-management.png | Ticket Management for the three-session example. Callouts: 1 Session filter, 2 the three per-session tables. */}
+
+## すべての日に段階販売を設定する
+
+1つのセッションで[リリースチェーン](/ja/tickets/scenario-ga-tiers)を作成してから、以下を行います。
+
+<Steps>
+  <Step title="コピーする">
+    チェーンのカードで **Copy to...**（コピー先...）を選択し、他のセッションにチェックを入れます。
+  </Step>
+  <Step title="照合結果を確認する">
+    段階はチケット名で照合されます。一致しない場合は正しいチケットを選ぶか、**Don't copy this tier**（この段階をコピーしない）を選びます。
+  </Step>
+  <Step title="Auto-release をオンにする">
+    コピーは一時停止の状態で始まります。警告が表示された終了日時を修正してから、各セッションでオンにします。
+  </Step>
+</Steps>
+
+<Frame>
+  <img
+    src="/images/sample-copy-release-chain.png"
+    alt="コピー先セッションと段階の照合オプションが表示された、リリースチェーンのコピーダイアログ"
+    className="mx-auto"
+    style={{ width:"67%" }}
+  />
+</Frame>
+
+<Tip>
+  すべての日で同じチケット名を使うと、コピーやレポートがシンプルになります。
+</Tip>
+
+全日程で有効な通し券は、このポータルでは作成できません。PLVR の担当者にご相談ください。
+
+## 管理と運営
+
+- [チケットレポート](/ja/tickets/ticket-report)：**Session**（セッション）で絞り込むと、1日分の販売状況を確認できます。
+- [招待チケット](/ja/tickets/scenario-comp-guests)：**Session** を選んで、ゲストに正しい日のチケットを発行します。
+- [プロモコード](/ja/tickets/scenario-promo-discounts)：1つのセッションの1つのチケットを対象にして、売れ行きの悪い日を割引します。
+
+{/* SCREENSHOT: images/tickets/multi-day-ticket-report-session.png | Ticket Report on the multi-day event with Saturday chosen in the Session filter. Capture the filters, summary cards and Export button. */}

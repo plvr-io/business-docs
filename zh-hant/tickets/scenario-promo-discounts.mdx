@@ -1,0 +1,47 @@
+---
+title: "情境：用優惠碼做折扣活動"
+description: "回饋合作夥伴、推出限時優惠，或為某一種賣得較慢的票券打折。"
+---
+
+**目標：**在不更動公開價格的情況下提供精準折扣。購票者在結帳時輸入優惠碼。各欄位的完整說明請參閱[優惠碼](/zh-hant/promotions/promo-codes)。
+
+## 合作夥伴優惠碼：九折，限用 50 次
+
+<Steps>
+  <Step title="建立優惠碼">
+    在[優惠碼](/zh-hant/promotions/promo-codes)中選擇 **Create**（建立）。**Generation Method**（產生方式）選 **Manual**（手動），**Code**（代碼）輸入 PARTNER10。
+  </Step>
+  <Step title="設定折扣">
+    **Discount Type**（折扣類型）選 **Percentage**（百分比），**Discount Value**（折扣值）輸入 10。
+  </Step>
+  <Step title="設定限制">
+    **Apply To**（適用範圍）選 **Specific ticket type**（指定票種），再選擇場次與票券。開啟 **Usage Limit**（使用次數上限）並輸入 50。
+  </Step>
+</Steps>
+
+{/* SCREENSHOT: images/tickets/promo-discounts-partner-form.png | Promotions > Promo Codes > Create, filled: Manual, PARTNER10, Percentage 10, Specific ticket type with General Admission, Usage Limit ON 50. Capture the whole panel. */}
+
+## 其他設定方式
+
+- **限時特賣**：開啟 **Time Limit**（時間限制）並設定開始與結束時間，**Apply To** 選 **All ticket types**（所有票種）。
+- **不重複代碼**：使用 **Bulk Generate**（批次產生）一次最多產生 100 組代碼，可選擇加上 **Code Prefix**（代碼前綴），並將 **Usage Limit** 設為 1 以限用一次。
+- **固定金額**：**Discount Type** 選 **Fixed Amount**（固定金額），例如折抵 $5。
+
+<Frame>
+  <img
+    src="/images/sample-promo-codes-bulk-generate.png"
+    alt="已填入數量與代碼前綴的 Bulk Generate 表單"
+    className="mx-auto"
+    style={{ width:"31%" }}
+  />
+</Frame>
+
+<Warning>
+  指定某一種票券的優惠碼無法用於其他票券。若是[釋票鏈](/zh-hant/tickets/scenario-ga-tiers)的各階段，且希望優惠碼適用於每個階段，請選擇 **All ticket types**。
+</Warning>
+
+## 檢查成效
+
+優惠碼頁面會顯示每組代碼的 **Uses/Limit**（使用次數／上限）、**Revenue**（營收）與 **Cost**（成本），**View Usage**（查看使用紀錄）則會列出每位購票者。[票券報表](/zh-hant/tickets/ticket-report)會顯示每筆訂單使用的優惠碼。若想追蹤管道而非提供折扣，請參閱[追蹤連結](/zh-hant/promotions/tracking-links)。
+
+{/* SCREENSHOT: images/tickets/promo-discounts-performance.png | Promo Codes list with a few used codes (e.g. PARTNER10 at 12/50). Callouts: 1 Uses/Limit, 2 Revenue, 3 Cost. */}

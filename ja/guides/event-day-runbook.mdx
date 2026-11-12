@@ -1,0 +1,72 @@
+---
+title: "イベント当日の運営手順書"
+description: "Onsite Operations から当日を運営します：シフト、入場、リストバンド、キャッシュレスの問題、エスカレーション。"
+---
+
+**Onsite Operations**（会場運営）は当日のコントロールルームです。**Command Center**（コマンドセンター）では対応が必要な事項を確認でき、どのゲストでも検索できます。チケットのみのイベントでは QR スキャンまたは手動チェックインで入場させます。Tap イベントではリストバンドで入場させ、**Wristbands**（リストバンド）と **Cashless**（キャッシュレス）も使います。[コマンドセンター](/ja/onsite/command-center)をご覧ください。
+
+## 開場前
+
+<Check>チームの全員が **Onsite Staff** で **Active**（有効）なコードを持ち、チャージスタッフは正しいステーションに紐付いていること。</Check>
+<Check>予備のリストバンドが追加され、**Approvals**（承認）が空になっていること（Tap イベント）。</Check>
+<Check>当日券を販売する場合、当日販売用のポスターが設置されていること。[当日販売](/ja/promotions/door-sales)をご覧ください。</Check>
+<Check>受付デスクが **Search**（検索）と **+ New service case**（新規サービスケース）の場所を把握していること。</Check>
+
+## 担当と使う画面
+
+| 業務 | 使う画面 |
+| --- | --- |
+| ゲートチーム：ゲストを入場させる | [チケットと入場](/ja/onsite/tickets) |
+| チャージチーム（Tap） | [チャージの設定](/ja/tap/top-up-setup) |
+| 受付デスク：入場やリストバンドの問題を解決する | [検索](/ja/onsite/search) |
+| スーパーバイザー：制限付きのリストバンド操作 | [リストバンド](/ja/onsite/wristbands) |
+| イベント責任者：コマンドセンターを監視し、エスカレーションを確認する | [サービスケース](/ja/onsite/cases) |
+
+各コードの **Role**（ロール）は **Onsite Staff** で設定します。コマンドセンターは一日中開いたままにしておきましょう。約30秒ごとに更新され、**Attention queue**（要対応キュー）はリスクの高い順に並んでいるので、上から対応してください。
+
+{/* SCREENSHOT: images/guides/runbook-command-center.png | Command Center on a Tap event mid-event. Callouts: 1 Open service cases / Blocked from entry / Unresolved top-ups counts, 2 Operational health banner, 3 Attention queue, 4 Search, 5 + New service case. */}
+
+## よくある状況
+
+<AccordionGroup>
+  <Accordion title="ゲストが入場できない">
+    チケット ID、メールアドレス、注文番号、リストバンドで **Search** し、**Why it matched**（一致した理由）を確認してから **Resolve**（解決）を選び、推奨される対応（**Admit with an override**（例外として入場させる）や **Allow re-entry**（再入場を許可）など）に従います。[チケットと入場](/ja/onsite/tickets)をご覧ください。
+  </Accordion>
+  <Accordion title="リストバンドの紛失、破損、動作不良">
+    **Replace the wristband**（リストバンドを交換。残高は影響を受けません）、**Report the wristband lost or stolen**（紛失・盗難を報告）、**Freeze the wristband**（リストバンドを凍結）のいずれかを行います。すべての支払いを止めるには、プロフィールで **Freeze the wallet**（ウォレットを凍結）を使います。**Ownership conflict**（所有者の競合）はスーパーバイザーに回してください。[リストバンド](/ja/onsite/wristbands)をご覧ください。
+  </Accordion>
+  <Accordion title="チャージが反映されない">
+    **Cashless** を開いてゲストを検索し、未解決のチャージを **Investigate**（調査）します。ゲストに「お金は引き落とされていません」と伝えたり、再度支払いを求めたりしないでください。解決できない場合は **Open a payment review case**（支払い確認ケースを作成）を選びます。コンソールからは返金できません。[キャッシュレス](/ja/onsite/cashless)をご覧ください。
+  </Accordion>
+  <Accordion title="残高を修正する必要がある">
+    参加者の **Cashless** タブで **Correct the balance**（残高を修正）または **Issue a reward credit**（特典クレジットを付与）を行います。どちらも操作者の名前で記録されます。[参加者](/ja/onsite/participants)をご覧ください。
+  </Accordion>
+  <Accordion title="承認済みのゲストがリストにいない">
+    **Guests**（ゲスト）で検索して **Check in**（チェックイン）するか、**Add an approved guest**（承認済みゲストを追加）を選んで承認者を記録します。名前が一致しただけで入場させることは絶対に避けてください。[ゲスト](/ja/onsite/guests)をご覧ください。
+  </Accordion>
+  <Accordion title="会場でチケットを購入したい人がいる">
+    ポスターを案内してください。ポスターをスキャンすれば、スマートフォンで購入できます。
+  </Accordion>
+</AccordionGroup>
+
+{/* SCREENSHOT: images/guides/runbook-search-resolve.png | Onsite Operations > Search result showing 'Why it matched', then the Resolve page with the plain-words explanation, 'Say to the participant' sentence and recommended actions. */}
+
+## 解決できないとき
+
+何も記録せずに人を帰すことは絶対にしないでください。**+ New service case** を使い、問題を記述して **Add evidence**（証拠を追加。参照番号、確認者の名前、メモなど。口頭での合意は証拠になりません）を行います。安全に対応できない場合は **Send for review**（レビューに送る）を選び、それ以外は解決済みまたは解決不可としてクローズします。[サービスケース](/ja/onsite/cases)をご覧ください。
+
+{/* SCREENSHOT: images/guides/runbook-service-case-form.png | '+ New service case' form filled, with Add evidence open. Callouts: 1 problem type, 2 Add evidence, 3 Send for review, 4 conclusion buttons. */}
+
+## 一日の終わりに
+
+<Steps>
+  <Step title="キューを片付ける">
+    **Service cases** > **Still open**（未解決）をゼロにするか、それぞれに明確な次のステップを設定します。
+  </Step>
+  <Step title="コードを無効にする">
+    業務を終えたスタッフと出店者のコードを **Inactive**（無効）に設定します。
+  </Step>
+  <Step title="数値を記録する">
+    **Tickets issued**（発行チケット数）、**Entered**（入場者数）、キャッシュレスの各カードの数値を、[イベント終了後](/ja/guides/after-the-event)のために控えておきます。
+  </Step>
+</Steps>

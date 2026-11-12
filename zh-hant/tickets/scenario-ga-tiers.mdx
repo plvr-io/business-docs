@@ -1,0 +1,84 @@
+---
+title: "情境：分階段販售一般入場票"
+description: "分階段販售一般入場票，並讓釋票鏈自動開放每個階段。"
+---
+
+**目標：**只有一種入場方式，價格隨需求增加而調漲。
+
+| 階段 | 數量 | 價格 |
+| --- | --- | --- |
+| Early Bird（早鳥） | 100 | $20 |
+| General Admission（一般入場） | 300 | $30 |
+| Final Release（最後一波） | 100 | $40 |
+
+總容量 500。全部售完的營收：100 x $20 + 300 x $30 + 100 x $40 = $15,000。
+
+<Tabs>
+  <Tab title="適合使用釋票鏈的情況">
+    你希望上一個階段一賣完，下一個價格就立即開賣，即使是在半夜。
+  </Tab>
+  <Tab title="適合只用販售日期的情況">
+    你希望在固定日期或手動切換階段。你也可以兩者併用：以日期作為保險，用釋票鏈提早推進。
+  </Tab>
+</Tabs>
+
+{/* SCREENSHOT: images/tickets/ga-tiers-initial-tickets.png | Ticket Management with the three tickets before any chain exists: Early Bird Active, the other two Inactive, each with a future sales end date. */}
+
+## 設定方式
+
+<Steps>
+  <Step title="檢查票券">
+    在[票券管理](/zh-hant/tickets/ticket-management)中確認 **Price**（價格）、**Total**（總數）與日期。賣出第一張票後，名稱與價格就會鎖定。
+  </Step>
+  <Step title="設定狀態與結束時間">
+    Early Bird 設為 **Active**（啟用），其他兩個設為 **Inactive**（停用）。每個階段都需要一個未來的結束時間，且後面階段的結束時間不得早於前一個階段。
+  </Step>
+  <Step title="建立釋票鏈">
+    在 **Release Chains**（釋票鏈）中選擇 **New chain**（新增釋票鏈），命名為「GA」後選擇 **Create**（建立）。
+  </Step>
+  <Step title="依序加入各階段">
+    使用 **+ Add existing ticket**（加入既有票券）：依序加入 Early Bird、General Admission、Final Release。
+  </Step>
+  <Step title="開啟 Auto-release">
+    在你開啟 **Auto-release**（自動釋票）之前，釋票鏈會維持暫停狀態。
+  </Step>
+</Steps>
+
+{/* SCREENSHOT: images/tickets/ga-tiers-chain-configured.png | Release Chains panel after setup: chain 'GA' with the three tiers in order, Auto-release ON, Early Bird 'On sale' with a partly filled bar. Callouts: 1 Auto-release, 2 the '98%' line, 3 Activity log icon. */}
+
+## 開賣後
+
+購票者只會看到目前開放的階段。當該階段快要售完時（依面板上顯示的百分比，不一定是最後一張票），下一個階段會自動變成 **Active**。Final Release 賣完後，釋票鏈會顯示 **Exhausted**（已用盡）。
+
+{/* SCREENSHOT: images/tickets/ga-tiers-second-tier-open.png | After Early Bird has sold out: Release Chains panel and ticket table together. Early Bird 'Sold out - next tier opened', General Admission Active at $30 with the auto-activated note and 'GA - 2/3' badge. */}
+
+<Note>
+  結帳中尚未付款的訂單可能會暫時保留票券。若這些票券被釋出，較早的階段可能會顯示又有幾張票重新開賣。
+</Note>
+
+<Tip>
+  購票頁面上不會顯示階段列表或倒數計時。請在每張票的 **Description**（說明）中解釋分階段的安排，例如「早鳥票：限前 100 張」。
+</Tip>
+
+{/* SCREENSHOT: images/tickets/ga-tiers-attendee-view.png | Public event page (via 'view Event') with only Early Bird Active: one General Admission option and the Description 'Early Bird: first 100 tickets only'. */}
+
+## 持續關注
+
+- **Activity log**（活動紀錄，歷史圖示）會記錄每一次售完與啟用。
+- 關閉 **Auto-release** 即可暫停。票券會維持原本的狀態。
+- 如果你手動啟用了較後面的階段，前面的階段就不會自動啟用。請手動啟用或將它們移除。
+
+{/* SCREENSHOT: images/tickets/ga-tiers-activity-log.png | Activity log open with a few entries (auto-release on, sell-out, automatic activation). */}
+
+## 套用到其他場次
+
+在釋票鏈卡片上使用 **Copy to...**（複製到…）。系統會依名稱比對各階段，且複製出來的釋票鏈預設為暫停，因此請在檢查後再開啟 **Auto-release**。請參閱[多日音樂節](/zh-hant/tickets/scenario-multi-day-festival)。
+
+<Frame>
+  <img
+    src="/images/sample-copy-release-chain.png"
+    alt="複製釋票鏈對話框，顯示在其他場次中比對或略過某個階段的選項"
+    className="mx-auto"
+    style={{ width:"67%" }}
+  />
+</Frame>

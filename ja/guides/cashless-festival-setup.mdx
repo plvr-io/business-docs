@@ -1,0 +1,79 @@
+---
+title: "キャッシュレスフェスティバルの設定"
+description: "やり直しを避けられる順番で、PLVR Tap を最初から最後まで設定します。"
+---
+
+開場の少なくとも数日前までに完了させましょう。出店者がメニューを作成する時間と、主催者がそれを承認する時間が必要です。
+
+<Note>
+**PLVR Tap** と **Personalization Form**（パーソナライズフォーム）は Tap イベントでのみ表示されます。[PLVR Tap の概要](/ja/tap/introduction)をご覧ください。
+</Note>
+
+| ステップ | ページ | 完了の目安 |
+| --- | --- | --- |
+| 1 | **Top-up Setup** | ステーションと支払い方法が作成されている |
+| 2 | **Personalization Form** | 質問が決まっている |
+| 3 | **Vendor Setup** | 出店者、販売場所、商品、ログインコードが作成されている |
+| 4 | **Approvals** | 保留中の項目がない |
+| 5 | **Onsite Staff** | チームの全員がコードを持っている |
+| 6 | **Wristbands** | 予備が追加されている |
+
+## 1. チャージステーションと支払い方法
+
+**PLVR Tap > Top-up Setup**（チャージの設定）で、スタッフがチャージを受け付けるすべての場所（例：Main Entrance、VIP Area）にステーションを追加し、チームが受け付ける支払い方法のみを追加します。[チャージの設定](/ja/tap/top-up-setup)をご覧ください。
+
+<Warning>
+支払い方法はレポート用にのみ使われます。代金の受け取りは、スタッフが主催者側の現金箱やカード決済端末で行う必要があります。
+</Warning>
+
+{/* SCREENSHOT: images/guides/cashless-topup-setup.png | PLVR Tap > Top-up Setup with stations Main Entrance, VIP Area, Campsite and Cash and Card added. Callouts: 1 Add Top-up Station, 2 Quick add, 3 Onsite Payment Methods list. */}
+
+## 2. パーソナライズフォーム
+
+リストバンドを紐付ける前に、参加者がチケットをパーソナライズまたは受け取る際に回答する項目を選びます。本当に必要な項目だけを **Required**（必須）にしてください。購入時の[登録フォーム](/ja/events/registration-form)とは別のものです。[パーソナライズフォーム](/ja/tap/personalization-form)をご覧ください。
+
+{/* SCREENSHOT: images/guides/cashless-personalization-form.png | Personalization Form with Phone Number (Required), Date of Birth, one custom question and one Inactive question. Callouts: 1 Quick add, 2 Custom question, 3 drag handles. */}
+
+## 3. 出店者
+
+**Vendor Setup**（出店者の設定）では、各屋台やバーが1つの出店者になります。出店者ごとに、まず **Sales Locations**（販売場所）を追加し、次に **Items**（商品）を追加します（各商品には販売場所と0より大きい価格が必要です。出店者に申請してもらい承認する方法もあります）。最後に **Login Codes**（ログインコード）を、シフトに入る1人につき1つ発行し、**Note**（メモ）に保有者を記入します。[出店者](/ja/tap/vendors)をご覧ください。
+
+{/* SCREENSHOT: images/guides/cashless-vendor-setup.png | Vendor Setup > 'Noodle Bar'. Callouts: 1 tabs (Sales Locations, Items, Login Codes), 2 Login Codes with Notes like 'Alex - Vendor Manager'. Two crops fine (add -items suffix for the second). */}
+
+## 4. 承認
+
+出店者の商品や変更は、承認されるまでメニューに表示されません。1件ずつ確認して **Approve**（承認）するか、出店者に表示される理由を添えて **Reject**（却下）します。行にチェックを入れると一括操作ができます。[承認](/ja/tap/approvals)をご覧ください。
+
+<Warning>
+保留中のメニューでは出店者は販売できません。前日までに Pending（保留中）一覧を空にしておきましょう。
+</Warning>
+
+{/* SCREENSHOT: images/guides/cashless-approvals.png | Approvals with a few pending submissions, one edit showing Current vs Requested. Callouts: 1 checkboxes, 2 Approve Selected / Reject Selected, 3 menu badge. */}
+
+## 5. 現場スタッフ
+
+**Onsite Staff**（現場スタッフ）で **Add Staff**（スタッフを追加）を選択します。チャージチームには **Top-up staff**（チャージスタッフ）と **Top-up Station**（チャージステーション）を選びます（ステーションごとに1バッチ）。コードは **CSV Import**（CSV インポート）または **Manual Creation**（手動作成）で作成し、シフトが終わったら **Inactive**（無効）に設定します。[現場スタッフ](/ja/onsite/onsite-staff)をご覧ください。
+
+{/* SCREENSHOT: images/guides/cashless-onsite-staff.png | Onsite Staff > Add Staff with 'Top-up staff' role and a Top-up Station selected. Callouts: 1 role, 2 Top-up Station, 3 CSV Import / Manual Creation. */}
+
+## 6. リストバンド
+
+Onsite Operations > **Wristbands**（リストバンド）で **+ Add wristbands**（リストバンドを追加）を選び、1行に1つの ID（最大200件）と **Note** を入力します。既存のリストバンドのはずが新規登録と表示された場合は、多くの場合 ID の入力ミスです。[リストバンド](/ja/onsite/wristbands)をご覧ください。
+
+<Frame>
+  <img
+    src="/images/sample-onsite-add-wristband-results.png"
+    alt="新規のリストバンド、利用可能なリストバンド、追加できなかったリストバンドを示すリストバンド追加結果"
+    className="mx-auto"
+    style={{ width:"43%" }}
+  />
+</Frame>
+
+## 7. リハーサル
+
+<Check>各出店者が **Active**（有効）で、販売場所、商品、ログインコードがそろっていること。</Check>
+<Check>各チャージスタッフのコードに正しいステーションが表示されること。</Check>
+<Check>テスト用の参加者にリストバンドが紐付けられ、チャージ後に想定どおりの残高になること。</Check>
+<Check>テストのチャージと購入が **Cashless Activity**（キャッシュレス取引履歴）に表示されること。</Check>
+
+次へ：[イベント当日の運営手順書](/ja/guides/event-day-runbook)、[イベント終了後](/ja/guides/after-the-event)。
