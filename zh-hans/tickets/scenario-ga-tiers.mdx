@@ -1,0 +1,84 @@
+---
+title: "场景：普通票分档定价"
+description: "分阶段销售普通票，并通过放票链自动开放每一档。"
+---
+
+**目标：** 只有一种入场票，价格随需求增长而上调。
+
+| 档位 | 数量 | 价格 |
+| --- | --- | --- |
+| Early Bird（早鸟票） | 100 | $20 |
+| General Admission（普通票） | 300 | $30 |
+| Final Release（尾票） | 100 | $40 |
+
+总容量 500 人。全部售出时的收入：100 x $20 + 300 x $30 + 100 x $40 = $15,000。
+
+<Tabs>
+  <Tab title="适合使用放票链的情况">
+    你希望上一档一售罄，下一档价格就立即开放，哪怕是在半夜。
+  </Tab>
+  <Tab title="适合只使用销售日期的情况">
+    你希望在固定日期或手动切换档位。也可以两者结合：用日期作为保底，用放票链提前推进。
+  </Tab>
+</Tabs>
+
+{/* SCREENSHOT: images/tickets/ga-tiers-initial-tickets.png | Ticket Management with the three tickets before any chain exists: Early Bird Active, the other two Inactive, each with a future sales end date. */}
+
+## 设置方法
+
+<Steps>
+  <Step title="检查门票">
+    在[门票管理](/zh-hans/tickets/ticket-management)中确认 **Price**（价格）、**Total**（总数）和日期。首次售出后，名称和价格将被锁定。
+  </Step>
+  <Step title="设置状态和结束时间">
+    Early Bird 设为 **Active**（启用），另外两档设为 **Inactive**（停用）。每一档都需要设置一个未来的结束时间，且后一档的结束时间不得早于前一档。
+  </Step>
+  <Step title="创建放票链">
+    在 **Release Chains**（放票链）中选择 **New chain**（新建放票链），命名为“GA”，然后选择 **Create**（创建）。
+  </Step>
+  <Step title="按顺序添加档位">
+    通过 **+ Add existing ticket**（添加已有门票）依次添加：Early Bird、General Admission、Final Release。
+  </Step>
+  <Step title="开启 Auto-release">
+    在你开启 **Auto-release**（自动放票）之前，放票链处于暂停状态。
+  </Step>
+</Steps>
+
+{/* SCREENSHOT: images/tickets/ga-tiers-chain-configured.png | Release Chains panel after setup: chain 'GA' with the three tiers in order, Auto-release ON, Early Bird 'On sale' with a partly filled bar. Callouts: 1 Auto-release, 2 the '98%' line, 3 Activity log icon. */}
+
+## 销售过程中
+
+购票者只能看到当前开放的档位。当该档接近售罄时（达到面板中显示的百分比，不一定是最后一张），下一档会自动变为 **Active**。Final Release 售完后，放票链会显示 **Exhausted**（已售罄）。
+
+{/* SCREENSHOT: images/tickets/ga-tiers-second-tier-open.png | After Early Bird has sold out: Release Chains panel and ticket table together. Early Bird 'Sold out - next tier opened', General Admission Active at $30 with the auto-activated note and 'GA - 2/3' badge. */}
+
+<Note>
+  结账中尚未支付的订单可能会短暂占用门票。如果这些门票被释放，之前的档位可能会重新显示有少量门票在售。
+</Note>
+
+<Tip>
+  购票页面上不会显示档位列表或倒计时。请在每种门票的 **Description**（描述）中说明分档安排，例如“早鸟票：仅限前 100 张”。
+</Tip>
+
+{/* SCREENSHOT: images/tickets/ga-tiers-attendee-view.png | Public event page (via 'view Event') with only Early Bird Active: one General Admission option and the Description 'Early Bird: first 100 tickets only'. */}
+
+## 持续关注
+
+- **Activity log**（活动日志，历史图标）会记录每一次售罄和开放。
+- 关闭 **Auto-release** 即可暂停。门票会保持当前状态。
+- 如果你手动开放了后面的档位，之前的档位将不会自动开放。请手动开放或将其移除。
+
+{/* SCREENSHOT: images/tickets/ga-tiers-activity-log.png | Activity log open with a few entries (auto-release on, sell-out, automatic activation). */}
+
+## 在其他场次中复用
+
+在放票链卡片上使用 **Copy to...**（复制到……）。档位按名称匹配，复制后的放票链默认处于暂停状态，检查无误后再开启 **Auto-release**。请参阅[多日音乐节](/zh-hans/tickets/scenario-multi-day-festival)。
+
+<Frame>
+  <img
+    src="/images/sample-copy-release-chain.png"
+    alt="复制放票链对话框，显示在另一场次中匹配或跳过某一档位的选项"
+    className="mx-auto"
+    style={{ width:"67%" }}
+  />
+</Frame>

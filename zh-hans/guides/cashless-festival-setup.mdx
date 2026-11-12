@@ -1,0 +1,79 @@
+---
+title: "无现金音乐节设置"
+description: "按照避免返工的顺序，从头到尾设置 PLVR Tap。"
+---
+
+请至少在开门前几天完成以下设置：商户需要时间搭建菜单，你也需要时间进行审批。
+
+<Note>
+**PLVR Tap** 和 **Personalization Form**（个性化表单）仅在 Tap 活动中显示。请参阅 [PLVR Tap 概览](/zh-hans/tap/introduction)。
+</Note>
+
+| 步骤 | 页面 | 完成标准 |
+| --- | --- | --- |
+| 1 | **Top-up Setup** | 已创建站点和支付方式 |
+| 2 | **Personalization Form** | 已选定问题 |
+| 3 | **Vendor Setup** | 已创建商户、地点、商品和登录码 |
+| 4 | **Approvals** | 没有待审批项 |
+| 5 | **Onsite Staff** | 每位团队成员都有登录码 |
+| 6 | **Wristbands** | 已添加备用手环 |
+
+## 1. 充值站与支付方式
+
+在 **PLVR Tap > Top-up Setup**（充值设置）中，为工作人员办理充值的每个地点添加一个站点（例如 Main Entrance 正门、VIP Area 贵宾区），并且只添加团队会接受的支付方式。请参阅[充值设置](/zh-hans/tap/top-up-setup)。
+
+<Warning>
+支付方式仅用于报表统计。工作人员必须使用你自备的收银箱或刷卡终端收款。
+</Warning>
+
+{/* SCREENSHOT: images/guides/cashless-topup-setup.png | PLVR Tap > Top-up Setup with stations Main Entrance, VIP Area, Campsite and Cash and Card added. Callouts: 1 Add Top-up Station, 2 Quick add, 3 Onsite Payment Methods list. */}
+
+## 2. 个性化表单
+
+选择参与者在绑定手环之前、进行门票个性化或领取门票时需要回答的问题。只把真正需要的问题设为 **Required**（必填）。它与结账时的[报名表](/zh-hans/events/registration-form)相互独立。请参阅[个性化表单](/zh-hans/tap/personalization-form)。
+
+{/* SCREENSHOT: images/guides/cashless-personalization-form.png | Personalization Form with Phone Number (Required), Date of Birth, one custom question and one Inactive question. Callouts: 1 Quick add, 2 Custom question, 3 drag handles. */}
+
+## 3. 商户
+
+在 **Vendor Setup**（商户设置）中，每个摊位或吧台都是一个商户。针对每个商户：先添加 **Sales Locations**（销售地点），再添加 **Items**（商品）（每件商品都需要一个地点和大于零的价格，也可以让商户自行提交并等待审批），然后生成 **Login Codes**（登录码），每位当班人员一个，并在 **Note**（备注）中注明持有人。请参阅[商户](/zh-hans/tap/vendors)。
+
+{/* SCREENSHOT: images/guides/cashless-vendor-setup.png | Vendor Setup > 'Noodle Bar'. Callouts: 1 tabs (Sales Locations, Items, Login Codes), 2 Login Codes with Notes like 'Alex - Vendor Manager'. Two crops fine (add -items suffix for the second). */}
+
+## 4. 审批
+
+商户提交的商品和修改在你审批通过之前不会出现在菜单上。逐一审核后选择 **Approve**（批准），或选择 **Reject**（拒绝）并填写商户可见的原因。勾选多行可进行批量操作。请参阅[审批](/zh-hans/tap/approvals)。
+
+<Warning>
+商户无法销售待审批的菜单。争取在活动前一天让 Pending（待审批）列表清空。
+</Warning>
+
+{/* SCREENSHOT: images/guides/cashless-approvals.png | Approvals with a few pending submissions, one edit showing Current vs Requested. Callouts: 1 checkboxes, 2 Approve Selected / Reject Selected, 3 menu badge. */}
+
+## 5. 现场工作人员
+
+在 **Onsite Staff**（现场工作人员）中选择 **Add Staff**（添加工作人员）。为充值团队选择 **Top-up staff**（充值人员）角色和一个 **Top-up Station**（充值站）（每个站点单独一批）。通过 **CSV Import**（CSV 导入）或 **Manual Creation**（手动创建）生成登录码，并在班次结束时将登录码设为 **Inactive**（停用）。请参阅[现场工作人员](/zh-hans/onsite/onsite-staff)。
+
+{/* SCREENSHOT: images/guides/cashless-onsite-staff.png | Onsite Staff > Add Staff with 'Top-up staff' role and a Top-up Station selected. Callouts: 1 role, 2 Top-up Station, 3 CSV Import / Manual Creation. */}
+
+## 6. 手环
+
+在 Onsite Operations > **Wristbands**（手环）中选择 **+ Add wristbands**（添加手环）：每行一个 ID（最多 200 个），并填写 **Note**（备注）。如果你本以为是已有手环，结果却显示为新注册，通常意味着 ID 输错了。请参阅[手环](/zh-hans/onsite/wristbands)。
+
+<Frame>
+  <img
+    src="/images/sample-onsite-add-wristband-results.png"
+    alt="添加手环的结果，显示一个新手环、一个可用手环和一个无法添加的手环"
+    className="mx-auto"
+    style={{ width:"43%" }}
+  />
+</Frame>
+
+## 7. 彩排
+
+<Check>每个商户都处于 **Active**（启用）状态，并已设置地点、商品和登录码。</Check>
+<Check>每个充值人员的登录码都显示了正确的站点。</Check>
+<Check>一位测试参与者已绑定手环，充值后余额符合预期。</Check>
+<Check>测试充值和消费记录出现在 **Cashless Activity**（无现金动态）中。</Check>
+
+下一步：[活动当天执行手册](/zh-hans/guides/event-day-runbook)、[活动结束后](/zh-hans/guides/after-the-event)。

@@ -1,0 +1,72 @@
+---
+title: "活動當天執行手冊"
+description: "透過 Onsite Operations 掌控整天：班次、入場、手環、無現金問題與問題升級。"
+---
+
+**Onsite Operations**（現場營運）就是你的控制室。其中的 **Command Center**（指揮中心）會顯示需要處理的事項，也能讓你搜尋任何來賓。純票券活動以 QR 碼掃描或手動報到讓來賓入場。Tap 活動則以手環入場，並多了 **Wristbands**（手環）與 **Cashless**（無現金）。請參閱[指揮中心](/zh-hant/onsite/command-center)。
+
+## 開放入場前
+
+<Check>每位團隊成員在 **Onsite Staff**（現場人員）中都有一組 **Active**（啟用）代碼，儲值人員也已綁定正確的儲值站。</Check>
+<Check>已加入備用手環，且 **Approvals**（審核）已清空（Tap 活動）。</Check>
+<Check>若有現場售票，現場售票海報已就位。請參閱[現場售票](/zh-hant/promotions/door-sales)。</Check>
+<Check>服務台知道 **Search**（搜尋）與 **+ New service case**（新增服務工單）在哪裡。</Check>
+
+## 分工
+
+| 工作 | 位置 |
+| --- | --- |
+| 入口團隊：讓來賓入場 | [票券與入場](/zh-hant/onsite/tickets) |
+| 儲值團隊（Tap） | [儲值設定](/zh-hant/tap/top-up-setup) |
+| 服務台：處理入場與手環問題 | [搜尋](/zh-hant/onsite/search) |
+| 主管：執行受限的手環操作 | [手環](/zh-hant/onsite/wristbands) |
+| 活動負責人：監看指揮中心、審查升級案件 | [服務工單](/zh-hant/onsite/cases) |
+
+每組代碼的 **Role**（角色）都在 **Onsite Staff** 中設定。請整天開著指揮中心。它大約每 30 秒更新一次，而 **Attention queue**（待處理佇列）會依風險排序，所以請從最上面開始處理。
+
+{/* SCREENSHOT: images/guides/runbook-command-center.png | Command Center on a Tap event mid-event. Callouts: 1 Open service cases / Blocked from entry / Unresolved top-ups counts, 2 Operational health banner, 3 Attention queue, 4 Search, 5 + New service case. */}
+
+## 常見狀況
+
+<AccordionGroup>
+  <Accordion title="來賓無法入場">
+    以票券 ID、電子郵件、訂單編號或手環進行 **Search**，查看 **Why it matched**（符合原因），再選擇 **Resolve**（處理），並依照建議操作進行（例如 **Admit with an override**（強制放行）或 **Allow re-entry**（允許再次入場））。請參閱[票券與入場](/zh-hant/onsite/tickets)。
+  </Accordion>
+  <Accordion title="手環遺失、損壞或無法使用">
+    選擇 **Replace the wristband**（更換手環）（餘額不受影響）、**Report the wristband lost or stolen**（回報手環遺失或遭竊），或 **Freeze the wristband**（凍結手環）。若要停止所有消費，請在個人資料中使用 **Freeze the wallet**（凍結錢包）。**Ownership conflict**（持有者衝突）請交由主管處理。請參閱[手環](/zh-hant/onsite/wristbands)。
+  </Accordion>
+  <Accordion title="儲值沒有入帳">
+    開啟 **Cashless**，搜尋該來賓，並對未完成的儲值選擇 **Investigate**（調查）。不要告訴來賓沒有扣款，也不要請他們再付一次。如果卡住了，請選擇 **Open a payment review case**（開立付款審查工單）。主控台無法退款。請參閱[無現金](/zh-hant/onsite/cashless)。
+  </Accordion>
+  <Accordion title="餘額需要修正">
+    在參加者的 **Cashless** 分頁中：選擇 **Correct the balance**（修正餘額）或 **Issue a reward credit**（發放回饋額度）。兩者都會以你的名義記錄。請參閱[參加者](/zh-hant/onsite/participants)。
+  </Accordion>
+  <Accordion title="已核准的來賓不在名單上">
+    在 **Guests**（來賓）中搜尋並選擇 **Check in**（報到），或選擇 **Add an approved guest**（新增已核准來賓）並記錄核准人。絕對不要只因名字相符就放行。請參閱[來賓](/zh-hant/onsite/guests)。
+  </Accordion>
+  <Accordion title="有人想在現場購票">
+    引導他們到海報前。他們掃描後即可用手機購票。
+  </Accordion>
+</AccordionGroup>
+
+{/* SCREENSHOT: images/guides/runbook-search-resolve.png | Onsite Operations > Search result showing 'Why it matched', then the Resolve page with the plain-words explanation, 'Say to the participant' sentence and recommended actions. */}
+
+## 無法自行解決時
+
+絕對不要在沒有任何紀錄的情況下拒絕來賓。請使用 **+ New service case**：描述問題、選擇 **Add evidence**（新增證據）（參考編號、具名確認或備註；口頭同意不算證據），如果你無法安全地處理，就選擇 **Send for review**（送交審查），或將工單以已解決或無法解決結案。請參閱[服務工單](/zh-hant/onsite/cases)。
+
+{/* SCREENSHOT: images/guides/runbook-service-case-form.png | '+ New service case' form filled, with Add evidence open. Callouts: 1 problem type, 2 Add evidence, 3 Send for review, 4 conclusion buttons. */}
+
+## 一天結束時
+
+<Steps>
+  <Step title="清空佇列">
+    將 **Service cases**（服務工單）> **Still open**（仍未結案）處理到全部清空，或每一件都有明確的下一步。
+  </Step>
+  <Step title="關閉代碼">
+    將已下班的工作人員與商家代碼設為 **Inactive**（停用）。
+  </Step>
+  <Step title="記下數字">
+    記下 **Tickets issued**（已發出票券）、**Entered**（已入場）與無現金相關卡片的數據，供[活動結束後](/zh-hant/guides/after-the-event)使用。
+  </Step>
+</Steps>

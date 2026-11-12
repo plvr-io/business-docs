@@ -1,0 +1,57 @@
+---
+title: "イベント終了後"
+description: "チケット販売、支出、プロモーションを振り返り、出店者と精算し、フォローアップを行います。"
+---
+
+## 1. チケット販売を振り返る
+
+イベントの **Overview**（概要）で、合計、**Trend**（推移）、**Performance Insights**（パフォーマンスインサイト）、**Ticket Breakdown**（チケット内訳）を確認し、どの段階が完売したかを把握します。詳細は[チケットレポート](/ja/tickets/ticket-report)を開いて **Export**（エクスポート）します。[イベントの概要](/ja/events/overview)をご覧ください。
+
+{/* SCREENSHOT: images/guides/after-event-overview.png | Event Overview after sales. Capture the totals, Trend chart, Performance Insights and Ticket Breakdown table (scroll-stitch if needed). */}
+
+## 2. 入場状況を確認する
+
+Onsite Operations > **Tickets & Entry**（チケットと入場）で、**Tickets issued**（発行チケット数）と **Entered**（入場者数）を比較します。[チケットと入場](/ja/onsite/tickets)をご覧ください。
+
+{/* SCREENSHOT: images/guides/after-event-tickets-and-entry.png | Onsite Operations > Tickets & Entry with entries recorded. Capture 'Tickets issued' vs 'Entered' and 'Recent entry activity'. */}
+
+## 3. キャッシュレス（Tap イベント）
+
+- [キャッシュレス取引履歴](/ja/tap/cashless-activity)：チャージと支出。CSV を **Export** します。
+- [利用額レポート](/ja/tap/spending-report) > **By Vendor**（出店者別）：精算用に出店者ごとに **Export Report**（レポートをエクスポート）するか、**Export All Vendor Reports**（全出店者のレポートをエクスポート）を使います。
+- Onsite Operations > **Cashless**：**Unresolved only**（未解決のみ）で保留中のチャージがないことを確認し、未解決の **Service cases**（サービスケース）を確認します。
+
+{/* SCREENSHOT: images/guides/after-event-spending-report.png | PLVR Tap > Spending Report, By Vendor tab with 3 vendors. Callouts: 1 Net Sales column, 2 Export Report on a row, 3 Export All Vendor Reports. */}
+
+<Note>
+**Top-up Amount**（チャージ額）には、サービス料と税金は含まれません。
+</Note>
+
+## 4. プロモーションの効果を測る
+
+| 知りたいこと | 確認する場所 |
+| --- | --- |
+| どのコードが使われたか？ | [プロモコード](/ja/promotions/promo-codes)：**Uses/Limit**、**Revenue**、**Cost** |
+| どのチャネルから訪問者が来たか？ | [トラッキングリンク](/ja/promotions/tracking-links) > **Link History** |
+| どのパートナーが販売したか？ | チケットレポート：**Affiliate Code** |
+| どのメールが効果的だったか？ | [キャンペーン](/ja/promotions/campaigns)：**Open Rate**、**Revenue** |
+| 当日販売は？ | [当日販売](/ja/promotions/door-sales) |
+
+## 5. フォローアップする
+
+- **Followers**（フォロワー）は閲覧のみです。
+- ヘッダーの **Audience**（オーディエンス）では、イベントをまたいだリピーターと継続率を確認でき、**Export CSV** でエクスポートできます。[オーディエンス](/ja/organization/audience)をご覧ください。
+- **Ticket Holders**（チケット購入者）にお礼のメールを送り、次回の予定を告知しましょう。
+
+{/* SCREENSHOT: images/guides/after-event-audience.png | Audience page from the header. Capture the three stat cards and the Export CSV button. */}
+
+<Warning>
+エクスポートには名前とメールアドレスが含まれます。共有は必要な範囲にとどめてください。
+</Warning>
+
+## チェックリスト
+
+<Check>出店者の精算レポートをエクスポートして送付した。</Check>
+<Check>未解決のチャージや未対応のサービスケースがない。</Check>
+<Check>チケットレポートとキャッシュレスのエクスポートを保存した。</Check>
+<Check>スタッフと出店者のログインコードを **Inactive**（無効）に設定した。</Check>

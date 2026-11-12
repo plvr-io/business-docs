@@ -8,143 +8,605 @@
     "dark": "#3A2E59"
   },
   "navigation": {
-    "tabs": [
+    "languages": [
       {
-        "tab": "Guides",
-        "groups": [
+        "language": "en",
+        "default": true,
+        "tabs": [
           {
-            "group": "Start here",
-            "pages": [
-              "index",
-              "getting-started/onboarding",
-              "getting-started/quickstart",
-              "getting-started/portal-tour"
+            "tab": "Guides",
+            "groups": [
+              {
+                "group": "Start here",
+                "pages": [
+                  "index",
+                  "getting-started/onboarding",
+                  "getting-started/quickstart",
+                  "getting-started/portal-tour"
+                ]
+              },
+              {
+                "group": "By organizer type",
+                "pages": [
+                  "organizers/small-events",
+                  "organizers/mid-size-events",
+                  "organizers/festivals",
+                  "organizers/recurring-community"
+                ]
+              },
+              {
+                "group": "By event phase",
+                "pages": [
+                  "phases/index",
+                  "phases/before",
+                  "phases/during",
+                  "phases/after"
+                ]
+              },
+              {
+                "group": "By team role",
+                "pages": [
+                  "roles/index",
+                  "roles/core-team",
+                  "roles/scanning-team",
+                  "roles/data-team",
+                  "roles/marketing-team"
+                ]
+              },
+              {
+                "group": "Playbooks",
+                "pages": [
+                  "guides/launch-checklist",
+                  "guides/promote-your-event",
+                  "guides/cashless-festival-setup",
+                  "guides/event-day-runbook",
+                  "guides/after-the-event"
+                ]
+              },
+              {
+                "group": "Ticketing scenarios",
+                "pages": [
+                  "tickets/scenario-ga-tiers",
+                  "tickets/scenario-multi-day-festival",
+                  "tickets/scenario-bundles",
+                  "tickets/scenario-vip-addons",
+                  "tickets/scenario-promo-discounts",
+                  "tickets/scenario-comp-guests"
+                ]
+              }
             ]
           },
           {
-            "group": "By organizer type",
-            "pages": [
-              "organizers/small-events",
-              "organizers/mid-size-events",
-              "organizers/festivals",
-              "organizers/recurring-community"
-            ]
-          },
-          {
-            "group": "By event phase",
-            "pages": [
-              "phases/index",
-              "phases/before",
-              "phases/during",
-              "phases/after"
-            ]
-          },
-          {
-            "group": "By team role",
-            "pages": [
-              "roles/index",
-              "roles/core-team",
-              "roles/scanning-team",
-              "roles/data-team",
-              "roles/marketing-team"
-            ]
-          },
-          {
-            "group": "Playbooks",
-            "pages": [
-              "guides/launch-checklist",
-              "guides/promote-your-event",
-              "guides/cashless-festival-setup",
-              "guides/event-day-runbook",
-              "guides/after-the-event"
-            ]
-          },
-          {
-            "group": "Ticketing scenarios",
-            "pages": [
-              "tickets/scenario-ga-tiers",
-              "tickets/scenario-multi-day-festival",
-              "tickets/scenario-bundles",
-              "tickets/scenario-vip-addons",
-              "tickets/scenario-promo-discounts",
-              "tickets/scenario-comp-guests"
+            "tab": "Features",
+            "groups": [
+              {
+                "group": "Organization",
+                "pages": [
+                  "organization/settings",
+                  "organization/team",
+                  "organization/audience"
+                ]
+              },
+              {
+                "group": "Events",
+                "pages": [
+                  "events/create-an-event",
+                  "events/overview",
+                  "events/event-editor",
+                  "events/registration-form",
+                  "events/rsvp",
+                  "events/followers"
+                ]
+              },
+              {
+                "group": "Tickets",
+                "pages": [
+                  "tickets/concepts",
+                  "tickets/ticket-management",
+                  "tickets/ticket-report",
+                  "tickets/comp-tickets",
+                  "other/payment-links"
+                ]
+              },
+              {
+                "group": "Promotions",
+                "pages": [
+                  "promotions/promo-codes",
+                  "promotions/campaigns",
+                  "promotions/door-sales",
+                  "promotions/tracking-links",
+                  "promotions/affiliates"
+                ]
+              },
+              {
+                "group": "PLVR Tap",
+                "pages": [
+                  "tap/introduction",
+                  "tap/top-up-setup",
+                  "tap/vendors",
+                  "tap/approvals",
+                  "tap/cashless-activity",
+                  "tap/spending-report",
+                  "tap/personalization-form"
+                ]
+              },
+              {
+                "group": "Onsite Operations",
+                "pages": [
+                  "onsite/command-center",
+                  "onsite/search",
+                  "onsite/tickets",
+                  "onsite/wristbands",
+                  "onsite/cashless",
+                  "onsite/guests",
+                  "onsite/participants",
+                  "onsite/cases",
+                  "onsite/onsite-staff"
+                ]
+              },
+              {
+                "group": "More",
+                "pages": [
+                  "other/table-booking",
+                  "other/marketing"
+                ]
+              }
             ]
           }
         ]
       },
       {
-        "tab": "Features",
-        "groups": [
+        "language": "zh-Hans",
+        "navbar": {
+          "primary": {
+            "type": "button",
+            "label": "打开后台",
+            "href": "https://business.plvr.io"
+          }
+        },
+        "tabs": [
           {
-            "group": "Organization",
-            "pages": [
-              "organization/settings",
-              "organization/team",
-              "organization/audience"
+            "tab": "指南",
+            "groups": [
+              {
+                "group": "从这里开始",
+                "pages": [
+                  "zh-hans/index",
+                  "zh-hans/getting-started/onboarding",
+                  "zh-hans/getting-started/quickstart",
+                  "zh-hans/getting-started/portal-tour"
+                ]
+              },
+              {
+                "group": "按主办方类型",
+                "pages": [
+                  "zh-hans/organizers/small-events",
+                  "zh-hans/organizers/mid-size-events",
+                  "zh-hans/organizers/festivals",
+                  "zh-hans/organizers/recurring-community"
+                ]
+              },
+              {
+                "group": "按活动阶段",
+                "pages": [
+                  "zh-hans/phases/index",
+                  "zh-hans/phases/before",
+                  "zh-hans/phases/during",
+                  "zh-hans/phases/after"
+                ]
+              },
+              {
+                "group": "按团队角色",
+                "pages": [
+                  "zh-hans/roles/index",
+                  "zh-hans/roles/core-team",
+                  "zh-hans/roles/scanning-team",
+                  "zh-hans/roles/data-team",
+                  "zh-hans/roles/marketing-team"
+                ]
+              },
+              {
+                "group": "实战手册",
+                "pages": [
+                  "zh-hans/guides/launch-checklist",
+                  "zh-hans/guides/promote-your-event",
+                  "zh-hans/guides/cashless-festival-setup",
+                  "zh-hans/guides/event-day-runbook",
+                  "zh-hans/guides/after-the-event"
+                ]
+              },
+              {
+                "group": "票务场景",
+                "pages": [
+                  "zh-hans/tickets/scenario-ga-tiers",
+                  "zh-hans/tickets/scenario-multi-day-festival",
+                  "zh-hans/tickets/scenario-bundles",
+                  "zh-hans/tickets/scenario-vip-addons",
+                  "zh-hans/tickets/scenario-promo-discounts",
+                  "zh-hans/tickets/scenario-comp-guests"
+                ]
+              }
             ]
           },
           {
-            "group": "Events",
-            "pages": [
-              "events/create-an-event",
-              "events/overview",
-              "events/event-editor",
-              "events/registration-form",
-              "events/rsvp",
-              "events/followers"
+            "tab": "功能",
+            "groups": [
+              {
+                "group": "组织",
+                "pages": [
+                  "zh-hans/organization/settings",
+                  "zh-hans/organization/team",
+                  "zh-hans/organization/audience"
+                ]
+              },
+              {
+                "group": "活动",
+                "pages": [
+                  "zh-hans/events/create-an-event",
+                  "zh-hans/events/overview",
+                  "zh-hans/events/event-editor",
+                  "zh-hans/events/registration-form",
+                  "zh-hans/events/rsvp",
+                  "zh-hans/events/followers"
+                ]
+              },
+              {
+                "group": "门票",
+                "pages": [
+                  "zh-hans/tickets/concepts",
+                  "zh-hans/tickets/ticket-management",
+                  "zh-hans/tickets/ticket-report",
+                  "zh-hans/tickets/comp-tickets",
+                  "zh-hans/other/payment-links"
+                ]
+              },
+              {
+                "group": "推广",
+                "pages": [
+                  "zh-hans/promotions/promo-codes",
+                  "zh-hans/promotions/campaigns",
+                  "zh-hans/promotions/door-sales",
+                  "zh-hans/promotions/tracking-links",
+                  "zh-hans/promotions/affiliates"
+                ]
+              },
+              {
+                "group": "PLVR Tap",
+                "pages": [
+                  "zh-hans/tap/introduction",
+                  "zh-hans/tap/top-up-setup",
+                  "zh-hans/tap/vendors",
+                  "zh-hans/tap/approvals",
+                  "zh-hans/tap/cashless-activity",
+                  "zh-hans/tap/spending-report",
+                  "zh-hans/tap/personalization-form"
+                ]
+              },
+              {
+                "group": "现场运营",
+                "pages": [
+                  "zh-hans/onsite/command-center",
+                  "zh-hans/onsite/search",
+                  "zh-hans/onsite/tickets",
+                  "zh-hans/onsite/wristbands",
+                  "zh-hans/onsite/cashless",
+                  "zh-hans/onsite/guests",
+                  "zh-hans/onsite/participants",
+                  "zh-hans/onsite/cases",
+                  "zh-hans/onsite/onsite-staff"
+                ]
+              },
+              {
+                "group": "更多",
+                "pages": [
+                  "zh-hans/other/table-booking",
+                  "zh-hans/other/marketing"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "language": "zh-Hant",
+        "navbar": {
+          "primary": {
+            "type": "button",
+            "label": "開啟後台",
+            "href": "https://business.plvr.io"
+          }
+        },
+        "tabs": [
+          {
+            "tab": "指南",
+            "groups": [
+              {
+                "group": "從這裡開始",
+                "pages": [
+                  "zh-hant/index",
+                  "zh-hant/getting-started/onboarding",
+                  "zh-hant/getting-started/quickstart",
+                  "zh-hant/getting-started/portal-tour"
+                ]
+              },
+              {
+                "group": "依主辦方類型",
+                "pages": [
+                  "zh-hant/organizers/small-events",
+                  "zh-hant/organizers/mid-size-events",
+                  "zh-hant/organizers/festivals",
+                  "zh-hant/organizers/recurring-community"
+                ]
+              },
+              {
+                "group": "依活動階段",
+                "pages": [
+                  "zh-hant/phases/index",
+                  "zh-hant/phases/before",
+                  "zh-hant/phases/during",
+                  "zh-hant/phases/after"
+                ]
+              },
+              {
+                "group": "依團隊角色",
+                "pages": [
+                  "zh-hant/roles/index",
+                  "zh-hant/roles/core-team",
+                  "zh-hant/roles/scanning-team",
+                  "zh-hant/roles/data-team",
+                  "zh-hant/roles/marketing-team"
+                ]
+              },
+              {
+                "group": "實戰手冊",
+                "pages": [
+                  "zh-hant/guides/launch-checklist",
+                  "zh-hant/guides/promote-your-event",
+                  "zh-hant/guides/cashless-festival-setup",
+                  "zh-hant/guides/event-day-runbook",
+                  "zh-hant/guides/after-the-event"
+                ]
+              },
+              {
+                "group": "票務情境",
+                "pages": [
+                  "zh-hant/tickets/scenario-ga-tiers",
+                  "zh-hant/tickets/scenario-multi-day-festival",
+                  "zh-hant/tickets/scenario-bundles",
+                  "zh-hant/tickets/scenario-vip-addons",
+                  "zh-hant/tickets/scenario-promo-discounts",
+                  "zh-hant/tickets/scenario-comp-guests"
+                ]
+              }
             ]
           },
           {
-            "group": "Tickets",
-            "pages": [
-              "tickets/concepts",
-              "tickets/ticket-management",
-              "tickets/ticket-report",
-              "tickets/comp-tickets",
-              "other/payment-links"
+            "tab": "功能",
+            "groups": [
+              {
+                "group": "組織",
+                "pages": [
+                  "zh-hant/organization/settings",
+                  "zh-hant/organization/team",
+                  "zh-hant/organization/audience"
+                ]
+              },
+              {
+                "group": "活動",
+                "pages": [
+                  "zh-hant/events/create-an-event",
+                  "zh-hant/events/overview",
+                  "zh-hant/events/event-editor",
+                  "zh-hant/events/registration-form",
+                  "zh-hant/events/rsvp",
+                  "zh-hant/events/followers"
+                ]
+              },
+              {
+                "group": "票券",
+                "pages": [
+                  "zh-hant/tickets/concepts",
+                  "zh-hant/tickets/ticket-management",
+                  "zh-hant/tickets/ticket-report",
+                  "zh-hant/tickets/comp-tickets",
+                  "zh-hant/other/payment-links"
+                ]
+              },
+              {
+                "group": "推廣",
+                "pages": [
+                  "zh-hant/promotions/promo-codes",
+                  "zh-hant/promotions/campaigns",
+                  "zh-hant/promotions/door-sales",
+                  "zh-hant/promotions/tracking-links",
+                  "zh-hant/promotions/affiliates"
+                ]
+              },
+              {
+                "group": "PLVR Tap",
+                "pages": [
+                  "zh-hant/tap/introduction",
+                  "zh-hant/tap/top-up-setup",
+                  "zh-hant/tap/vendors",
+                  "zh-hant/tap/approvals",
+                  "zh-hant/tap/cashless-activity",
+                  "zh-hant/tap/spending-report",
+                  "zh-hant/tap/personalization-form"
+                ]
+              },
+              {
+                "group": "現場營運",
+                "pages": [
+                  "zh-hant/onsite/command-center",
+                  "zh-hant/onsite/search",
+                  "zh-hant/onsite/tickets",
+                  "zh-hant/onsite/wristbands",
+                  "zh-hant/onsite/cashless",
+                  "zh-hant/onsite/guests",
+                  "zh-hant/onsite/participants",
+                  "zh-hant/onsite/cases",
+                  "zh-hant/onsite/onsite-staff"
+                ]
+              },
+              {
+                "group": "更多",
+                "pages": [
+                  "zh-hant/other/table-booking",
+                  "zh-hant/other/marketing"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "language": "ja",
+        "navbar": {
+          "primary": {
+            "type": "button",
+            "label": "ポータルを開く",
+            "href": "https://business.plvr.io"
+          }
+        },
+        "tabs": [
+          {
+            "tab": "ガイド",
+            "groups": [
+              {
+                "group": "はじめに",
+                "pages": [
+                  "ja/index",
+                  "ja/getting-started/onboarding",
+                  "ja/getting-started/quickstart",
+                  "ja/getting-started/portal-tour"
+                ]
+              },
+              {
+                "group": "主催者タイプ別",
+                "pages": [
+                  "ja/organizers/small-events",
+                  "ja/organizers/mid-size-events",
+                  "ja/organizers/festivals",
+                  "ja/organizers/recurring-community"
+                ]
+              },
+              {
+                "group": "イベントフェーズ別",
+                "pages": [
+                  "ja/phases/index",
+                  "ja/phases/before",
+                  "ja/phases/during",
+                  "ja/phases/after"
+                ]
+              },
+              {
+                "group": "チームの役割別",
+                "pages": [
+                  "ja/roles/index",
+                  "ja/roles/core-team",
+                  "ja/roles/scanning-team",
+                  "ja/roles/data-team",
+                  "ja/roles/marketing-team"
+                ]
+              },
+              {
+                "group": "プレイブック",
+                "pages": [
+                  "ja/guides/launch-checklist",
+                  "ja/guides/promote-your-event",
+                  "ja/guides/cashless-festival-setup",
+                  "ja/guides/event-day-runbook",
+                  "ja/guides/after-the-event"
+                ]
+              },
+              {
+                "group": "チケット販売シナリオ",
+                "pages": [
+                  "ja/tickets/scenario-ga-tiers",
+                  "ja/tickets/scenario-multi-day-festival",
+                  "ja/tickets/scenario-bundles",
+                  "ja/tickets/scenario-vip-addons",
+                  "ja/tickets/scenario-promo-discounts",
+                  "ja/tickets/scenario-comp-guests"
+                ]
+              }
             ]
           },
           {
-            "group": "Promotions",
-            "pages": [
-              "promotions/promo-codes",
-              "promotions/campaigns",
-              "promotions/door-sales",
-              "promotions/tracking-links",
-              "promotions/affiliates"
-            ]
-          },
-          {
-            "group": "PLVR Tap",
-            "pages": [
-              "tap/introduction",
-              "tap/top-up-setup",
-              "tap/vendors",
-              "tap/approvals",
-              "tap/cashless-activity",
-              "tap/spending-report",
-              "tap/personalization-form"
-            ]
-          },
-          {
-            "group": "Onsite Operations",
-            "pages": [
-              "onsite/command-center",
-              "onsite/search",
-              "onsite/tickets",
-              "onsite/wristbands",
-              "onsite/cashless",
-              "onsite/guests",
-              "onsite/participants",
-              "onsite/cases",
-              "onsite/onsite-staff"
-            ]
-          },
-          {
-            "group": "More",
-            "pages": [
-              "other/table-booking",
-              "other/marketing"
+            "tab": "機能",
+            "groups": [
+              {
+                "group": "組織",
+                "pages": [
+                  "ja/organization/settings",
+                  "ja/organization/team",
+                  "ja/organization/audience"
+                ]
+              },
+              {
+                "group": "イベント",
+                "pages": [
+                  "ja/events/create-an-event",
+                  "ja/events/overview",
+                  "ja/events/event-editor",
+                  "ja/events/registration-form",
+                  "ja/events/rsvp",
+                  "ja/events/followers"
+                ]
+              },
+              {
+                "group": "チケット",
+                "pages": [
+                  "ja/tickets/concepts",
+                  "ja/tickets/ticket-management",
+                  "ja/tickets/ticket-report",
+                  "ja/tickets/comp-tickets",
+                  "ja/other/payment-links"
+                ]
+              },
+              {
+                "group": "プロモーション",
+                "pages": [
+                  "ja/promotions/promo-codes",
+                  "ja/promotions/campaigns",
+                  "ja/promotions/door-sales",
+                  "ja/promotions/tracking-links",
+                  "ja/promotions/affiliates"
+                ]
+              },
+              {
+                "group": "PLVR Tap",
+                "pages": [
+                  "ja/tap/introduction",
+                  "ja/tap/top-up-setup",
+                  "ja/tap/vendors",
+                  "ja/tap/approvals",
+                  "ja/tap/cashless-activity",
+                  "ja/tap/spending-report",
+                  "ja/tap/personalization-form"
+                ]
+              },
+              {
+                "group": "現場運営",
+                "pages": [
+                  "ja/onsite/command-center",
+                  "ja/onsite/search",
+                  "ja/onsite/tickets",
+                  "ja/onsite/wristbands",
+                  "ja/onsite/cashless",
+                  "ja/onsite/guests",
+                  "ja/onsite/participants",
+                  "ja/onsite/cases",
+                  "ja/onsite/onsite-staff"
+                ]
+              },
+              {
+                "group": "その他",
+                "pages": [
+                  "ja/other/table-booking",
+                  "ja/other/marketing"
+                ]
+              }
             ]
           }
         ]

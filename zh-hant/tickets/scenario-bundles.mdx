@@ -1,0 +1,43 @@
+---
+title: "情境：用套票做團體方案"
+description: "以更划算的單張價格販售「4 人團體票」等套票。"
+---
+
+**目標：**用優惠套票鼓勵團體一起購買。
+
+| 項目 | 內容 | 價格 |
+| --- | --- | --- |
+| General Admission（一般入場） | 1 張票 | $30 |
+| Group of 4（4 人團體票） | General Admission x 4 | $100 |
+
+購票者只需支付 $100，而不是 $120。
+
+## 庫存如何計算
+
+套票會從其包含的票券中扣除庫存。如果 General Admission 有 300 張，每賣出一組 Group of 4 就會用掉其中 4 張。**Max Bundle Sales**（套票銷售上限）可限制套票的組數（例如 20 組），但只有在所含票券的剩餘數量足夠時，套票才能售出。
+
+{/* SCREENSHOT: images/tickets/bundles-in-ticket-table.png | Ticket Management with General Admission (300 @ $30) and bundle 'Group of 4' ($100) in the same session. Highlight the bundle row. */}
+
+## 管理套票
+
+<Steps>
+  <Step title="開啟 Edit Bundle">
+    在[票券管理](/zh-hant/tickets/ticket-management)中，點選套票那一列的鉛筆圖示，開啟 **Edit Bundle**（編輯套票）。
+  </Step>
+  <Step title="設定價格、上限與販售期間">
+    設定 **Price**（價格）、**Max Bundle Sales**、販售日期與選用的購買限制。
+  </Step>
+  <Step title="啟用">
+    將 **Status**（狀態）設為 **Active**（啟用），然後選擇 **Save**（儲存）。
+  </Step>
+</Steps>
+
+{/* SCREENSHOT: images/tickets/bundles-edit-panel.png | Edit Bundle panel for 'Group of 4'. Callouts: 1 Price, 2 Max Bundle Sales (20), 3 Included Tickets reading 'General Admission x 4', 4 Status. */}
+
+<Warning>
+  賣出第一組後，名稱與 **Price** 就會鎖定，而且套票無法加入釋票鏈。
+</Warning>
+
+- 套票中的票券會在[票券報表](/zh-hant/tickets/ticket-report)中顯示套票名稱。
+- [優惠碼](/zh-hant/promotions/promo-codes)可以只針對某一種套票。
+- 此後台無法建立新的套票。請洽詢你的 PLVR 窗口。

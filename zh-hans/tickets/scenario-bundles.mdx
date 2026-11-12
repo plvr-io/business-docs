@@ -1,0 +1,43 @@
+---
+title: "场景：用套票打包团体套餐"
+description: "以更优惠的单张价格销售“4 人团”等套餐。"
+---
+
+**目标：** 通过折扣套餐鼓励团体一起购票。
+
+| 项目 | 包含 | 价格 |
+| --- | --- | --- |
+| General Admission（普通票） | 1 张门票 | $30 |
+| Group of 4（4 人团） | General Admission x 4 | $100 |
+
+购票者只需支付 $100，而不是 $120。
+
+## 库存如何计算
+
+套票会占用其包含的门票库存。如果 General Admission 有 300 张，每卖出一份 Group of 4 就会用掉其中 4 张。**Max Bundle Sales**（套票销售上限）用于限制套餐数量（例如 20 份），但只有在所含门票库存充足时，套餐才能继续销售。
+
+{/* SCREENSHOT: images/tickets/bundles-in-ticket-table.png | Ticket Management with General Admission (300 @ $30) and bundle 'Group of 4' ($100) in the same session. Highlight the bundle row. */}
+
+## 管理套票
+
+<Steps>
+  <Step title="打开 Edit Bundle">
+    在[门票管理](/zh-hans/tickets/ticket-management)中，选择套票行上的铅笔图标打开 **Edit Bundle**（编辑套票）。
+  </Step>
+  <Step title="设置价格、上限和销售时段">
+    设置 **Price**（价格）、**Max Bundle Sales**、销售日期以及可选的购买限制。
+  </Step>
+  <Step title="启用">
+    将 **Status**（状态）设为 **Active**（启用），然后选择 **Save**（保存）。
+  </Step>
+</Steps>
+
+{/* SCREENSHOT: images/tickets/bundles-edit-panel.png | Edit Bundle panel for 'Group of 4'. Callouts: 1 Price, 2 Max Bundle Sales (20), 3 Included Tickets reading 'General Admission x 4', 4 Status. */}
+
+<Warning>
+  首次售出后，名称和 **Price** 将被锁定，且套票无法加入放票链。
+</Warning>
+
+- 套票中的门票会在[门票报表](/zh-hans/tickets/ticket-report)中显示套票名称。
+- [优惠码](/zh-hans/promotions/promo-codes)可以针对某一个套票。
+- 本后台无法创建新的套票。请联系你的 PLVR 对接人。

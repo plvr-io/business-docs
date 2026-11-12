@@ -1,0 +1,53 @@
+---
+title: "场景：VIP 门票与附加项"
+description: "提供少量高端门票，并同时销售停车等额外项目。"
+---
+
+**目标：** 以溢价销售限量 VIP 门票，并提供购票者可加购的额外项目。
+
+| 项目 | 数量 | 价格 | 说明 |
+| --- | --- | --- | --- |
+| General Admission（普通票） | 400 | $30 | 主门票 |
+| VIP | 50 | $90 | 限量 |
+| Parking Pass（停车证，附加项） | 80 | $10 | 普通票和 VIP |
+| Event T-shirt（活动 T 恤，附加项） | 100 | $25 | 仅限 VIP |
+
+## 第 1 部分：限量 VIP
+
+在[门票管理](/zh-hans/tickets/ticket-management)中编辑 VIP 门票：
+
+- **Total Quantity**（总数量）设为 50。售完即 VIP 售罄。
+- 设置 **Limit Qty per Order**（每单限购数量）和 **per User**（每人限购数量）（例如 4），让门票分散到更多购票者手中。
+- 在 **Description**（描述）中说明 VIP 包含哪些权益。
+- 设置较晚的 **Sales Start Date**（开售日期），或保持 **Inactive**（停用），作为第二波推出。
+
+{/* SCREENSHOT: images/tickets/vip-addons-edit-vip-ticket.png | Edit Ticket panel for VIP (50 @ $90). Callouts: 1 Total Quantity 50, 2 Limit Qty per Order and per User (4), 3 Description, 4 sales dates. */}
+
+## 第 2 部分：创建附加项
+
+在 **Add-ons**（附加项）标签页中选择 **Create Add-on**（创建附加项），然后：
+
+<Steps>
+  <Step title="命名">
+    选择 **Session**（场次），并填写 **Add-on Name**（附加项名称）和 **Description**（描述）。
+  </Step>
+  <Step title="选择可购买的人群">
+    **Linked to**（关联门票）：停车证关联普通票和 VIP，T 恤仅关联 VIP。
+  </Step>
+  <Step title="选择库存来源">
+    停车、周边商品等实体附加项请使用 **Own inventory**（独立库存）。
+  </Step>
+  <Step title="设置数量和价格">
+    填写 **Total Quantity** 和 **Face Value**（面值），然后保存。
+  </Step>
+</Steps>
+
+{/* SCREENSHOT: images/tickets/vip-addons-create-addon.png | Create Add-on filled: Parking Pass, Active, Linked to General Admission and VIP, Own inventory, Quantity 80, Face Value 10. Callouts: 1 Linked to, 2 Inventory Source. */}
+
+<Note>
+  附加项无法加入放票链，且创建后无法更改其库存来源。
+</Note>
+
+已售出的附加项会在[门票报表](/zh-hans/tickets/ticket-report)中带有 **Add-on** 标签。
+
+{/* SCREENSHOT: images/tickets/vip-addons-ticket-report.png | Ticket Report with sold add-ons: the 'Add-ons Sold' card and a few rows with the Add-on label. */}
